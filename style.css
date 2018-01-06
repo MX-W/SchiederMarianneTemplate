@@ -1,0 +1,173 @@
+/*
+Theme Name: Schieder Template
+Author: Max Wendl
+Description: Custom Template for the homepage of Schieder Marianne
+Version: 0.0.1
+Tags: bootstrap
+
+*/
+
+
+
+
+/**
+    SPD-Rot: #E3000F rgb(227,0,15)
+    Purpur: #980267 rgb(152,2,103)
+    Dunkelrot: #861C3E rgb(182,28,62)
+    Cyanblau: #00B4CC rgb(0,180,204)
+    
+    Schrift: SPD TheSans, SPD TheSans Versal (Extrabold, Regular)
+*/
+
+
+/*      SPD Fonts       */
+
+@font-face { 
+    font-family: 'SPD TheSans';
+    src: url('fonts/sans.ttf');
+}
+
+@font-face { 
+    font-family: 'SPD TheSans';
+    src: url('fonts/sans-bold.ttf');
+    font-weight: bold;
+}
+
+@font-face { 
+    font-family: 'SPD TheSans';
+    src: url('fonts/sans-bold-italic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face { 
+    font-family: 'SPD TheSans';
+    src: url('fonts/sans-italic.ttf');
+    font-style: italic;
+}
+
+@font-face { 
+    font-family: 'SPD TheSans';
+    src: url('fonts/sans-narrow.ttf');
+    font-stretch: condensed;
+}
+
+@font-face { 
+    font-family: 'SPD TheSans';
+    src: url('fonts/sans-narrow-bold.ttf');
+    font-stretch: condensed;
+    font-weight: bold;
+    
+}
+
+
+body{
+    font-family: 'SPD TheSans', sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+ul.nav {
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(255,255,255,.1);
+    top: 0px;
+    position: fixed;
+    z-index: 5;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.3)
+}
+
+ul.nav > li {
+    display: inline-block;
+    padding: 40px 0px 40px 0px;
+    cursor: pointer;
+    margin: 0;
+}
+
+
+ul.nav > li.first-item {
+    margin-right: 125px;
+}
+
+ul.nav > li:first-child > a, ul.nav > li:last-child > a {
+    border: 0;
+}
+
+ul.nav > li > a{
+    display: inherit;
+    margin: 0px;
+    font-family: 'SPD TheSans', sans-serif;
+    font-weight: normal;
+    font-size: 21px;
+    color: #000;
+    border-right: 1px double #e1e1e1;
+}
+
+
+ul.nav > li:first-child {
+   padding: 5px;
+    left: 20px;
+}
+
+ul.nav > li:first-child > a {
+    font-weight: bold;
+}
+
+ul.nav > li > #menu-logo {
+    display: inherit;
+}
+
+ul.nav > li:not(.first-item) > a:hover {
+    color: #fff;
+    transition: .4s;
+    background-color: transparent;
+}
+
+ul.nav > li:first-child:hover {
+    background-color: #E3000F;
+    transition: .5s;
+}
+
+
+ul.nav > li:first-child:hover > a {
+    color: #fff;
+    background-color: transparent;
+    transition: .5s;
+    border-left: 1px solid white;
+}
+
+ul.nav li a.active{
+    /*background-color: #E3000F;*/
+    color: #980267;
+}
+
+
+
+/*      Scrolled            */
+
+.scrolled {
+    background-color: rgba(255,255,255,1);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+}
+
+/*      Main-Section        */
+
+main {
+    margin-top: 1080px;
+}
+
+.background-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.article {
+    display: block;
+    padding: 0px 30px 50px 30px
+}
