@@ -1,0 +1,33 @@
+.menu-footer {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.menu-footer > ul.menu {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0 10px;
+    background-color: #E3000F;
+}
+
+.menu-footer > ul.menu > .menu-item {
+    display: inline-block;
+    padding: 5px 0;
+    cursor: pointer;
+    margin: 0;
+}
+
+.menu-footer > ul.menu > .menu-item > a{
+    display: inherit;
+    margin: 0px;
+    padding: 0 3px 0 0px;
+    font-weight: normal;
+    font-size: 11px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-footer > ul.menu > .menu-item:not(.last-item) > a {
+    border-right: 1px double #fff;
+}

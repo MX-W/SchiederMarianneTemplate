@@ -1,258 +1,130 @@
-/* =================== Main navigation =================== */
 
-.mainMenuList {
-    list-style-type: none;
+/*      Active Menu Item    */
+.current-menu-item:not(.menu-item-home) > a > span {
+    color: #980267;
+}
+
+.current-menu-item > .sub-menu > .menu-item > a > span {
+    color: #000;
+}
+
+.menu-header {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.menu-header > ul.menu {
+    display: block;
+    width: 100%;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #5C6266;
-    -webkit-box-shadow: 15px 15px 16px 0px rgba(0,0,0,0.6);
-    -moz-box-shadow: 15px 15px 16px 0px rgba(0,0,0,0.6);
-    box-shadow: 15px 15px 16px 0px rgba(0,0,0,0.6);
-    font-size: 13px;
-}
-
-.mainMenuItem {
-    float: left;
-    border-left: 2px solid black;
-}
-
-.mainMenuItem > a {
-    display: block;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-    background-color: #404040;
-    cursor: pointer;
-    transition: .7s;
-}
-
-.mainMenuItem > a:hover:not(.active) {
-    background-color: #616161;
-}
-
-.mainMenuItem a.active {
-    background-color: #232323;
-    -moz-box-shadow: inset 0px 0px 2px 5px rgba(51,51,51,1);
-    box-shadow: inset 0px 0px 0px 4px rgba(51,51,51,1);
-    color: #FFF;
-}
-
-.icon {
-    display: none;
-}
-
-/* ==== Prevents round borders on smaller screens ==== */
-@media only screen and (min-width: 1131px) {
-    
-    #lastRegularItem > a{
-        border-radius: 0 5px 5px 0;
-    }
-
-    .mainMenuItem:first-child {
-        border-left: none;
-    }
-
-    .mainMenuItem:first-child > a {
-        border-radius: 5px 0 0 5px;
-    }
-}
-
-
-/* ===== Subnavigation ===== */
-
-.dropButton {
-    display: none;
-    list-style-type: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    margin: 0;
-    padding: 0;
-    z-index: 1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    border-radius: 0 5px 5px 5px;
-}
-
-.subMenuItem {
-    border-bottom: 1px solid black;
-    transition: .7s;
-}
-
-.subMenuItem:last-child {
-    border-bottom: 0;
-}
-
-.subMenuItem > a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    
-}
-
-.subMenuItem:hover {
-    background-color: #616161;
-}
-
-.dropButton .subMenuItem a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.mainMenuItem:hover .dropButton {
-    display: block;
-}
-
-/* ==== Login Form ==== */
-
-#tooltipContainer {
-    display: inline-block;
-    border-left: none;
-    border-bottom: none;
-    float: right;
-}
-
-#loginForm {
-    display: none;
-    position: absolute;
-    right: 10%;
-    padding: 10px;
-    background-color: #212348;
-    border: none;
-    border-radius: 10px;
-    z-index: 6;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    margin-top: 8px;
-    
-}
-
-#tooltipContainer > a {
-    border-radius: 5px;
-}
-
-#loginTable {
-    border: none;
-}
-
-#loginTable td {
-    line-height: 100%;
-    margin-top: 5px;
-}
-
-.loginMenueButton {
-    background-color: #180A2E;
     padding: 5px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #fff;
-    border: none;
+    background-color: rgba(255,255,255,.1);
+    top: 0px;
+    position: fixed;
+    z-index: 5;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3)
+}
+
+.menu-header > ul.menu > .menu-item {
+    display: inline-block;
+    padding: 40px 0px 40px 0px;
     cursor: pointer;
 }
 
-.loginMenueButton:hover {
-    background-color: #FF5F00;
+
+.menu-header > ul.menu > .menu-item:first-child {
+    margin: 0px 160px -20px 100px;
+    padding: 5px 5px 5px 0;
 }
 
-#loginTable input, #loginTable label {
-    padding: 5px;
-    margin-bottom: 5px;
+.menu-header > ul.menu > .menu-item:first-child > a, .menu-header > ul.menu > .menu-item:last-child > a {
+    border: 0;
+}
+
+.menu-header > ul.menu > .menu-item > a{
+    display: inherit;
+    /*margin: 0px;*/
+    padding: 0 8px 0 8px;
+    font-weight: normal;
+    font-size: 21px;
+    color: #000;
+    border-right: 1px double #e1e1e1;
+    text-decoration: none;
+}
+
+.menu-header > ul.menu > .menu-item:first-child > a {
+    font-weight: bold;
+    padding: 3px 3px 3px 3px;
+}
+
+.menu-header > ul.menu > .menu-item:first-child:hover {
+    background-color: #E3000F;
+    transition: .5s;
+}
+
+.menu-header > ul.menu > .menu-item > a:hover {
+    color: #980267;
+}
+
+.menu-header > ul.menu > .menu-item:first-child > a > span {
+    padding-left: 5px;
+    border-left: 1px solid transparent;
+}
+
+.menu-header > ul.menu > .menu-item:first-child:hover > a > span {
     color: #fff;
-    background-color: #180A2E;
+    background-color: transparent;
+    transition: .5s;
+    border-left: 1px solid white;
 }
 
-#loginTable label {
-    border-radius: 5px;
+
+.sub-menu {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin-left: 55px;
+    margin-top: -18px;
 }
 
-#username, #password {
-    border: none;
-    border-bottom: 2px white solid;
-    border-radius: 0;
+
+.sub-menu > li > a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 10px;
+
+}
+
+
+.menu-header > ul.menu > .menu-item:hover > .sub-menu > li > a > span {
     color: #fff;
-    margin-bottom: 5px;
-}
-
-#username:focus, #password:focus {
-    border-bottom-color: #FF5F00;
-}
-
-#message {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-/*============= Basket ================*/
-
-#cartIcon {
-    background: url(../img/shop-icon-white.png) no-repeat;
-    background-size: 32px 32px;
-    width: 32px;
-    height: 32px;
-}
-
-#cart {
-    padding: 5px;
-    background-color: #404040;
-    border-radius: 5px;
-    border-left: none;
-    float: right;
-}
-
-#cartContainer:hover {
-    background-color: #616161
-}
-
-#countBasket {
-    color: #fff;
-    display: inline-block;
-    padding: 2px;
-    margin: 0px 0px 0px 3px;
-    line-height: 32px;
-    vertical-align: middle;
+    transition: .5s;
 }
 
 
-/*========== Responsive Menue ==========*/
 
-@media only screen and (max-width: 1130px) {
-    .mainMenuItem {
-        width: 100%;
-        border: none;
-        border-bottom: 2px solid black;
-    }
 
-    .mainMenuItem:not(:first-child) {
-        display: none;
-    }
-    
-    #tooltipContainer a {
-        border-radius: 0px;
-    }
-  
-    a.icon {
-        float: right;
-        display: block;
-        background-color: #404040;
-        cursor: pointer;
-        padding: 9px;
-        z-index: 3;
-        margin-top: -40px;
-    }
-    
-    a.icon:hover {
-        background-color: #616161;
-    }
+/*      Scrolled            */
 
-    .mainMenuItem.display {
-        float: none;
-        display: block;
-    }
+.scrolled {
+    background-color: rgba(255,255,255,1);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+}
 
+
+/*      Front Page Picture  */
+
+#header-image-container {
+    margin: 0 -15px 0 -15px;
+    background-image: url("../img/kuppel_bundestag-f.png");
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+}
+
+#header-image {
+    min-height: 100vh;
 }

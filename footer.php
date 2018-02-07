@@ -1,14 +1,5 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Max
- * Date: 04.01.2018
- * Time: 19:53
- */
-?>
 
-        <div>Facebook</div>
-        <div>Youtube</div>
-
+        <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container_class' => 'menu-footer' ) ); ?>
+        <?php wp_footer(); ?>
     </body>
 </html>

@@ -1,21 +1,48 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Max
- * Date: 04.01.2018
- * Time: 19:52
- */
+
+$args = array(
+	'post_type' => 'post',
+	'posts_per_page' => 10
+);
+
+if(is_page(55)):
+	$cat = 1;
+elseif(is_page(57)):
+	$cat = 4;
+elseif(is_page(63)):
+	$cat = 6;
+elseif(is_page(59)):
+	$cat = 3;
+elseif(is_page(61)):
+	$cat = 5;
+elseif(is_page(65)):
+	$cat = 7;
+elseif(is_page(67)):
+	get_template_part('template-parts/service/content-service');
+elseif(is_front_page()):
+	$cat = 1;
+
+endif;
+
+if(!is_page(67)){
+
+	$args['cat'] = $cat;
+
+
+	$results = new WP_Query($args);
+
+
+	while($results->have_posts()):
+		if($results->have_posts()): $results->the_post();
+
+			get_template_part('content', get_post_format());
+
+
+
+		endif;
+	endwhile;
+}
+
+
+
 ?>
-
-<main>
-    <div class="row col-lg-12">
-        <div class="col-lg-6 article">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-        <div class="col-lg-6 article">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-    </div>
-</main>
-
-<script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/scroll_menu.js"></script>
