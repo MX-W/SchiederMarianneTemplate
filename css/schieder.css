@@ -89,7 +89,7 @@ body{
 
 
 .row {
-    margin: 30px 0;
+    margin: 0 0;
     padding: 0 0px;
 }
 
@@ -97,6 +97,10 @@ body{
 .placeholder {
     height: 130px;
     width: 100%;
+}
+
+[class*='col-'] {
+    padding: 0 0;
 }
 
 
@@ -213,4 +217,70 @@ hr {
 .heading-red {
     color: #E3000F;
     font-style: italic;
+}
+
+/*
+    Purple italic heading
+ */
+.heading-purple {
+    /*color: #980267;*/
+    /*font-style: italic;*/
+    font-weight: bold;
+}
+
+/*
+    Separator for single posts
+ */
+
+.separator {
+    margin: 30px 0;
+}
+
+
+.table-cell-top {
+    vertical-align: top;
+    padding: 12px;
+
+}
+
+
+/*
+    ===============
+
+    Service - Page
+
+    ===============
+ */
+
+#service-submit {
+    float: right;
+    border: none;
+    padding: 8px 15px;
+    background-color: #980267;
+    color: #fff;
+}
+
+#service-submit:hover {
+    background-color: #680037;
+    /*color: #dfdfdf;*/
+}
+
+.table-service-form .input-service {
+    width: 100%;
+    padding: 5px 0 5px 5px;
+    border: 2px solid white;
+    background-color: #F0F0F0;
+}
+
+.table-service-form .input-service:focus {
+    outline: none;
+    border: 2px solid #980267;
+}
+
+textarea {
+    resize: none;
+}
+
+.table-service .tr-separate {
+    padding-bottom: 10px;
 }

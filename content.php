@@ -12,7 +12,7 @@ elseif(is_page(57)):
 elseif(is_page(63)):
 	$cat = 6;
 elseif(is_page(59)):
-	$cat = 3;
+	get_template_part('template-parts/service/content-zur-person');
 elseif(is_page(61)):
 	$cat = 5;
 elseif(is_page(65)):
@@ -24,7 +24,7 @@ elseif(is_front_page()):
 
 endif;
 
-if(!is_page(67)){
+if(!is_page(67) && !is_page(59)){
 
 	$args['cat'] = $cat;
 
