@@ -126,6 +126,159 @@ hr {
 /*
     ======================
 
+    Custom horizontal lines
+
+    ======================
+ */
+
+.custom-hr {
+    width: 100%;
+    clear: both;
+    min-height: 8px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.hr-left {
+    display: inline-block;
+    position: relative;
+    left: 0px;
+    width: 70px;
+    border-top: 2px solid #E3000F;
+    vertical-align: middle;
+}
+
+/*
+    ======================
+
+    Separator for single posts
+
+    ======================
+ */
+
+.separator {
+    margin: 30px 0;
+}
+
+
+.table-cell-top {
+    vertical-align: top;
+    padding: 12px;
+
+}
+
+.col-right {
+    padding-left: 25px;
+}
+
+.col-left {
+    padding-right: 25px;
+}
+
+.justified {
+    text-align: justify;
+    word-break: normal;
+}
+
+
+
+
+
+/*
+    ======================
+
+    Red heading
+
+    ======================
+ */
+.heading-red {
+    color: #E3000F;
+}
+
+/*
+    ======================
+
+    Purple italic heading
+
+    ======================
+ */
+.heading-purple {
+    color: #980267;
+    /*font-style: italic;*/
+}
+
+/*
+    ======================
+
+    Bold heading
+
+    ======================
+ */
+.heading-strong {
+    font-weight: bold;
+}
+
+
+
+/*
+    ======================
+
+    Link styling
+
+    ======================
+ */
+
+.row a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #E3000F;
+}
+
+.row a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/*
+    ======================
+
+    Small screen rules!
+
+    ======================
+ */
+
+@media screen and (max-width: 992px) {
+    .col-right {
+        padding-left: 0;
+    }
+
+    .col-left {
+        padding-right: 0;
+    }
+}
+
+
+/*
+    ======================
+
+    Post time
+
+    ======================
+ */
+.time {
+    font-size: 13px;
+    color: #808080;
+    padding-top: 20px;
+}
+
+
+
+
+/*
+    ======================
+
     Post type status
 
     ======================
@@ -146,17 +299,18 @@ hr {
 
     ======================
  */
+
+.post-image-thumbnail {
+    padding: 25px 25px 25px 0;
+}
+
 .post-image-thumbnail > img {
     display: block;
     max-width: 100%;
     height: auto;
-    margin: auto;
+    margin-left: 0;
 }
 
-.post-image-content {
-    display: flex;
-    align-items: center;
-}
 
 .post-image-content > p {
     margin: 0;
@@ -183,104 +337,4 @@ hr {
 .post-aside-content p {
     margin-top: 20px;
     font-size: 16px;
-}
-
-
-/*
-    ======================
-
-    Custom horizontal lines
-
-    ======================
- */
-
-.custom-hr {
-    width: 100%;
-    clear: both;
-    min-height: 8px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.hr-left {
-    display: inline-block;
-    position: relative;
-    left: 0px;
-    width: 70px;
-    border-top: 2px solid #E3000F;
-    vertical-align: middle;
-}
-
-/*
-    Red italic heading
- */
-.heading-red {
-    color: #E3000F;
-    font-style: italic;
-}
-
-/*
-    Purple italic heading
- */
-.heading-purple {
-    /*color: #980267;*/
-    /*font-style: italic;*/
-    font-weight: bold;
-}
-
-/*
-    Separator for single posts
- */
-
-.separator {
-    margin: 30px 0;
-}
-
-
-.table-cell-top {
-    vertical-align: top;
-    padding: 12px;
-
-}
-
-
-/*
-    ===============
-
-    Service - Page
-
-    ===============
- */
-
-#service-submit {
-    float: right;
-    border: none;
-    padding: 8px 15px;
-    background-color: #980267;
-    color: #fff;
-}
-
-#service-submit:hover {
-    background-color: #680037;
-    /*color: #dfdfdf;*/
-}
-
-.table-service-form .input-service {
-    width: 100%;
-    padding: 5px 0 5px 5px;
-    border: 2px solid white;
-    background-color: #F0F0F0;
-}
-
-.table-service-form .input-service:focus {
-    outline: none;
-    border: 2px solid #980267;
-}
-
-textarea {
-    resize: none;
-}
-
-.table-service .tr-separate {
-    padding-bottom: 10px;
 }

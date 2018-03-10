@@ -1,3 +1,10 @@
+.header-container {
+    top: 0px;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+}
+
 
 /*      Active Menu Item    */
 .current-menu-item:not(.menu-item-home) > a > span {
@@ -19,9 +26,6 @@
     margin: 0;
     padding: 5px;
     background-color: rgba(255,255,255,.1);
-    top: 0px;
-    position: fixed;
-    z-index: 5;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.3)
 }
 
@@ -103,17 +107,6 @@
 }
 
 
-
-
-/*      Scrolled            */
-
-.scrolled {
-    background-color: rgba(255,255,255,1);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,1);
-    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,1);
-}
-
-
 /*      Front Page Picture  */
 
 #header-image-container {
@@ -127,4 +120,69 @@
 
 #header-image {
     min-height: 100vh;
+}
+
+/*
+    ===============
+
+    Top Line of Header
+
+    ===============
+ */
+
+.header-contact-section {
+/*    width: 100%;
+    background-color: rgba(255,255,255,.1);*/
+}
+
+.contact-scrolled {
+    display: none;
+    transition: 2s;
+}
+
+/*
+    Text
+ */
+.header-contact-text {
+    font-size: 12px;
+    margin-bottom: 0;
+    padding: 4px 0;
+    margin-right: 150px;
+}
+
+
+
+/*
+    Social Media Buttons
+ */
+.fa {
+    float: right;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.fa-facebook {
+    margin-right: 50px;
+    background: transparent;
+    color: black !important;
+    padding: 8px 11px;
+}
+
+.fa-facebook:hover {
+    background-color: #3B5998;
+    text-decoration: none;
+    color: black;
+}
+
+.fa-youtube {
+    background: transparent;
+    color: black !important;
+    padding: 8px 8px;
+}
+
+.fa-youtube:hover {
+    background-color: #bb0000;
+    text-decoration: none;
+    color: black;
 }

@@ -7,14 +7,14 @@
     <span class="hr-left"></span>
 </div>
 
-<div class="row">
+<div class="row justified">
 
-    <div class="col-lg-6">
+    <div class="col-lg-6 col-left">
         <p>
             Ganz gleich ob Sie Sorgen oder Nöte haben, ob Sie Informationen zu bestimmten Themen brauchen, oder ob Sie einfach mal eine Abgeordnete persönlich kennenlernen wollen: Sie dürfen jederzeit vorbeikommen.
         </p>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 col-right">
         <p>
              Meine Mitarbeiterinnen und Mitarbeiter helfen Ihnen gerne weiter. Wenn Sie mich selber treffen wollen, sollten Sie vorsichtshalber einen Termin vereinbaren. Rufen Sie an oder senden Sie ein E-Mail!
 
@@ -48,19 +48,19 @@
 </div>-->
 
 <div class="row">
-    <table class="table-service">
-        <tr class="tr-separate">
-            <td class="heading-purple table-cell-top">BÜRGERINNENBÜRO WERNBERG-KÖBLITZ</td>
-            <td class="heading-purple table-cell-top">BÜRGERINNENBÜRO CHAM</td>
-            <td class="heading-purple table-cell-top">BÜRO BERLIN</td>
+    <table class="table-service col-lg-12">
+        <tr class="tr-separate row">
+            <td class="heading-strong table-cell-top col-lg-4">BÜRGERINNENBÜRO WERNBERG-KÖBLITZ</td>
+            <td class="heading-strong table-cell-top col-lg-4">BÜRGERINNENBÜRO CHAM</td>
+            <td class="heading-strong table-cell-top col-lg-4">BÜRO BERLIN</td>
         </tr>
-        <tr class="tr-separate">
-            <td class="table-cell-top"><p>Das Büro in Wernberg-Köblitz ist täglich für Sie geöffnet. Meine Mitarbeiterin Maria Reitinger steht Ihnen gerne zur Verfügung.</p></td>
-            <td class="table-cell-top"><p>Im BürgerInnenbüro in Cham steht Ihnen meine Mitarbeiterin Walburga Bartonizek vier halbe Tage in der Woche zur Verfügung. Meine Sprechstunden im Büro in Cham werden in der Presse bekannt gegeben. Gerne stehe ich Ihnen für ein Gespräch zur Verfügung - dazu bitte ich aber um vorherige Terminabsprache.</p></td>
-            <td class="table-cell-top"><p>Im Abgeordnetenbüro in Berlin unterstützen mich Ulrike Geißler, Hanna Malz und Felix Engelhard. Auch sie sind gerne bereit, sich Ihrer Anliegen anzunehmen.</p></td>
+        <tr class="tr-separate row">
+            <td class="table-cell-top col-lg-4"><p>Das Büro in Wernberg-Köblitz ist täglich für Sie geöffnet. Meine Mitarbeiterin Maria Reitinger steht Ihnen gerne zur Verfügung.</p></td>
+            <td class="table-cell-top col-lg-4"><p>Im BürgerInnenbüro in Cham steht Ihnen meine Mitarbeiterin Walburga Bartonizek vier halbe Tage in der Woche zur Verfügung. Meine Sprechstunden im Büro in Cham werden in der Presse bekannt gegeben. Gerne stehe ich Ihnen für ein Gespräch zur Verfügung - dazu bitte ich aber um vorherige Terminabsprache.</p></td>
+            <td class="table-cell-top col-lg-4"><p>Im Abgeordnetenbüro in Berlin unterstützen mich Ulrike Geißler, Hanna Malz und Felix Engelhard. Auch sie sind gerne bereit, sich Ihrer Anliegen anzunehmen.</p></td>
         </tr>
-        <tr class="tr-separate">
-            <td class="table-cell-top">
+        <tr class="tr-separate row">
+            <td class="table-cell-top col-lg-4">
                 <p>
                     <br>
                     Am Kalvarienberg 6<br>
@@ -71,7 +71,7 @@
                     <b>Öffnungszeiten:</b><br>
                     Mo. - Fr. 9.00 - 16.00 Uhr<br>
                 </p></td>
-            <td class="table-cell-top">
+            <td class="table-cell-top col-lg-4">
                 <p>
                     <br>
                     Parkstraße 33<br>
@@ -84,7 +84,7 @@
                     und nach Vereinbarung<br>
                 </p>
             </td>
-            <td class="table-cell-top">
+            <td class="table-cell-top col-lg-4">
                 <p>
                     Deutscher Bundestag<br>
                     Platz der Republik 1<br>
