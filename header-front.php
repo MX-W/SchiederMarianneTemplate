@@ -22,7 +22,7 @@ $css_classes = 'container-fluid';
 <body <?php body_class($css_classes) ?>>
 
 <div id="header-image-container">
-    <img id="header-image" src="<?php echo(get_template_directory_uri()); ?>/" alt="">
+    <img id="header-image" src="" alt="">
 </div>
 
 <div class="header-container">

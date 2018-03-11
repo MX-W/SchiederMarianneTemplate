@@ -238,6 +238,11 @@ hr {
     text-decoration: underline;
 }
 
+.right {
+    position: absolute;
+    right: 0;
+}
+
 
 
 
@@ -301,14 +306,15 @@ hr {
  */
 
 .post-image-thumbnail {
-    padding: 25px 25px 25px 0;
+    padding: 25px;
 }
 
 .post-image-thumbnail > img {
-    display: block;
-    max-width: 100%;
     height: auto;
-    margin-left: 0;
+    max-width: 100%;
+    /*object-fit: cover;
+    width:100%;
+    height: auto;*/
 }
 
 

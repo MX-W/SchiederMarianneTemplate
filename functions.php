@@ -17,7 +17,7 @@ function template_script_enqueue() {
     } elseif(is_page(67)) { //Service
         wp_enqueue_style( 'schieder-service', get_template_directory_uri() . '/css/subpages/schieder-service.css', array(), '', 'all' );
     } elseif(is_page(57)) { //Aktuelles
-
+		wp_enqueue_style( 'schieder-aktuelles', get_template_directory_uri() . '/css/subpages/schieder-aktuelles.css', array(), '', all);
     } elseif(is_page(63)) { //Bundestag
 
     } elseif(is_page(61)) { //Wahlkreis
@@ -76,7 +76,7 @@ add_theme_support('post-formats', array('aside', 'image', 'gallery', 'status'));
 /* Modify the read more link on the_excerpt() */
 
 function et_excerpt_length($length) {
-    return 220;
+    return 100;
 }
 add_filter('excerpt_length', 'et_excerpt_length');
 
@@ -84,6 +84,11 @@ add_filter('excerpt_length', 'et_excerpt_length');
 
 function et_excerpt_more($more) {
     global $post;
-    return '<div class="view-full-post"><a href="'. get_permalink($post->ID) . '" class="view-full-post-btn">(mehr lesen)</a></div>;';
+    return '<div class="view-full-post"><a href="'. get_permalink($post->ID) . '" class="view-full-post-btn">(mehr lesen)</a></div>';
 }
 add_filter('excerpt_more', 'et_excerpt_more');
+
+
+/* Thumbnails */
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size(1024, 681);

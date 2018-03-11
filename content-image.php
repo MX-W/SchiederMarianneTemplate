@@ -1,10 +1,6 @@
 
 <div class="row">
-    <div class="separator"></div>
-</div>
-
-<div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg-12">
         <h2><?php the_title(); ?></h2>
     </div>
 
@@ -15,22 +11,42 @@
     <span class="hr-left"></span>
 </div>
 
-<div class="row post-image-thumbnail">
-		<?php the_post_thumbnail(); ?>
+<div class="row">
+    <div class="col-lg-12 post-image-thumbnail">
+	    <?php the_post_thumbnail(); ?>
+    </div>
 </div>
 
 <div class="row">
 
 	<div class="col-lg-12 post post-image-content justified">
-		<?php //the_content('(mehr lesen)');
-        the_excerpt();?>
+		<?php
+        if(is_page(57)) {
+            the_excerpt();
+        } else {
+            the_content();
+        }
+        ?>
 	</div>
 
 </div>
 
+<?php
+if(!is_page(57)) {
+?>
+
+<div class="row">
+    <div class="col-lg-12">
+        <button class="btn"><a href="/wordpress/aktuelles">Zurück</a></button>
+    </div>
+</div>
+
+<?php
+}
+?>
 <div class="row">
     <div class="time">
-        <?php the_time('d. F Y') ?>
+        <?php the_time('d. F Y'); ?>
     </div>
 </div>
 
