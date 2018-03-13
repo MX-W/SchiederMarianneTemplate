@@ -23,10 +23,10 @@
             <?php
             if(is_page(57)) {
                 the_excerpt();
-            } elseif (0 == substr_compare($_SERVER['REQUEST_URI'], "/wordpress/post/", 0, 15)) {
-                the_content();
+            } elseif (substr_compare($_SERVER['REQUEST_URI'], "/wordpress/post/category/", 0, 25) == 0) {
+                the_excerpt();
             } else {
-                the_conent();
+                the_content();
             }
             ?>
         </div>
@@ -34,7 +34,7 @@
     </div>
 
     <?php
-    if(!is_page(57)) {
+    if(!is_page(57) && substr_compare($_SERVER['REQUEST_URI'], "/wordpress/post/category/", 0, 25) != 0) {
     ?>
 
     <div class="row">

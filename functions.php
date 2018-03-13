@@ -17,7 +17,7 @@ function template_script_enqueue() {
     } elseif(is_page(67)) { //Service
         wp_enqueue_style( 'schieder-service', get_template_directory_uri() . '/css/subpages/schieder-service.css', array(), '', 'all' );
     } elseif(is_page(57)) { //Aktuelles
-		wp_enqueue_style( 'schieder-aktuelles', get_template_directory_uri() . '/css/subpages/schieder-aktuelles.css', array(), '', all);
+		wp_enqueue_style( 'schieder-aktuelles', get_template_directory_uri() . '/css/subpages/schieder-aktuelles.css', array(), '', 'all');
     } elseif(is_page(63)) { //Bundestag
 
     } elseif(is_page(61)) { //Wahlkreis
