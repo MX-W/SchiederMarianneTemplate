@@ -17,9 +17,9 @@ if(is_page(57)) { //Aktuelles
 	get_template_part('template-parts/service/content-service');
 }elseif(is_front_page()) {
 	$cat = 1;
-}
-
-if(!is_page(57) && !is_page(63) && !is_page(59) && !is_page(61) && !is_page(67) &&!is_front_page()) {
+}elseif (0 == substr_compare($_SERVER['REQUEST_URI'], "/wordpress/post/", 0, 15)) {
+	get_template_part('content', get_post_format());
+}elseif(!is_page(57) && !is_page(63) && !is_page(59) && !is_page(61) && !is_page(67) &&!is_front_page()) {
 	$args['cat'] = $cat;
 
 

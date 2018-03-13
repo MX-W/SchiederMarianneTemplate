@@ -30,7 +30,7 @@
 	<div class="col-lg-4">
 		<div class="row">
 			<input type="text" placeholder="Suche"/>
-			<a href="" class="fas fa-search">S</a>
+			<a href="" class="fa fa-search"></a>
 
 		</div>
 

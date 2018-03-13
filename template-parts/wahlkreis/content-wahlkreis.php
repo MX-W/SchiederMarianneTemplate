@@ -22,6 +22,7 @@
     var templateUrl = '<?= get_bloginfo("template_url"); ?>';
 
     function myMap() {
+        var open = false;
         var mapCanvas = document.getElementById("map");
         var mapOptions = {
             center: new google.maps.LatLng(49.3, 12.423), zoom: 9
@@ -47,6 +48,44 @@
         });
 
         map.data.loadGeoJson(templateUrl + '/img/maps/Schwandorf-GeoJSON.json');
+
+        var contentSchwandorf = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Schwandorf</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Schwandorf</b>, Informationstext über Schwandorf </p>'+
+            '<p>Website: <a href="http://www.landkreis-schwandorf.de" target="_blank">www.landkreis-schwandorf.de</a> </p>'+
+            '</div>'+
+            '</div>';
+
+        var infoSchwandorf = new google.maps.InfoWindow({
+            content: contentSchwandorf
+        });
+
+        markerSchwandorf.addListener('click', function() {
+            open = true;
+            infoSchwandorf.open(map, markerSchwandorf);
+        });
+
+        var contentCham = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Cham</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Cham</b>, Informationstext über Cham </p>'+
+            '<p>Website: <a href="https://www.landkreis-cham.de" target="_blank">www.landkreis-cham.de</a> </p>'+
+            '</div>'+
+            '</div>';
+
+        var infoCham = new google.maps.InfoWindow({
+            content: contentCham
+        });
+
+        markerCham.addListener('click', function() {
+            open = true;
+            infoCham.open(map, markerCham);
+        });
     }
 </script>
 
