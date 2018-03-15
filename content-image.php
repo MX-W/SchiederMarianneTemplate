@@ -1,3 +1,7 @@
+<div class="row">
+    <div class="separator"></div>
+</div>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="row">
         <div class="col-lg-12">
@@ -21,12 +25,10 @@
 
         <div class="col-lg-12 post post-image-content justified">
             <?php
-            if(is_page(57)) {
-                the_excerpt();
-            } elseif (substr_compare($_SERVER['REQUEST_URI'], "/wordpress/post/category/", 0, 25) == 0) {
-                the_excerpt();
-            } else {
+            if(is_single()) {
                 the_content();
+            } else {
+                the_excerpt();
             }
             ?>
         </div>
@@ -34,7 +36,7 @@
     </div>
 
     <?php
-    if(!is_page(57) && substr_compare($_SERVER['REQUEST_URI'], "/wordpress/post/category/", 0, 25) != 0) {
+    if(is_single()) {
     ?>
 
     <div class="row">
@@ -52,7 +54,6 @@
         </div>
     </div>
 
-    <?php// echo $_SERVER['REQUEST_URI'] ?>
 </article>
 
 <hr>

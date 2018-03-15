@@ -11,3 +11,33 @@ li {
 .fa-search:hover {
     background-color: #525252;
 }
+
+#search {
+    background-color: #e5e5e5;
+    padding-left: 5px;
+    border-left: .1em solid #d0d0d0;
+    border-top: .1em solid #d0d0d0;
+    border-bottom: .1em solid #d0d0d0;
+}
+
+#archive-select {
+    background-color: #e5e5e5;
+    border: .1em solid #d0d0d0;
+    padding: 3px;
+    max-height: 30px;
+    width: 211px;
+}
+
+.categories {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cat-item {
+    font-size: 16px;
+}
+
+.cat-item > a {
+    font-weight: normal;
+    color: #a0a0a0;
+}
