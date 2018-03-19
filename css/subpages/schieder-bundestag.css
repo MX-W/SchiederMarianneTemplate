@@ -1,0 +1,31 @@
+.intro-container {
+    height: 100%;
+    /*text-align: center;*/
+}
+
+.intro-text {
+    line-height: 100%;
+}
+
+.intro-image {
+    display: block;
+    margin: auto;
+}
+
+td {
+    padding: 0 15px 3px 25px;
+    vertical-align: top;
+}
+
+ul {
+    list-style-position: outside;
+}
+
+li {
+    padding: 4px 0;
+}
+
+h6 {
+    margin-left: 10px;
+    margin-top: 25px;
+}

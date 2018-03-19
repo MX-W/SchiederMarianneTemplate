@@ -34,3 +34,8 @@ textarea {
 .table-service {
     table-layout: fixed;
 }
+
+.service-image {
+    display: block;
+    margin: 50px auto;
+}

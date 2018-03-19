@@ -22,8 +22,8 @@ function template_script_enqueue() {
 
 
 
-	if(is_page(55)) {
-
+	if(is_front_page()) {
+        wp_enqueue_style( 'schieder-startseite', get_template_directory_uri() . '/css/subpages/schieder-startseite.css', array(), '', 'all' );
     } elseif(is_page(59)) { //Zur Person
         wp_enqueue_style( 'schieder-person', get_template_directory_uri() . '/css/subpages/schieder-zur-person.css', array(), '', 'all' );
     } elseif(is_page(67)) { //Service
@@ -31,9 +31,11 @@ function template_script_enqueue() {
     } elseif(is_page(57)) { //Aktuelles
 		wp_enqueue_style( 'schieder-aktuelles', get_template_directory_uri() . '/css/subpages/schieder-aktuelles.css', array(), '', 'all');
     } elseif(is_page(63)) { //Bundestag
-
+        wp_enqueue_style('schieder-bundestag', get_template_directory_uri() . '/css/subpages/schieder-bundestag.css', array(), '', 'all');
     } elseif(is_page(61)) { //Wahlkreis
         wp_enqueue_style('schieder-wahlkreis', get_template_directory_uri() . '/css/subpages/schieder-wahlkreis.css', array(), '', 'all');
+    } elseif(is_page(55)) {
+
     }
 }
 
@@ -67,12 +69,12 @@ add_action('init', 'navs_setup');
  *
  * ===========================
  */
-add_theme_support('custom-background');
+//add_theme_support('custom-background');
 
 add_theme_support( 'custom-header');
 add_theme_support('post-thumbnails');
 
-add_theme_support('post-formats', array('aside', 'image', 'gallery', 'status'));
+add_theme_support('post-formats', array('image'));
 
 
 /* Modify the read more link on the_excerpt() */
