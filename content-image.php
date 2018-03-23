@@ -68,4 +68,4 @@
 
 </article>
 
-<hr>
+<hr class="custom-post-divide">

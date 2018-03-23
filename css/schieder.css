@@ -95,7 +95,7 @@ body{
 
 
 .placeholder {
-    height: 130px;
+    height: 150px;
     width: 100%;
 }
 
@@ -112,7 +112,7 @@ body{
 
     ======================
  */
-hr {
+.custom-post-divide {
     margin: 50px auto 50px auto;
     width: 60%;
     border: 0;
@@ -137,6 +137,7 @@ hr {
     min-height: 8px;
     height: auto;
     margin-bottom: 10px;
+    border-color: #9d9d9d;
 }
 
 .hr-left {
@@ -348,3 +349,21 @@ hr {
     margin-top: 20px;
     font-size: 16px;
 }
+
+
+
+.site-search {
+    border: none;
+    padding: 9px;
+    background-color: grey;
+    color: #fff !important;
+    float: none;
+}
+/*
+#s {
+    background-color: #e5e5e5;
+    padding-left: 5px;
+    border-left: .1em solid #d0d0d0;
+    border-top: .1em solid #d0d0d0;
+    border-bottom: .1em solid #d0d0d0;
+}*/

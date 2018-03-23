@@ -1,4 +1,14 @@
 <?php get_header(); ?>
+<?php
+$catsWPTerm = get_the_category();
+foreach($catsWPTerm as $term) {
+    $term = $term->to_array();
+    if($term['term_id'] === 17) {
+        $cat = $term['term_id'];
+        break;
+    }
+}
+if( $cat !== 17) { ?>
     <link href=" <?php echo get_template_directory_uri() ?>/css/subpages/schieder-aktuelles.css" rel="stylesheet" type="text/css" />
     <div class="row">
         <div class="col-lg-2"></div>
@@ -66,4 +76,31 @@
     </div>
 
 <?php
+} else {
+?>
+
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <?php
+                    if(have_posts()) {
+                        while(have_posts()) {
+                            the_post();
+                            get_template_part( 'content', get_post_format() );
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+
+    </div>
+
+<?php
+}
 get_footer();

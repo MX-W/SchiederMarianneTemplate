@@ -96,3 +96,17 @@ add_filter('excerpt_more', 'et_excerpt_more');
 /* Thumbnails */
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(1024, 681);
+
+/*
+function add_search_nav_item($items, $args) {
+	if($args->theme_location == 'header-menu') {
+		/*return $items .= '<li class="menu-item"><a href="#" data-toggle="modal" data-target="#myModal" class="fa fa-search search-header"></a></li>';
+		$items .= '<li class="menu-item">'. include (__DIR__ . '/template-parts/searchform.php');
+		return $items .= '</li>';
+
+	} else {
+		return $items;
+	}
+
+}
+add_filter('wp_nav_menu_items','add_search_nav_item', 10, 2);*/

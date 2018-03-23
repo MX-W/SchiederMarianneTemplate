@@ -5,8 +5,8 @@
 
 		$args['cat'] = 4;
 
-
-		$results = new WP_Query($args);
+		global $results;
+		 $results = new WP_Query($args);
 
 
 		while($results->have_posts()) {
@@ -26,8 +26,7 @@
         </div>
 
 		<div class="row">
-			<input id="search" type="text" placeholder="Suche"/>
-			<a href="" class="fa fa-search"></a>
+            <?php include (__DIR__ . '/../searchform.php');?>
 		</div>
 
         <div class="row">
