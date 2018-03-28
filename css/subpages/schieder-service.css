@@ -37,5 +37,6 @@ textarea {
 
 .service-image {
     display: block;
+    width: 100%;
     margin: 50px auto;
 }

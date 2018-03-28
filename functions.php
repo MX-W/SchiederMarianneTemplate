@@ -74,7 +74,7 @@ add_action('init', 'navs_setup');
 add_theme_support( 'custom-header');
 add_theme_support('post-thumbnails');
 
-add_theme_support('post-formats', array('image'));
+add_theme_support('post-formats', array('image','video'));
 
 
 /* Modify the read more link on the_excerpt() */

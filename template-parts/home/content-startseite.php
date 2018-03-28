@@ -44,8 +44,8 @@
         preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $url, $matches);
         $id = $matches[1];
         ?>
-        <div width="1024" height="768">Hier könnte Ihr Video stehen!</div>
-        <!--<iframe width="1024" height="768" src="https://www.youtube-nocookie.com/embed/<?php /*echo $id; */?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>-->
+        <!--<div width="1024" height="768">Hier könnte Ihr Video stehen!</div>-->
+        <iframe width="1024" height="768" src="https://www.youtube-nocookie.com/embed/<?php echo $id; ?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
     </div>
 </div>
 
