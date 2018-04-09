@@ -35,6 +35,31 @@
     wp_reset_query();
 ?>
 
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Termine</h1>
+        <?php $args = array(
+	        'post_type' => 'diary',
+	        'posts_per_page' => 1,
+        );
+
+        $results = new WP_Query($args);
+
+        while($results->have_posts()) {
+	        if ( $results->have_posts() ) {
+		        $results->the_post();
+		        the_simdiaw_upcoming_reminders();
+	        }
+        }
+
+        ?>
+    </div>
+</div>
+
+<div class="row">
+    <div class="placeholder"></div>
+</div>
+
 
 <div class="row">
     <div class="col-lg-12">

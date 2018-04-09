@@ -7,10 +7,13 @@
         <div class="col-lg-12">
             <h3><?php the_title(); ?></h3>
         </div>
-
-        <div class="col-lg-4"></div>
-
     </div>
+    <!--<div class="row">
+        <div class="col-lg-12 time">
+            <?php /*the_category(); */?>
+        </div>
+    </div>-->
+
     <div class="custom-hr">
         <span class="hr-left"></span>
     </div>
@@ -28,7 +31,7 @@
             if(is_single()) {
                 the_content();
             } else {
-                the_excerpt();
+                the_content('(mehr lesen...)');
             }
             ?>
         </div>
@@ -37,7 +40,7 @@
 
     <?php
     if(is_single()) {
-        if(in_category('reden', $post = null)) {
+        if(!in_category('reden', $post)) {
     ?>
 
             <div class="row">

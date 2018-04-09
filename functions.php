@@ -19,6 +19,7 @@ function template_script_enqueue() {
     wp_enqueue_style( 'header', get_template_directory_uri() . '/css/header.css', array(), '', 'all' );
     wp_enqueue_style( 'schieder', get_template_directory_uri() . '/css/schieder.css', array(), '', 'all' );
     wp_enqueue_style( 'footer', get_template_directory_uri() . '/css/footer.css', array(), '', 'all' );
+    wp_enqueue_style('searchform', get_template_directory_uri() . '/css/search.css', array(), '', 'all');
 
 
 
@@ -77,31 +78,16 @@ add_theme_support('post-thumbnails');
 add_theme_support('post-formats', array('image','video'));
 
 
-/* Modify the read more link on the_excerpt() */
-
-function et_excerpt_length($length) {
-    return 100;
-}
-add_filter('excerpt_length', 'et_excerpt_length');
-
-/* Add a link  to the end of our excerpt contained in a div for styling purposes and to break to a new line on the page.*/
-
-function et_excerpt_more($more) {
-    global $post;
-    return '<div class="view-full-post"><a href="'. get_permalink($post->ID) . '" class="view-full-post-btn">(mehr lesen)</a></div>';
-}
-add_filter('excerpt_more', 'et_excerpt_more');
-
 
 /* Thumbnails */
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(1024, 681);
 
-/*
+
 function add_search_nav_item($items, $args) {
 	if($args->theme_location == 'header-menu') {
-		/*return $items .= '<li class="menu-item"><a href="#" data-toggle="modal" data-target="#myModal" class="fa fa-search search-header"></a></li>';
-		$items .= '<li class="menu-item">'. include (__DIR__ . '/template-parts/searchform.php');
+		$items .= '<li class="menu-item"><a target="_blank" class="facebook-wrapper" href="https://www.facebook.com/MarianneSchieder/"><div class="fa fa-facebook fa-no-float menu-facebook"></div></a></li>';
+		$items .= '<li id="search-item" class="menu-item">'. file_get_contents(__DIR__ . '/template-parts/searchform.php', true);
 		return $items .= '</li>';
 
 	} else {
@@ -109,4 +95,4 @@ function add_search_nav_item($items, $args) {
 	}
 
 }
-add_filter('wp_nav_menu_items','add_search_nav_item', 10, 2);*/
+add_filter('wp_nav_menu_items','add_search_nav_item', 10, 2);

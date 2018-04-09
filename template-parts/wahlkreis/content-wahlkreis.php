@@ -29,52 +29,65 @@
         };
         var map = new google.maps.Map(mapCanvas, mapOptions);
 
-        var markerSchwandorf = new google.maps.Marker({
+        var markerWernberg = new google.maps.Marker({
             position: {
-                lat: 49.3261854,
-                lng: 12.1092708
+                lat: 49.543463,
+                lng: 12.161269
             },
             map: map,
-            title: 'Schwandorf'
+            title: 'Büro Wernberg-Köblitz'
         });
 
         var markerCham = new google.maps.Marker({
             position: {
-                lat: 49.2178194,
-                lng: 12.6663832
+                lat: 49.225169,
+                lng: 12.669247
             },
             map: map,
-            title: 'Cham'
+            title: 'Büro Cham'
         });
 
         map.data.loadGeoJson(templateUrl + '/img/maps/Schwandorf-GeoJSON.json');
 
-        var contentSchwandorf = '<div id="content">'+
+        var contentWernberg = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Schwandorf</h1>'+
+            '<h1 id="firstHeading" class="firstHeading">Büro Wernberg-Köblitz</h1>'+
             '<div id="bodyContent">'+
-            '<p><b>Schwandorf</b>, Informationstext über Schwandorf </p>'+
-            '<p>Website: <a href="http://www.landkreis-schwandorf.de" target="_blank">www.landkreis-schwandorf.de</a> </p>'+
+            '<p><b>Adresse:</b><br>'+
+            'Am Kalvarienberg 6<br>'+
+            '92533 Wernberg-Köblitz<br>'+
+            '<br><b>Tel.:</b> 09604 / 931211<br>'+
+            '<b>Fax:</b> 09604 / 931355<br>'+
+            '<b>Mail:</b> marianne.schieder@wk.bundestag.de<br>'+
+            '<br><b>Öffnungszeiten:</b><br>'+
+            'Mo. - Fr. 9.00 - 16.00 Uhr<br></p>'+
             '</div>'+
             '</div>';
 
         var infoSchwandorf = new google.maps.InfoWindow({
-            content: contentSchwandorf
+            content: contentWernberg
         });
 
-        markerSchwandorf.addListener('click', function() {
+        markerWernberg.addListener('click', function() {
             open = true;
-            infoSchwandorf.open(map, markerSchwandorf);
+            infoSchwandorf.open(map, markerWernberg);
         });
 
         var contentCham = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Cham</h1>'+
+            '<h1 id="firstHeading" class="firstHeading">Büro Cham</h1>'+
             '<div id="bodyContent">'+
-            '<p><b>Cham</b>, Informationstext über Cham </p>'+
-            '<p>Website: <a href="https://www.landkreis-cham.de" target="_blank">www.landkreis-cham.de</a> </p>'+
+            '<p><b>Adresse:</b><br>'+
+            'Parkstraße 33<br>'+
+            '93413 Cham<br>'+
+            '<br><b>Tel.:</b> 09971 / 843626<br>'+
+            '<b>Fax:</b> 09971 / 801598<br>'+
+            '<b>Mail:</b> marianne.schieder@wk2.bundestag.de<br>'+
+            '<br><b>Öffnungszeiten:</b><br>'+
+            'Mo. - Fr. 9.00 - 14.00 Uhr<br>' +
+            'und nach Vereinbarung<br><br></p>'+
             '</div>'+
             '</div>';
 

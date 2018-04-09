@@ -37,7 +37,7 @@
 
 
 .menu-header > ul.menu > .menu-item:first-child {
-    margin: 0px 160px -20px 100px;
+    margin: 0px 60px -20px 100px;
     padding: 5px 5px 5px 0;
 }
 
@@ -164,10 +164,11 @@
 }
 
 .fa-facebook {
-    margin-right: 50px;
-    background: transparent;
-    color: black !important;
-    padding: 8px 11px;
+    line-height: 31px;
+    background: #3B5998;
+    color: white !important;
+    border-radius: 5px;
+    padding: 0px 10px 0px 10px !important;
 }
 
 .fa-facebook:hover {
@@ -176,23 +177,19 @@
     color: black;
 }
 
-.fa-youtube {
-    background: transparent;
-    color: black !important;
-    padding: 8px 8px;
-}
-
-.fa-youtube:hover {
-    background-color: #bb0000;
-    text-decoration: none;
-    color: black;
-}
-
-.search-header {
+.fa-no-float {
     float: none;
-    display: inline-block !important;
-    font-size: 12px !important;
-    padding: 8px !important;
-    background-color: #fff !important;
-    color: #000000 !important;
+}
+
+.menu-facebook {
+    /*border-left: 1px solid transparent;*/
+    font-size: 21px;
+}
+
+.menu-facebook:hover {
+    background-color: #1B3978;
+}
+
+#search-item {
+    padding-left: 5px;
 }

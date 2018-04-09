@@ -62,29 +62,35 @@
         </tr>
         <tr class="tr-separate row">
             <td class="table-cell-top col-lg-4"><p>Das Büro in Wernberg-Köblitz ist täglich für Sie geöffnet. Meine Mitarbeiterin Maria Reitinger steht Ihnen gerne zur Verfügung.</p></td>
-            <td class="table-cell-top col-lg-4"><p>Im BürgerInnenbüro in Cham steht Ihnen meine Mitarbeiterin Walburga Bartonizek vier halbe Tage in der Woche zur Verfügung. Meine Sprechstunden im Büro in Cham werden in der Presse bekannt gegeben. Gerne stehe ich Ihnen für ein Gespräch zur Verfügung - dazu bitte ich aber um vorherige Terminabsprache.</p></td>
+            <td class="table-cell-top col-lg-4"><p>Im BürgerInnenbüro in Cham steht Ihnen meine Mitarbeiterin Walburga Bartonizek vier halbe Tage in der Woche zur Verfügung. Gerne stehe ich Ihnen für ein Gespräch zur Verfügung - dazu bitte ich aber um vorherige Terminabsprache.</p></td>
             <td class="table-cell-top col-lg-4"><p>Im Abgeordnetenbüro in Berlin unterstützen mich Ulrike Geißler, Hanna Malz und Felix Engelhard. Auch sie sind gerne bereit, sich Ihrer Anliegen anzunehmen.</p></td>
         </tr>
         <tr class="tr-separate row">
             <td class="table-cell-top col-lg-4">
                 <p>
-                    <br>
+                    <b>Adresse:</b><br>
                     Am Kalvarienberg 6<br>
                     92533 Wernberg-Köblitz<br>
+                    <br>
+                    <br>
                     <b>Tel.:</b> 09604 / 931211<br>
                     <b>Fax:</b> 09604 / 931355<br>
-                    <b>Mail:</b> marianne.schieder(at)wk.bundestag.de<br>
+                    <b>Mail:</b> marianne.schieder@wk.bundestag.de<br>
+                    <br>
                     <b>Öffnungszeiten:</b><br>
                     Mo. - Fr. 9.00 - 16.00 Uhr<br>
                 </p></td>
             <td class="table-cell-top col-lg-4">
                 <p>
-                    <br>
+                    <b>Adresse:</b> <br>
                     Parkstraße 33<br>
                     93413 Cham<br>
+                    <br>
+                    <br>
                     <b>Tel.:</b> 09971 / 843626<br>
                     <b>Fax:</b> 09971 / 801598<br>
-                    <b>Mail:</b> marianne.schieder(at)wk2.bundestag.de<br>
+                    <b>Mail:</b> marianne.schieder@wk2.bundestag.de<br>
+                    <br>
                     <b>Öffnungszeiten:</b><br>
                     Mo. - Fr. 9.00 - 14.00 Uhr<br>
                     und nach Vereinbarung<br>
@@ -92,12 +98,15 @@
             </td>
             <td class="table-cell-top col-lg-4">
                 <p>
+                    <b>Adresse:</b><br>
                     Deutscher Bundestag<br>
                     Platz der Republik 1<br>
                     11011 Berlin <br>
+                    <br>
                     <b>Tel.:</b> 030 / 227 - 72270<br>
                     <b>Fax:</b> 030 / 227 - 76268<br>
-                    <b>Mail:</b> marianne.schieder(at)bundestag.de<br>
+                    <b>Mail:</b> marianne.schieder@bundestag.de<br>
+                    <br>
                     <b>Öffnungszeiten:</b><br>
                     Mo. - Fr. 9.00 - 16.00 Uhr<br>
                 </p>

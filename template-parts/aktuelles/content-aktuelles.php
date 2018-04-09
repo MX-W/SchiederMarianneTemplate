@@ -3,7 +3,14 @@
 
 		<?php
 
-		$args['cat'] = 4;
+		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+		$args = array(
+		        'cat' => 4,
+                'type' => 'post',
+                'posts_per_page' => 1,
+                'paged' => $paged,
+        );
 
 		global $results;
 		 $results = new WP_Query($args);
@@ -14,10 +21,23 @@
 				$results->the_post();
 				get_template_part('content', get_post_format());
 			}
-		}
-		wp_reset_query();
+		}?>
+        <div class="row">
+            <div class="nav-previous alignright"><?php next_posts_link( 'Ältere Beiträge', $results->max_num_pages ); ?></div>
+
+            <div class="nav-next alignleft"><?php previous_posts_link( 'Neuere Beiträge' ); ?></div>
+        </div>
+
+        <div class="row">
+            <div class="separator"></div>
+        </div>
+
+        <?php
+        wp_reset_query();
 		?>
 	</div>
+
+    <div class="col-lg-1"></div>
 
 	<div class="col-lg-3">
 
@@ -57,7 +77,5 @@
             </select>
         </div>
 	</div>
-
-    <div class="col-lg-1"></div>
 </div>
 

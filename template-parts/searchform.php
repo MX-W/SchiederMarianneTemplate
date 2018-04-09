@@ -1,6 +1,6 @@
 <form action="<?php echo get_home_url(); ?>" method="get" role="search" id="searchform" class="searchform">
 	<div>
-		<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s"/>
-		<button type="submit" value="" class="fa fa-search site-search" id="searchsubmit"></button>
+		<input type="text" value="" name="s" id="s" placeholder="Ihre Suchbegriffe..."/>
+        <input type="submit" value="Suche" class="site-search" id="searchsubmit"/>
 	</div>
 </form>

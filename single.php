@@ -36,8 +36,7 @@ if( $cat !== 17) { ?>
                     </div>
 
                     <div class="row">
-                        <input id="search" type="text" placeholder="Suche"/>
-                        <a href="" class="fa fa-search"></a>
+		                <?php include (__DIR__ . '/template-parts/searchform.php');?>
                     </div>
 
                     <div class="row">
