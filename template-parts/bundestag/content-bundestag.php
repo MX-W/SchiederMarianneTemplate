@@ -83,11 +83,11 @@
     </table>-->
 </div>
 
-
+<!--
 <div class="row">
     <div class="col-lg-12">
         <?php
-        $args['category_name'] = 'reden';
+/*        $args['category_name'] = 'reden';
 
 
         $results = new WP_Query($args);
@@ -97,6 +97,35 @@
             if($results->have_posts()) {
                 $results->the_post();
                 get_template_part('content', get_post_format());
+            }
+        }
+        wp_reset_query();
+        */?>
+    </div>
+
+</div>-->
+
+<div class="row">
+    <div class="col-lg-12">
+
+        <h1>Meine aktuellste Rede im Bundestag</h1>
+
+        <?php
+
+        $args = array(
+            'type' => 'post',
+            'post_type' => 'reden',
+            'posts_per_page' => 1,
+        );
+
+
+        $results = new WP_Query($args);
+
+
+        while($results->have_posts()) {
+            if($results->have_posts()) {
+                $results->the_post();
+                get_template_part('template-parts/post-formats/reden');
             }
         }
         wp_reset_query();

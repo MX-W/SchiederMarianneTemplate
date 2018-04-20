@@ -39,8 +39,18 @@
     <div class="col-lg-12">
         <h1>Termine</h1>
         <?php $args = array(
-	        'post_type' => 'diary',
-	        'posts_per_page' => 1,
+	        'post_type' => 'reminder',
+	        'posts_per_page' => 2,
+            'meta_query' => array (
+                array(
+                    'key' => 'simdiaw-start-date',
+                    'value' => date("Y-m-d"),
+                    'compare' => '>='
+                )
+            ),
+            'orderby' => 'meta_value',
+            'order' => 'ASC',
+            'meta_key' => 'simdiaw-start-date',
         );
 
         $results = new WP_Query($args);
@@ -48,10 +58,10 @@
         while($results->have_posts()) {
 	        if ( $results->have_posts() ) {
 		        $results->the_post();
-		        the_simdiaw_upcoming_reminders();
+                get_template_part('content', get_post_type());
 	        }
         }
-
+        wp_reset_query();
         ?>
     </div>
 </div>

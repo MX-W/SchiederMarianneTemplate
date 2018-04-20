@@ -1,3 +1,5 @@
+
+
 <form action="<?php echo get_home_url(); ?>" method="get" role="search" id="searchform" class="searchform">
 	<div>
 		<input type="text" value="" name="s" id="s" placeholder="Ihre Suchbegriffe..."/>
