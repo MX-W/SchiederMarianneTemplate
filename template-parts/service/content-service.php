@@ -2,7 +2,7 @@
     <div class="separator"></div>
 </div>
 
-<h1>Service</h1>
+<h1 class="section-heading">Service</h1>
 <div class="custom-hr">
     <span class="hr-left"></span>
 </div>
@@ -32,7 +32,7 @@
     <div class="separator"></div>
 </div>
 
-<h1>Büros</h1>
+<h1 class="section-heading">Büros</h1>
 <div class="custom-hr">
     <span class="hr-left"></span>
 </div>
@@ -127,7 +127,7 @@
 
                 <tr>
                     <td>
-                        <h2>Kontakt</h2>
+                        <h2 class="section-heading">Kontakt</h2>
                         <div class="custom-hr"><div class="hr-left"></div></div>
                     </td>
                 </tr>

@@ -17,8 +17,12 @@
 </div>
 
 <div class="row">
+    <div class="separator"></div>
+</div>
+
+<div class="row">
     <div>
-        <h1>Aufgabenbereiche</h1>
+        <h2 class="section-heading">Aufgabenbereiche</h2>
     </div>
 </div>
 <div class="custom-hr">
@@ -106,9 +110,23 @@
 </div>-->
 
 <div class="row">
+    <div class="separator"></div>
+</div>
+
+<div class="row">
     <div class="col-lg-12">
 
-        <h1>Meine aktuellste Rede im Bundestag</h1>
+        <div class="row">
+            <h2 class="section-heading">Meine Reden im Bundestag</h2>
+
+            <div class="custom-hr">
+                <span class="hr-left"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <p></p>
+        </div>
 
         <?php
 

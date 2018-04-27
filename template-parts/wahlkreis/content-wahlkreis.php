@@ -3,7 +3,7 @@
 </div>
 
 
-<h1>Wahlkreis Schwandorf-Cham</h1>
+<h1 class="section-heading">Wahlkreis Schwandorf-Cham</h1>
 <div class="custom-hr">
     <span class="hr-left"></span>
 </div>

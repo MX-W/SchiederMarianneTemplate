@@ -87,7 +87,7 @@ set_post_thumbnail_size(1024, 681);
 function add_search_nav_item($items, $args) {
 	if($args->theme_location == 'header-menu') {
 		$items .= '<li class="menu-item"><a target="_blank" class="facebook-wrapper" href="https://www.facebook.com/MarianneSchieder/"><div class="fa fa-facebook fa-no-float menu-facebook"></div></a></li>';
-		$items .= '<li id="search-item" class="menu-item">'. file_get_contents(__DIR__ . '/template-parts/searchform.php', true);
+		$items .= '<li id="search-item" class="menu-item">'. file_get_contents(__DIR__ . '/template-parts/searchform-header.php', true);
 		return $items .= '</li>';
 
 	} else {
@@ -208,9 +208,9 @@ function mx_w_save_link_data( $post_id ) {
         return;
     }
 
-    $data = $_POST['mx_w_link_meta_box_nonce'];
+    $data = sanitize_text_field($_POST['mx_w_video_link']);
 
-    print_r($_POST['mx_w_link_meta_box_nonce']);
+    print_r($_POST['mx_w_video_link']);
 
     update_post_meta($post_id, '_video_link_value_key', $data);
 }

@@ -6,7 +6,6 @@
 		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 		$args = array(
-		        'cat' => 4,
                 'type' => 'post',
                 'posts_per_page' => 1,
                 'paged' => $paged,
@@ -54,9 +53,7 @@
         </div>
 
 		<div class="row">
-			<?php wp_list_categories( array(
-			        "exclude" => "4, 15"
-            )); ?>
+			<?php wp_list_categories(); ?>
 		</div>
 
         <div class="row">

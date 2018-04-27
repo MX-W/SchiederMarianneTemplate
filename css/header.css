@@ -1,5 +1,5 @@
 .header-container {
-    top: 0px;
+    top: 0;
     position: fixed;
     z-index: 5;
     width: 100%;
@@ -31,13 +31,13 @@
 
 .menu-header > ul.menu > .menu-item {
     display: inline-block;
-    padding: 40px 0px 40px 0px;
+    padding: 40px 0 40px 0;
     cursor: pointer;
 }
 
 
 .menu-header > ul.menu > .menu-item:first-child {
-    margin: 0px 60px -20px 100px;
+    margin: 0 60px -20px 100px;
     padding: 5px 5px 5px 0;
 }
 
@@ -52,7 +52,7 @@
     font-weight: normal;
     font-size: 21px;
     color: #000;
-    border-right: 1px double #e1e1e1;
+    border-right: 1px solid #e1e1e1;
     text-decoration: none;
 }
 
@@ -165,16 +165,18 @@
 
 .fa-facebook {
     line-height: 31px;
-    background: #3B5998;
-    color: white !important;
+    background-color: transparent;
+    color: #000;
     border-radius: 5px;
-    padding: 0px 10px 0px 10px !important;
+    border-right: 2px solid transparent;
+    padding: 0 10px 0 11px !important;
 }
 
 .fa-facebook:hover {
+    transition: .8s;
     background-color: #3B5998;
     text-decoration: none;
-    color: black;
+    color: #fff !important;
 }
 
 .fa-no-float {
@@ -182,14 +184,5 @@
 }
 
 .menu-facebook {
-    /*border-left: 1px solid transparent;*/
     font-size: 21px;
-}
-
-.menu-facebook:hover {
-    background-color: #1B3978;
-}
-
-#search-item {
-    padding-left: 5px;
 }

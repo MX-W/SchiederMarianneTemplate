@@ -2,10 +2,6 @@ li {
     list-style: none;
 }
 
-.fa-search:hover {
-    background-color: #525252;
-}
-
 #archive-select {
     background-color: #e5e5e5;
     border: .1em solid #d0d0d0;

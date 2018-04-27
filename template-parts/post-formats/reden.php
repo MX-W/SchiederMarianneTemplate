@@ -1,7 +1,3 @@
-<div class="row">
-    <div class="separator"></div>
-</div>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="row">
         <div class="col-lg-12">
@@ -14,8 +10,8 @@
         </div>
     </div>-->
 
-    <div class="custom-hr">
-        <span class="hr-left"></span>
+    <div class="row">
+        <div class="separator-small"></div>
     </div>
 
     <div class="row">
@@ -33,18 +29,7 @@
     </div>
 
     <?php
-    if(is_single()) {
-        if(!get_post_type() == 'reden' ) {
-            ?>
-
-            <div class="row">
-                <div class="col-lg-12" style="margin-top: 25px;">
-                    <button class="btn"><a href="/wordpress/aktuelles">Zurück</a></button>
-                </div>
-            </div>
-
-            <?php
-        } else {
+        if(is_single()) {
             ?>
 
             <div class="row">
@@ -55,8 +40,7 @@
 
             <?php
         }
-    }
-    ?>
+        ?>
     <div class="row">
         <div class="time">
             <?php the_time('d. F Y'); ?>
@@ -65,4 +49,10 @@
 
 </article>
 
-<hr class="custom-post-divide">
+<?php
+ if(!is_single() && !is_page(63) && !is_front_page()) {
+     ?>
+     <hr class="custom-post-divide">
+     <?php
+ }
+ ?>

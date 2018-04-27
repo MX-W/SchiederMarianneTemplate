@@ -18,10 +18,6 @@ endif;
 	<div class="col-lg-2"></div>
 	<div class="col-lg-8 col-xs-12">
 		<?php get_template_part('content'); ?>
-	</div>
-	<div class="col-lg-2"></div>
-
-</div>
 
 
 <?php get_footer(); ?>

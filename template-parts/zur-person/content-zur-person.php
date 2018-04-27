@@ -2,7 +2,7 @@
 	<div class="separator"></div>
 </div>
 
-<h1>Persönlicher Werdegang</h1>
+<h1 class="section-heading">Persönlicher Werdegang</h1>
 
 <div class="custom-hr">
 	<span class="hr-left"></span>
