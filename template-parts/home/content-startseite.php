@@ -1,7 +1,6 @@
 
-
 <div class="row">
-    <div class="placeholder"></div>
+    <div class="separator"></div>
 </div>
 
 <!--<div class="row">
@@ -11,7 +10,7 @@
 </div>-->
 
 <?php
-    $args = array(
+    $argsReden = array(
         'post_type' => 'reden',
         'posts_per_page' => 1,
         'orderby' => 'date',
@@ -19,12 +18,12 @@
     );
 
 
-    $results = new WP_Query($args);
+    $resultsReden = new WP_Query($argsReden);
 
 
-    while($results->have_posts()) {
-        if($results->have_posts()) {
-            $results->the_post();
+    while($resultsReden->have_posts()) {
+        if($resultsReden->have_posts()) {
+            $resultsReden->the_post();
             if(date_diff(new DateTime(get_the_date('d.m.Y')), new DateTime())->days <= 30) {?>
                 <div class="row">
                     <div class="col-lg-12">
@@ -42,7 +41,7 @@
                     </div>
                 </div>
 <?php
-                get_template_part('template-parts/post-formats/reden');
+                get_template_part('template-parts/post-formats/content', get_post_type());
             }
         }
     }
@@ -61,7 +60,7 @@
                 <span class="hr-left"></span>
             </div>
         </div>
-        <?php $args = array(
+        <?php $argsReminder = array(
 	        'post_type' => 'reminder',
 	        'posts_per_page' => 3,
             'meta_query' => array (
@@ -76,17 +75,39 @@
             'meta_key' => 'simdiaw-start-date',
         );
 
-        $results = new WP_Query($args);
+        $resultsReminder = new WP_Query($argsReminder);
 
-        if ( $results->have_posts() ) {
+        if ( $resultsReminder->have_posts() ) {
             ?>
             <div class="row">
                 <p>Hier sehen Sie demnächst anstehende Termine.</p>
             </div>
+
+            <div class="row">
+                <div class="separator"></div>
+            </div>
+
+            <div class="row reminder-entry">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-2">
+                    <p class="center-vertical">Datum/Uhrzeit</p>
+                </div>
+                <div class="col-lg-5">
+                    <p class="center-vertical">Ort</p>
+                </div>
+                <div class="col-lg-4">
+                    <p class="center-vertical">Info</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr-line-purple"></div>
+                </div>
+            </div>
         <?php
-            while($results->have_posts()) {
-		        $results->the_post();
-                get_template_part('template-parts/post-formats/reminder');
+            while($resultsReminder->have_posts()) {
+                $resultsReminder->the_post();
+                get_template_part('template-parts/post-formats/content', get_post_type());
 	        }
         } else {
             ?>
@@ -145,6 +166,7 @@
                 </div>
         <?php
             }
+            wp_reset_query();
         ?>
         <!--<div width="1024" height="768">Hier könnte Ihr Video stehen!</div>-->
     </div>

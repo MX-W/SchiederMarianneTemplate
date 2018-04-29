@@ -1,6 +1,3 @@
-<div class="row">
-    <div class="separator"></div>
-</div>
 
 
 <h1 class="section-heading">Wahlkreis Schwandorf-Cham</h1>
@@ -16,97 +13,54 @@
     <div class="separator"></div>
 </div>
 
+<?php
 
-<script type="text/javascript">
+$argsReminder = array(
+    'post_type' => 'reminder',
+    'posts_per_page' => -1,
+    'meta_query' => array (
+        array(
+            'key' => 'simdiaw-start-date',
+            'value' => date("Y-m-d"),
+            'compare' => '>='
+        )
+    ),
+    'orderby' => 'meta_value',
+    'order' => 'ASC',
+    'meta_key' => 'simdiaw-start-date',
+);
 
-    var templateUrl = '<?= get_bloginfo("template_url"); ?>';
+$results = new WP_Query($argsReminder);
 
-    function myMap() {
-        var open = false;
-        var mapCanvas = document.getElementById("map");
-        var mapOptions = {
-            center: new google.maps.LatLng(49.3, 12.423), zoom: 9
-        };
-        var map = new google.maps.Map(mapCanvas, mapOptions);
+global $locations;
+global $titles;
+global $dates;
 
-        var markerWernberg = new google.maps.Marker({
-            position: {
-                lat: 49.543463,
-                lng: 12.161269
-            },
-            map: map,
-            title: 'Büro Wernberg-Köblitz'
-        });
+if($results->have_posts()) {
+    $locations = array();
+    while ($results->have_posts()) {
+        $results->the_post();
+        $locations[] = get_simdiaw_location();
+        $dates[] = get_simdiaw_start_date();
+        $titles[] = get_the_title();
 
-        var markerCham = new google.maps.Marker({
-            position: {
-                lat: 49.225169,
-                lng: 12.669247
-            },
-            map: map,
-            title: 'Büro Cham'
-        });
-
-        map.data.loadGeoJson(templateUrl + '/img/maps/Schwandorf-GeoJSON.json');
-
-        var contentWernberg = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Büro Wernberg-Köblitz</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>Adresse:</b><br>'+
-            'Am Kalvarienberg 6<br>'+
-            '92533 Wernberg-Köblitz<br>'+
-            '<br><b>Tel.:</b> 09604 / 931211<br>'+
-            '<b>Fax:</b> 09604 / 931355<br>'+
-            '<b>Mail:</b> marianne.schieder@wk.bundestag.de<br>'+
-            '<br><b>Öffnungszeiten:</b><br>'+
-            'Mo. - Fr. 9.00 - 16.00 Uhr<br></p>'+
-            '</div>'+
-            '</div>';
-
-        var infoSchwandorf = new google.maps.InfoWindow({
-            content: contentWernberg
-        });
-
-        markerWernberg.addListener('click', function() {
-            open = true;
-            infoSchwandorf.open(map, markerWernberg);
-        });
-
-        var contentCham = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Büro Cham</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>Adresse:</b><br>'+
-            'Parkstraße 33<br>'+
-            '93413 Cham<br>'+
-            '<br><b>Tel.:</b> 09971 / 843626<br>'+
-            '<b>Fax:</b> 09971 / 801598<br>'+
-            '<b>Mail:</b> marianne.schieder@wk2.bundestag.de<br>'+
-            '<br><b>Öffnungszeiten:</b><br>'+
-            'Mo. - Fr. 9.00 - 14.00 Uhr<br>' +
-            'und nach Vereinbarung<br><br></p>'+
-            '</div>'+
-            '</div>';
-
-        var infoCham = new google.maps.InfoWindow({
-            content: contentCham
-        });
-
-        markerCham.addListener('click', function() {
-            open = true;
-            infoCham.open(map, markerCham);
-        });
     }
-</script>
+}
 
+wp_register_script('maps_plugin', get_template_directory_uri().'/js/wahlkreis_maps_plugin.js');
+$translation_array = array(
+        'templateUrl' => get_template_directory_uri());
 
+if(!is_null($locations)) {
+    $translation_array['geoLocations'] = $locations;
+    $translation_array['startDates'] = $dates;
+    $translation_array['titles'] = $titles;
+}
 
+wp_localize_script('maps_plugin', 'object_name', $translation_array);
+wp_print_scripts('maps_plugin');
 
-
-
+?>
 
 
 

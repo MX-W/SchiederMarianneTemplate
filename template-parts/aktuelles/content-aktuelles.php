@@ -18,7 +18,7 @@
 		while($results->have_posts()) {
 			if($results->have_posts()) {
 				$results->the_post();
-				get_template_part('content', get_post_format());
+				get_template_part('template-parts/post-formats/content', get_post_type());
 			}
 		}?>
         <div class="row">

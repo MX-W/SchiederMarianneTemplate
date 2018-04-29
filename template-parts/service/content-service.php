@@ -1,7 +1,3 @@
-<div class="row">
-    <div class="separator"></div>
-</div>
-
 <h1 class="section-heading">Service</h1>
 <div class="custom-hr">
     <span class="hr-left"></span>

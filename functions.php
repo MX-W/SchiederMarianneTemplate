@@ -129,7 +129,7 @@ function mx_w_video_format_add_custom_post_type() {
     $args = array(
         'labels' => $labels,
         'public' => true,
-        'has_archive' => false,
+        'has_archive' => true,
         'publicly_queryable' => true,
         'query_var' => true,
         'rewrite' => array( 'slug', 'video'),
@@ -146,6 +146,7 @@ function mx_w_video_format_add_custom_post_type() {
     );
 
     register_post_type( 'video', $args);
+    /*unregister_post_type('video');*/
 }
 
 /*

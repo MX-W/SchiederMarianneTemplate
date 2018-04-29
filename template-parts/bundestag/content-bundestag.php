@@ -1,7 +1,10 @@
-<div class="row">
-    <div class="separator"></div>
-</div>
 
+<div class="row">
+    <h2 class="section-heading">Bundestag</h2>
+    <div class="custom-hr">
+        <span class="hr-left"></span>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-lg-6 intro-container">
@@ -143,7 +146,7 @@
         while($results->have_posts()) {
             if($results->have_posts()) {
                 $results->the_post();
-                get_template_part('template-parts/post-formats/reden');
+                get_template_part('template-parts/post-formats/content', get_post_type());
             }
         }
         wp_reset_query();

@@ -1,36 +1,24 @@
 <?php get_header(); ?>
-<?php
-$postType = get_post_type();
-
-?>
-
-<div class="row">
-    <div class="col-lg-2"></div>
-    <div class="col-lg-8">
-
-        <div class="row">
-<?php
-
-if( strcmp($postType, 'post') === 0) {                    //  If the post type is not speeches, do this
-
-    ?>
-
     <link href=" <?php echo get_template_directory_uri() ?>/css/subpages/schieder-aktuelles.css" rel="stylesheet" type="text/css" />
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
 
+            <div class="row">
                 <div class="col-lg-8">
 
                     <?php
                     if(have_posts()) {
                         while(have_posts()) {
                             the_post();
-                            get_template_part( 'template-parts/post-formats/content', get_post_type() );
+                            get_template_part( 'content', get_post_format() );
                         }
                     }
                     ?>
                 </div>
 
 
-                <div class="col-lg-1"></div>
+
                 <div class="col-lg-3">
 
                     <div class="row">
@@ -38,7 +26,8 @@ if( strcmp($postType, 'post') === 0) {                    //  If the post type i
                     </div>
 
                     <div class="row">
-		                <?php include (__DIR__ . '/template-parts/searchform.php');?>
+                        <input id="search" type="text" placeholder="Suche"/>
+                        <a href="" class="fa fa-search"></a>
                     </div>
 
                     <div class="row">
@@ -46,7 +35,9 @@ if( strcmp($postType, 'post') === 0) {                    //  If the post type i
                     </div>
 
                     <div class="row">
-                        <?php wp_list_categories(); ?>
+                        <?php wp_list_categories( array(
+                            "exclude" => "4, 15"
+                        )); ?>
                     </div>
 
                     <div class="row">
@@ -68,25 +59,11 @@ if( strcmp($postType, 'post') === 0) {                    //  If the post type i
                     </div>
                 </div>
 
-<?php
-} else {
-    ?>
-                <div class="col-lg-12">
-
-                    <?php
-                    if(have_posts()) {
-                        while(have_posts()) {
-                            the_post();
-                            get_template_part( 'template-parts/post-formats/content', get_post_type());
-                        }
-                    }
-                    ?>
-                </div>
-    <?php }?>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
     </div>
-    </div>
-    <div class="col-lg-2"></div>
-</div>
 
 <?php
 get_footer();
