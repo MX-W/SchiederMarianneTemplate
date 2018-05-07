@@ -28,7 +28,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
-                            <h1  class="section-heading">Die letzte Rede im Bundestag</h1>
+                            <h1  class="section-heading">Die aktuellste Rede im Bundestag</h1>
                             <div class="custom-hr">
                                 <span class="hr-left"></span>
                             </div>
@@ -122,7 +122,64 @@
     </div>
 </div>
 
-<div class="separator"></div>
+<div class="row">
+    <div class="separator"></div>
+</div>
+
+
+<?php
+$argsNews = array(
+	'post-type' => 'post',
+	'posts_per_page' => 3,
+	'orderby' => 'date'
+);
+
+$resultsNews = new WP_Query($argsNews);
+
+if($resultsNews->have_posts()) {
+?>
+
+<div class="row">
+    <?php
+
+	        while($resultsNews->have_posts()) {
+		        $resultsNews->the_post();
+		        ?>
+                <div class="col-lg-3 col-margin">
+                    <?php the_post_thumbnail(); ?>
+                </div>
+		        <?php
+	        }
+	        ?>
+</div>
+<div class="row">
+	<?php
+	while($resultsNews->have_posts()) {
+		$resultsNews->the_post();
+		?>
+        <div class="col-lg-3 col-margin">
+            <h6 class="news-title"><a class="post-title-link" href="<?php the_permalink(); ?>"><?php the_title();  ?></a></h6>
+        </div>
+		<?php
+	} ?>
+</div>
+<div class="row">
+            <?php
+            while($resultsNews->have_posts()) {
+                $resultsNews->the_post();
+                ?>
+                <div class="col-lg-3 col-margin">
+                    <?php echo wp_trim_words(get_the_content(), 30); ?>
+                </div>
+                <?php
+            }
+        }
+            ?>
+</div>
+
+<div class="row">
+    <div class="separator"></div>
+</div>
 
 
 <div class="row">
