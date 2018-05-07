@@ -55,6 +55,73 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="row">
+            <h1  class="section-heading">News</h1>
+            <div class="custom-hr">
+                <span class="hr-left"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<?php
+$argsNews = array(
+	'post-type' => 'post',
+	'posts_per_page' => 3,
+	'orderby' => 'date'
+);
+
+$resultsNews = new WP_Query($argsNews);
+
+if($resultsNews->have_posts()) {
+?>
+
+<div class="row">
+	<?php
+
+	while($resultsNews->have_posts()) {
+		$resultsNews->the_post();
+		?>
+        <div class="col-lg-4 col-padding">
+			<?php the_post_thumbnail(); ?>
+        </div>
+		<?php
+	}
+	?>
+</div>
+<div class="row">
+	<?php
+	while($resultsNews->have_posts()) {
+		$resultsNews->the_post();
+		?>
+        <div class="col-lg-4 col-padding">
+            <h6 class="heading-strong"><a class="post-title-link" href="<?php the_permalink(); ?>"><?php the_title();  ?></a></h6>
+        </div>
+		<?php
+	} ?>
+</div>
+<div class="row">
+	<?php
+	while($resultsNews->have_posts()) {
+		$resultsNews->the_post();
+		?>
+        <div class="col-lg-4 col-padding">
+			<?php echo wp_trim_words(get_the_content('(mehr lesen...)'), 15); ?>
+        </div>
+		<?php
+	}
+	}
+	?>
+</div>
+
+<div class="row">
+    <div class="separator"></div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row">
             <h1  class="section-heading">Termine</h1>
             <div class="custom-hr">
                 <span class="hr-left"></span>
@@ -126,60 +193,6 @@
     <div class="separator"></div>
 </div>
 
-
-<?php
-$argsNews = array(
-	'post-type' => 'post',
-	'posts_per_page' => 3,
-	'orderby' => 'date'
-);
-
-$resultsNews = new WP_Query($argsNews);
-
-if($resultsNews->have_posts()) {
-?>
-
-<div class="row">
-    <?php
-
-	        while($resultsNews->have_posts()) {
-		        $resultsNews->the_post();
-		        ?>
-                <div class="col-lg-3 col-margin">
-                    <?php the_post_thumbnail(); ?>
-                </div>
-		        <?php
-	        }
-	        ?>
-</div>
-<div class="row">
-	<?php
-	while($resultsNews->have_posts()) {
-		$resultsNews->the_post();
-		?>
-        <div class="col-lg-3 col-margin">
-            <h6 class="news-title"><a class="post-title-link" href="<?php the_permalink(); ?>"><?php the_title();  ?></a></h6>
-        </div>
-		<?php
-	} ?>
-</div>
-<div class="row">
-            <?php
-            while($resultsNews->have_posts()) {
-                $resultsNews->the_post();
-                ?>
-                <div class="col-lg-3 col-margin">
-                    <?php echo wp_trim_words(get_the_content(), 30); ?>
-                </div>
-                <?php
-            }
-        }
-            ?>
-</div>
-
-<div class="row">
-    <div class="separator"></div>
-</div>
 
 
 <div class="row">

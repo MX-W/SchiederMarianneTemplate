@@ -8,7 +8,7 @@
 <div class="row">
     <div class="col-lg-12 col-s-12">
         <p>
-            <img class="side-image right" src="<?php echo get_template_directory_uri(); ?> /img/zur-person/zur-person-top.jpg" alt="">
+            <img class="side-image right" src="<?php echo get_template_directory_uri(); ?>/img/zur-person/zur-person-top.jpg" alt="">
             Ich bin 1962 geboren und wuchs als älteste von fünf Töchtern auf einem Bauernhof in Schwarzberg, einem kleinen Dorf in der Marktgemeinde Wernberg-Köblitz auf. <br> <br>
 
             Nach Abschluss des 2. juristischen Staatsexamens arbeitete ich als Landesgeschäftsführerin der Katholischen Landjugendbewegung Bayerns. <br> <br>
@@ -40,7 +40,7 @@
 <div class="row">
     <div class="col-lg-12 col-left col-s-12">
         <p>
-            <img class="side-image left" src="<?php echo get_template_directory_uri(); ?> /img/zur-person/zur-person-bot.jpg" alt="">
+            <img class="side-image left" src="<?php echo get_template_directory_uri(); ?>/img/zur-person/zur-person-bot.jpg" alt="">
             Neben der Politik bin ich vielseitig engagiert. Mein großes Hobby ist das Kinderzeltlager des Bundes der Deutschen Katholischen Jugend (<a href="https://www.bdkj-kinderzeltlager.de" target="_blank">BDKJ</a>) in Furth im Wald. Dieses Zeltlager findet jedes Jahr im August statt und bietet drei Wochen lang jeweils rund 130 Kindern von rund 10 bis 13 Jahren eine hervorragende Jugendfreizeit. Seit rund 30 Jahren arbeite ich ehrenamtlich als Leiterin im Arbeitskreis Zeltlager und Freizeit (ZuF) mit, der zum Bund der Deutschen Katholischen Jugend (BDKJ), Diözesanverband Regensburg gehört und die Jugendfreizeit organisiert. <br> <br>
             Außerdem unterstütze ich UNICEF und den Eine-Welt-Handel durch den Verkauf von Grußkarten sowie fair gehandelten Produkten. Kommen Sie gerne in meinem <a href="<?php echo get_site_url(); ?>/service">BürgerInnenBüro</a> vorbei, ich berate Sie gerne zum reichhaltigen Angebot!
             Wo ich selber nicht aktiv mitarbeiten kann, fördere ich gerne durch meine Mitgliedschaft in zahlreichen Vereinen und verschiedensten Organisationen. <br> <br>

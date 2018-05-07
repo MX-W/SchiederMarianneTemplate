@@ -1,6 +1,6 @@
 <?php
 
-require_once get_template_directory() . '/func/admin.php';
+/*require_once get_template_directory() . '/func/admin.php';*/
 
 /*
  *
@@ -85,8 +85,6 @@ add_action('init', 'navs_setup');
 
 add_theme_support( 'custom-header');
 add_theme_support('post-thumbnails');
-
-add_theme_support('post-formats', array('image',));
 
 
 

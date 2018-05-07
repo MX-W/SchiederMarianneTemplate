@@ -237,6 +237,10 @@ body{
     font-weight: bold;
 }
 
+.heading-normal {
+    font-weight: normal !important;
+}
+
 /*
     ======================
 
@@ -268,7 +272,6 @@ body{
 
 .post-title-link {
     color: #000 !important;
-    font-weight: normal !important;
 }
 
 .post-title-link:hover {
@@ -316,7 +319,6 @@ body{
     display: block;
     width: 100%;
     opacity: .6;
-    cursor: pointer;
 }
 
 .divider-image:hover {
@@ -357,6 +359,21 @@ body{
     float: left;
 }
 
-.col-margin {
-    margin: 0 15px;
+
+/*
+    ======================
+
+    thumbnail image
+
+    ======================
+ */
+.post-image-thumbnail > img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.col-padding {
+    padding: 15px !important;
 }

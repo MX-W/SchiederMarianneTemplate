@@ -3,15 +3,11 @@
     <span class="hr-left"></span>
 </div>
 
-<div class="row justified">
+<div class="row">
 
-    <div class="col-lg-6 col-left">
+    <div class="col-lg-12 col-left">
         <p>
             Ganz gleich ob Sie Sorgen oder Nöte haben, ob Sie Informationen zu bestimmten Themen brauchen, oder ob Sie einfach mal eine Abgeordnete persönlich kennenlernen wollen: Sie dürfen jederzeit vorbeikommen.
-        </p>
-    </div>
-    <div class="col-lg-6 col-right">
-        <p>
              Meine Mitarbeiterinnen und Mitarbeiter helfen Ihnen gerne weiter. Wenn Sie mich selber treffen wollen, sollten Sie vorsichtshalber einen Termin vereinbaren. Rufen Sie an oder senden Sie ein E-Mail!
 
         </p>
@@ -19,6 +15,13 @@
 </div>
 </div>
     <div class="col-lg-2"></div>
+</div>
+
+<div class="row">
+    <div class="separator"></div>
+</div>
+<div class="row">
+    <div class="separator"></div>
 </div>
 
 <div class="row">
