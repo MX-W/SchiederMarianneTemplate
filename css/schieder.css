@@ -335,20 +335,8 @@ body{
  */
 
 .side-image {
-    /*float: right;*/
     width: 35%;
     margin: 10px 25px;
-    /*opacity: .6;*/
-    /*cursor: pointer;*/
-}
-
-.side-image:hover {
-    -webkit-transition: .85s;
-    -moz-transition: .85s;
-    -ms-transition: .85s;
-    -o-transition: .85s;
-    transition: .85s;
-    opacity: 1;
 }
 
 .right {
