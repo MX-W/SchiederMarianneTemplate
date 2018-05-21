@@ -1,11 +1,11 @@
 function scrollEffectMenu() {
     jQuery(window).scroll(function(){
-        if(jQuery(this).scrollTop() < 100) {
-            jQuery( ".menu-header > .menu" ).css( "background-color", "rgba(255,255,255,.1)" );
+        if(jQuery(this).scrollTop() < 50) {
+            jQuery( ".menu-container" ).css( "background-color", "rgba(255,255,255,.1)" );
             jQuery(".header-contact-section").removeClass("contact-scrolled");
         }
-        if(jQuery(this).scrollTop() >= 100) {
-            jQuery( ".menu-header > .menu" ).css( "background-color", "rgba(255,255,255,1)" );
+        if(jQuery(this).scrollTop() >= 50) {
+            jQuery( ".menu-container" ).css( "background-color", "rgba(255,255,255,1)" );
             jQuery(".header-contact-section").addClass("contact-scrolled");
         }
     });

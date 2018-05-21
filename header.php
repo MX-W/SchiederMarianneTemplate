@@ -33,7 +33,14 @@ $css_classes = 'container-fluid';
             <div class="col-lg-1"></div>
         </div>
 
-        <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu-header')); ?>
+        <div class="row menu-container">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-10">
+	            <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu-header')); ?>
+            </div>
+        </div>
+
+
 
     </div>
         <div class="row">

@@ -9,48 +9,72 @@
     </div>
 </div>-->
 
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row">
+            <h1  class="section-heading">News</h1>
+            <div class="custom-hr">
+                <span class="hr-left"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <?php
-    $argsReden = array(
-        'post_type' => 'reden',
-        'posts_per_page' => 1,
-        'orderby' => 'date',
+$argsNews = array(
+	'post-type' => 'post',
+	'posts_per_page' => 3,
+	'orderby' => 'date'
+);
 
-    );
+$resultsNews = new WP_Query($argsNews);
 
-
-    $resultsReden = new WP_Query($argsReden);
-
-
-    while($resultsReden->have_posts()) {
-        if($resultsReden->have_posts()) {
-            $resultsReden->the_post();
-            if(date_diff(new DateTime(get_the_date('d.m.Y')), new DateTime())->days <= 30) {?>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="row">
-                            <h1  class="section-heading">Die letzte Rede im Bundestag</h1>
-                            <div class="custom-hr">
-                                <span class="hr-left"></span>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <p> <?php echo get_option('speech-information') ?></p>
-                        </div>
-
-                    </div>
-                </div>
-<?php
-                get_template_part('template-parts/post-formats/content', get_post_type());
-            }
-        }
-    }
-    wp_reset_query();
+if($resultsNews->have_posts()) {
 ?>
+
+<div class="row">
+	<?php
+
+	while($resultsNews->have_posts()) {
+		$resultsNews->the_post();
+		?>
+        <div class="col-lg-4 col-padding">
+			<?php the_post_thumbnail(); ?>
+        </div>
+		<?php
+	}
+	?>
+</div>
+<div class="row">
+	<?php
+	while($resultsNews->have_posts()) {
+		$resultsNews->the_post();
+		?>
+        <div class="col-lg-4 col-padding">
+            <h6 class="heading-strong"><a class="post-title-link" href="<?php the_permalink(); ?>"><?php the_title();  ?></a></h6>
+        </div>
+		<?php
+	} ?>
+</div>
+<div class="row">
+	<?php
+	while($resultsNews->have_posts()) {
+		$resultsNews->the_post();
+		?>
+        <div class="col-lg-4 col-padding">
+			<?php echo wp_trim_words(get_the_content('(mehr lesen...)'), 15); ?>
+        </div>
+		<?php
+	}
+	}
+	?>
+</div>
 
 <div class="row">
     <div class="separator"></div>
 </div>
+
 
 <div class="row">
     <div class="col-lg-12">
@@ -122,7 +146,53 @@
     </div>
 </div>
 
-<div class="separator"></div>
+<div class="row">
+    <div class="separator"></div>
+</div>
+
+
+<?php
+$argsReden = array(
+	'post_type' => 'reden',
+	'posts_per_page' => 1,
+	'orderby' => 'date',
+
+);
+
+
+$resultsReden = new WP_Query($argsReden);
+
+
+while($resultsReden->have_posts()) {
+	if($resultsReden->have_posts()) {
+		$resultsReden->the_post();
+		if(date_diff(new DateTime(get_the_date('d.m.Y')), new DateTime())->days <= 30) {?>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <h1  class="section-heading">Die aktuellste Rede im Bundestag</h1>
+                        <div class="custom-hr">
+                            <span class="hr-left"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <p> <?php echo get_option('speech-information') ?></p>
+                    </div>
+
+                </div>
+            </div>
+			<?php
+			get_template_part('template-parts/post-formats/content', get_post_type());
+		}
+	}
+}
+wp_reset_query();
+?>
+
+<div class="row">
+    <div class="separator"></div>
+</div>
 
 
 <div class="row">

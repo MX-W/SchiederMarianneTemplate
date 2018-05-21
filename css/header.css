@@ -15,18 +15,27 @@
     color: #000;
 }
 
-.menu-header {
-    margin-left: -15px;
-    margin-right: -15px;
+.menu-container {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
 }
 
-.menu-header > ul.menu {
+/*.menu-header > ul.menu {
     display: block;
     width: 100%;
     margin: 0;
     padding: 5px;
     background-color: rgba(255,255,255,.1);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.3)
+}*/
+.menu-container {
+    /*padding: 5px;*/
+    background-color: rgba(255,255,255,.1);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3)
+}
+
+#menu-hauptmenue {
+    padding:0;
 }
 
 .menu-header > ul.menu > .menu-item {
@@ -37,8 +46,8 @@
 
 
 .menu-header > ul.menu > .menu-item:first-child {
-    margin: 0 60px -20px 100px;
     padding: 5px 5px 5px 0;
+    margin-right: 50px;
 }
 
 .menu-header > ul.menu > .menu-item:first-child > a, .menu-header > ul.menu > .menu-item:last-child > a {
@@ -112,7 +121,7 @@
 
 #header-image-container {
     margin: 0 -15px 0 -15px;
-    background-image: url("../img/kuppel_bundestag-g.png");
+    background-image: url("../img/kuppel_bundestag-h.png");
     background-repeat: no-repeat !important;
     background-attachment: scroll !important;
     background-position: center center !important;

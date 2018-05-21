@@ -104,6 +104,13 @@ body{
     padding: 0 0;
 }
 
+@media only screen and (min-width: 1360px) {
+    .container-fluid {
+        padding: 0;
+        margin: 0;
+    }
+}
+
 
 
 /*
@@ -177,14 +184,6 @@ body{
     padding: 12px;
 }
 
-.col-right {
-    padding-left: 25px;
-}
-
-.col-left {
-    padding-right: 25px;
-}
-
 .justified {
     text-align: justify;
     word-break: normal;
@@ -238,6 +237,10 @@ body{
     font-weight: bold;
 }
 
+.heading-normal {
+    font-weight: normal !important;
+}
+
 /*
     ======================
 
@@ -248,16 +251,6 @@ body{
 .section-heading {
     font-size: 2rem;
 }
-
-.post-title-link {
-    color: #000 !important;
-    font-weight: normal !important;
-}
-
-.post-title-link:hover {
-    text-decoration: underline;
-}
-
 
 /*
     ======================
@@ -277,31 +270,14 @@ body{
     text-decoration: underline;
 }
 
-.right {
-    position: absolute;
-    right: 0;
+.post-title-link {
+    color: #000 !important;
 }
 
-
-
-
-/*
-    ======================
-
-    Small screen rules!
-
-    ======================
- */
-
-@media screen and (max-width: 992px) {
-    .col-right {
-        padding-left: 0;
-    }
-
-    .col-left {
-        padding-right: 0;
-    }
+.post-title-link:hover {
+    text-decoration: underline;
 }
+
 
 
 /*
@@ -310,7 +286,7 @@ body{
     Post time
 
     ======================
- */
+*/
 .time {
     font-size: 13px;
     color: #808080;
@@ -318,72 +294,111 @@ body{
 }
 
 
-
-
 /*
     ======================
 
-    Post type status
+    reminder entry
 
     ======================
- */
-.post-status-title > p {
-    text-align: center;
-    margin: 0;
-    font-size: 30px;
-    padding: 20px 0;
-}
-
-
-
-/*
-    ======================
-
-    Post type image
-
-    ======================
- */
-
-.post-image-thumbnail {
-    padding: 25px;
-}
-
-.post-image-thumbnail > img {
-    height: auto;
-    max-width: 100%;
-    /*object-fit: cover;
-    width:100%;
-    height: auto;*/
-}
-
-
-.post-image-content > p {
-    margin: 0;
-    line-height: 1.5;
-    font-size: 16px;
-}
-
-
-
-/*
-    ======================
-
-    Post type aside
-
-    ======================
- */
-.post-aside-title > p {
-    text-align: center;
-    margin: 0;
-    padding: 100px 0 0 0;
-    font-size: 30px;
-}
-
-.post-aside-content p {
-    margin-top: 20px;
-    font-size: 16px;
-}
+*/
 
 .reminder-entry:nth-child(2n) {
     background-color: #e3e3e3;
+}
+
+
+
+/*
+    ======================
+
+    divider image
+
+    ======================
+ */
+.divider-image {
+    display: block;
+    width: 100%;
+    opacity: .6;
+}
+
+.divider-image:hover {
+    transition: .85s;
+    opacity: 1;
+}
+
+/*
+    ======================
+
+    side image
+
+    ======================
+ */
+
+.side-image {
+    /*float: right;*/
+    width: 50%;
+    margin: 10px 25px;
+    /*opacity: .6;*/
+    /*cursor: pointer;*/
+}
+
+.side-image:hover {
+    -webkit-transition: .85s;
+    -moz-transition: .85s;
+    -ms-transition: .85s;
+    -o-transition: .85s;
+    transition: .85s;
+    opacity: 1;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+
+/*
+    ======================
+
+    thumbnail image
+
+    ======================
+ */
+.post-image-thumbnail > img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.col-padding {
+    padding: 15px !important;
+}
+
+/*
+    =============================
+
+        Read more triangle
+
+    =============================
+ */
+
+.read-more {
+    position: absolute;
+    right: -10px;
+    top: 8px;
+    margin-right: 25px;
+    height: 0;
+    width: 0;
+    border-top: 4px solid transparent;
+    border-right: 8px solid black;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    border-right-color: #980267;
 }

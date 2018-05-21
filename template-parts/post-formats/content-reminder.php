@@ -13,7 +13,7 @@
         ?>
     </div>
 
-    <div class="col-lg-6">
+    <div class="col-lg-5">
         <div class="row">
             <div class="col-lg-12">
                 <?php
@@ -32,5 +32,11 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-3"></div>
+    <div class="col-lg-4">
+        <?php
+
+            echo wp_trim_words(get_the_content(), 15);
+        ?>
+        <p class="read-more" onclick="onReadMore()"></p>
+    </div>
 </div>

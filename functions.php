@@ -1,6 +1,19 @@
 <?php
 
-require_once get_template_directory() . '/func/admin.php';
+/*require_once get_template_directory() . '/func/admin.php';*/
+
+/*
+ *
+ *
+ * Disable admin bar.
+ *
+ *
+ */
+add_filter( 'show_admin_bar', '__return_false' );
+
+
+
+
 /*
  * ===========================
  *
@@ -25,18 +38,16 @@ function template_script_enqueue() {
 
 	if(is_front_page()) {
         wp_enqueue_style( 'schieder-startseite', get_template_directory_uri() . '/css/subpages/schieder-startseite.css', array(), '', 'all' );
-    } elseif(is_page(59)) { //Zur Person
+    } elseif(is_page('zur-person')) { //Zur Person
         wp_enqueue_style( 'schieder-person', get_template_directory_uri() . '/css/subpages/schieder-zur-person.css', array(), '', 'all' );
-    } elseif(is_page(67)) { //Service
+    } elseif(is_page('service')) { //Service
         wp_enqueue_style( 'schieder-service', get_template_directory_uri() . '/css/subpages/schieder-service.css', array(), '', 'all' );
-    } elseif(is_page(57)) { //Aktuelles
+    } elseif(is_page('aktuelles')) { //Aktuelles
 		wp_enqueue_style( 'schieder-aktuelles', get_template_directory_uri() . '/css/subpages/schieder-aktuelles.css', array(), '', 'all');
-    } elseif(is_page(63)) { //Bundestag
+    } elseif(is_page('bundestag')) { //Bundestag
         wp_enqueue_style('schieder-bundestag', get_template_directory_uri() . '/css/subpages/schieder-bundestag.css', array(), '', 'all');
-    } elseif(is_page(61)) { //Wahlkreis
+    } elseif(is_page('wahlkreis')) { //Wahlkreis
         wp_enqueue_style('schieder-wahlkreis', get_template_directory_uri() . '/css/subpages/schieder-wahlkreis.css', array(), '', 'all');
-    } elseif(is_page(55)) {
-
     }
 }
 
@@ -74,8 +85,6 @@ add_action('init', 'navs_setup');
 
 add_theme_support( 'custom-header');
 add_theme_support('post-thumbnails');
-
-add_theme_support('post-formats', array('image',));
 
 
 
@@ -179,7 +188,7 @@ function mw_w_video_format_link_callback( $post ) {
     $value = get_post_meta($post->ID, '_video_link_value_key', true);
 
     echo '<label for="mx_w_video_link">Youtube-Link: </label>';
-    echo '<input type="text" name="mx_w_video_link" id="mx_w_video_link" value="'. $value .'" size="55"/>';
+    echo '<input type="text" name="mx_w_video_link" id="mx_w_video_link" value="'. $value .'" size="20"/>';
 }
 
 //add action for adding meta boxes
@@ -210,8 +219,6 @@ function mx_w_save_link_data( $post_id ) {
     }
 
     $data = sanitize_text_field($_POST['mx_w_video_link']);
-
-    print_r($_POST['mx_w_video_link']);
 
     update_post_meta($post_id, '_video_link_value_key', $data);
 }

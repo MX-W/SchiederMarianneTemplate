@@ -31,44 +31,8 @@ if( strcmp($postType, 'post') === 0) {                    //  If the post type i
 
 
                 <div class="col-lg-1"></div>
-                <div class="col-lg-3">
-
-                    <div class="row">
-                        <div class="separator"></div>
-                    </div>
-
-                    <div class="row">
-		                <?php include (__DIR__ . '/template-parts/searchform.php');?>
-                    </div>
-
-                    <div class="row">
-                        <div class="separator"></div>
-                    </div>
-
-                    <div class="row">
-                        <?php wp_list_categories(); ?>
-                    </div>
-
-                    <div class="row">
-                        <div class="separator"></div>
-                    </div>
-
-                    <div class="row">
-                        <p class="categories">Archiv</p>
-                    </div>
-
-                    <div class="row">
-                        <select id="archive-select" onchange="document.location.href=this.options[this.selectedIndex].value;">
-                            <option value="" hidden>Bitte Auswählen</option>
-                            <?php wp_get_archives( array(
-                                'type' => 'monthly',
-                                'format' => 'option'
-                            )); ?>
-                        </select>
-                    </div>
-                </div>
-
-<?php
+    <?php
+        get_template_part("template-parts/sidebar/sidebar");
 } else {
     ?>
                 <div class="col-lg-12">
