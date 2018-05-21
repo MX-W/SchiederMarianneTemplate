@@ -25,7 +25,7 @@ $css_classes = 'container-fluid';
 <body <?php body_class($css_classes) ?>>
 
 <div id="header-image-container">
-    <!--<img id="header-image" src="" alt="">-->
+    <img id="header-image" src="" alt="">
 </div>
 <div class="row header-container">
     <div class="col-lg-12">
