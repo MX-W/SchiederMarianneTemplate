@@ -63,7 +63,7 @@ if($resultsNews->have_posts()) {
 		$resultsNews->the_post();
 		?>
         <div class="col-lg-4 col-padding">
-			<?php echo wp_trim_words(get_the_content('(mehr lesen...)'), 15); ?>
+			<?php echo wp_trim_words(get_the_content('(mehr lesen...)'), 23); ?>
         </div>
 		<?php
 	}
@@ -133,6 +133,15 @@ if($resultsNews->have_posts()) {
                 $resultsReminder->the_post();
                 get_template_part('template-parts/post-formats/content', get_post_type());
 	        }
+	    ?>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="<?php echo get_site_url(); ?>/wahlkreis" class="all-reminder-link">Alle Termine anzeigen</a>
+                </div>
+            </div>
+
+            <?php
         } else {
             ?>
         <div class="row">

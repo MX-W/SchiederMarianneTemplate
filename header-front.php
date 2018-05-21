@@ -30,16 +30,15 @@ $css_classes = 'container-fluid';
 <div class="row header-container">
     <div class="col-lg-12">
         <div class="row header-contact-section">
-            <div class="col-lg-1"></div>
+            <div class="col-lg-2"></div>
             <div class="col-lg-10">
                 <p class="pull-left header-contact-text">
-                    <b>Fragen? Büro Berlin: 030 / 227 - 72270 - Büro Wernberg: 09604 / 931 - 211</b>
+                    <b>Fragen? Büro Berlin: 030 / 227 - 72270 - Büro Wernberg: 09604 / 931 211</b>
                 </p>
 
                 <!--<a target="_blank" class="fa fa-facebook " href="https://www.facebook.com/MarianneSchieder/"></a>
                 <a target="_blank" class="fa fa-youtube " href="https://www.youtube.com"></a>-->
             </div>
-            <div class="col-lg-1"></div>
         </div>
 
         <div class="row menu-container">

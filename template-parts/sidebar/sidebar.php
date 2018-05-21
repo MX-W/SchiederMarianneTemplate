@@ -43,7 +43,7 @@
 	</div>
 
 	<div class="row">
-		<p>Link zu den Reden</p>
+		<a href="<?php echo get_post_type_archive_link( 'reden' ); ?>">Klicken Sie hier um alle Reden zu sehen.</a>
 	</div>
 
 	<div class="row">
@@ -55,6 +55,6 @@
 	</div>
 
 	<div class="row">
-		<p>Link zur Videothek</p>
+        <a href="<?php echo get_post_type_archive_link( 'video' ); ?>">Klicken Sie hier um alle Videos zu sehen.</a>
 	</div>
 </div>

@@ -13,3 +13,8 @@ iframe {
 .news-title {
     font-weight: bold;
 }
+
+.all-reminder-link {
+    float: right;
+    color: #980267 !important;
+}
