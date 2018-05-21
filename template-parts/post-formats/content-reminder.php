@@ -21,7 +21,7 @@
                 if ( is_single() ) :
                     the_title( '<h3 class="entry-title" itemprop="name">', '</h3>' );
                 else :
-                    the_title( '<h3 class="entry-title"><a class="post-title-link" href="'. get_site_url().'/wahlkreis' .'" rel="bookmark" itemprop="name">', '</a></h3>' );
+                    the_title( '<h3 class="entry-title"><a class="post-title-link heading-normal" href="'. get_site_url().'/wahlkreis' .'" rel="bookmark" itemprop="name">', '</a></h3>' );
                 endif;
                 ?>
             </div>
