@@ -20,16 +20,8 @@
     margin-right: -15px !important;
 }
 
-/*.menu-header > ul.menu {
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 5px;
-    background-color: rgba(255,255,255,.1);
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3)
-}*/
+
 .menu-container {
-    /*padding: 5px;*/
     background-color: rgba(255,255,255,.1);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.3)
 }
@@ -49,7 +41,6 @@
 .menu-header > ul.menu > .menu-item {
     display: inline-block;
     padding: 40px 0 40px 0;
-    cursor: pointer;
 }
 
 
@@ -68,14 +59,15 @@
     color: #000;
     border-right: 1px solid #e1e1e1;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .menu-header > ul.menu > .menu-item:first-child > a {
     font-weight: bold;
-    padding: 3px 3px 3px 3px;
+    padding: 10px 120px 20px 5px;
 }
 
-.menu-header > ul.menu > .menu-item:first-child:hover {
+.menu-header > ul.menu > .menu-item:first-child:hover > a {
     background-color: #E3000F;
     transition: .5s;
 }
@@ -101,8 +93,8 @@
     position: relative;
     list-style: none;
     padding: 0;
-    margin-left: 55px;
-    margin-top: -18px;
+    margin-left: 58px;
+    margin-top: -16px;
 }
 
 
@@ -118,6 +110,10 @@
 .menu-header > ul.menu > .menu-item:hover > .sub-menu > li > a > span {
     color: #fff;
     transition: .5s;
+}
+
+.menu-header > ul.menu > .menu-item > .sub-menu > li:hover > a {
+    text-decoration: none;
 }
 
 
