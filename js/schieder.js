@@ -22,3 +22,8 @@ function setHeaderImageHeight()
 
 setHeaderImageHeight();*/
 
+function responsiveNav() {
+    jQuery("#menu-hauptmenue > .menu-item").toggleClass("show-menu");
+    jQuery("#menu-hauptmenue > .menu-item").toggleClass("hide-menu");
+    jQuery(".menu-item:first-child").toggleClass("menu-shown");
+}

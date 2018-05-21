@@ -95,9 +95,12 @@ set_post_thumbnail_size(1024, 681);
 
 function add_search_nav_item($items, $args) {
 	if($args->theme_location == 'header-menu') {
-		$items .= '<li class="menu-item"><a target="_blank" class="facebook-wrapper" href="https://www.facebook.com/MarianneSchieder/"><div class="fa fa-facebook fa-no-float menu-facebook"></div></a></li>';
-		$items .= '<li id="search-item" class="menu-item">'. file_get_contents(__DIR__ . '/template-parts/searchform-header.php', true);
-		return $items .= '</li>';
+		$items .= '<li class="menu-item hide-menu"><a target="_blank" class="facebook-wrapper" href="https://www.facebook.com/MarianneSchieder/"><div class="fa fa-facebook fa-no-float menu-facebook"></div></a></li>';
+		$items .= '<li id="search-item" class="menu-item hide-menu">'. file_get_contents(__DIR__ . '/template-parts/searchform-header.php', true);
+		$items .= '</li>';
+		/*$items .= '';*/
+
+		return $items;
 
 	} else {
 		return $items;

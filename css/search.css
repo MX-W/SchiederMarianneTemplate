@@ -17,7 +17,6 @@ button {
 }
 
 .container-3{
-    width: 200px;
     vertical-align: middle;
     white-space: nowrap;
     position: relative;
@@ -36,7 +35,7 @@ button {
     -webkit-transition: .2s;
 }
 
-.container-3:hover .icon {
+.container-3:hover .search-icon {
     /*margin-top: 16px;*/
     color: #980267;
 }
