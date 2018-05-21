@@ -8,20 +8,41 @@
             <h3><?php the_title(); ?></h3>
         </div>
     </div>
-    <!--<div class="row">
-        <div class="col-lg-12 time">
-            <?php /*the_category(); */?>
-        </div>
-    </div>-->
 
-    <div class="custom-hr">
-        <span class="hr-left"></span>
+    <div class="row">
+        <div class="time">
+            <?php the_time('d. F Y'); ?>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="custom-hr">
+            <span class="hr-left"></span>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="separator-small"></div>
     </div>
 
     <div class="row">
         <div class="col-lg-12 post-image-thumbnail">
             <?php the_post_thumbnail(); ?>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <p class="post-thumbnail-caption">
+                <?php the_post_thumbnail_caption(); ?>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="separator-small"></div>
     </div>
 
     <div class="row">
@@ -63,11 +84,6 @@
         }
     }
     ?>
-    <div class="row">
-        <div class="time">
-            <?php the_time('d. F Y'); ?>
-        </div>
-    </div>
 
 </article>
 

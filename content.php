@@ -12,4 +12,11 @@ if(is_page('aktuelles')) { //Aktuelles
     get_template_part('template-parts/bundestag/content-bundestag');
 }elseif(is_front_page()) { //Startseite
     get_template_part('template-parts/home/content-startseite');
+}elseif(is_page('impressum')) { //Impressum
+    if(have_posts()) {
+        while(have_posts()) {
+            the_post();
+            the_content();
+        }
+    }
 }

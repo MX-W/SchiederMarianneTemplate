@@ -36,6 +36,14 @@
 
 #menu-hauptmenue {
     padding:0;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#menu-hauptmenue > li:first-child {
+    justify-self: flex-start;
 }
 
 .menu-header > ul.menu > .menu-item {
@@ -47,7 +55,6 @@
 
 .menu-header > ul.menu > .menu-item:first-child {
     padding: 5px 5px 5px 0;
-    margin-right: 50px;
 }
 
 .menu-header > ul.menu > .menu-item:first-child > a, .menu-header > ul.menu > .menu-item:last-child > a {
@@ -55,8 +62,6 @@
 }
 
 .menu-header > ul.menu > .menu-item > a{
-    display: inherit;
-    /*margin: 0px;*/
     padding: 0 8px 0 8px;
     font-weight: normal;
     font-size: 21px;

@@ -290,7 +290,7 @@ body{
 .time {
     font-size: 13px;
     color: #808080;
-    padding-top: 20px;
+    padding: 0 0;
 }
 
 
@@ -336,7 +336,7 @@ body{
 
 .side-image {
     /*float: right;*/
-    width: 50%;
+    width: 35%;
     margin: 10px 25px;
     /*opacity: .6;*/
     /*cursor: pointer;*/
@@ -401,4 +401,10 @@ body{
 
 .read-more:hover {
     border-right-color: #980267;
+}
+
+.post-thumbnail-caption {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
 }
