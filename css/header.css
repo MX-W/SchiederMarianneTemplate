@@ -87,9 +87,9 @@
     background-color: transparent;
     transition: .5s;
     border-left: 1px solid white;
-}
+}*/
 
-!*      Front Page Picture  *!
+/*      Front Page Picture  */
 
 #header-image-container {
     margin: 0 -15px 0 -15px;
@@ -98,11 +98,13 @@
     background-attachment: scroll !important;
     background-position: center center !important;
     background-size: cover !important;
-}*/
+}
 
+/*
 #header-image {
     min-height: 100vh;
 }
+*/
 
 /*
     ===============
