@@ -387,8 +387,25 @@ body{
     cursor: pointer;
 }
 
+.read-more-open {
+    position: absolute;
+    right: -10px;
+    top: 8px;
+    margin-right: 25px;
+    height: 0;
+    width: 0;
+    border-right: 4px solid transparent;
+    border-top: 8px solid black;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+}
+
 .read-more:hover {
     border-right-color: #980267;
+}
+
+.read-more-open:hover {
+    border-top-color: #980267;
 }
 
 .post-thumbnail-caption {
