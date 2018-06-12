@@ -1,5 +1,7 @@
 <?php
 
+const REMINDER_SECURITY_STRING = 'reminder_Security';
+
 /*require_once get_template_directory() . '/func/admin.php';*/
 
 /*
@@ -27,6 +29,9 @@ function template_script_enqueue() {
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'bootstrapjs', get_template_directory_uri() . '/js/bootstrap/bootstrap.min.js', array(), '', true );
     wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/schieder.js', array(), '', true );
+    wp_enqueue_script( 'readmore', get_template_directory_uri() . '/js/read_more_reminder.js', array('jquery'), '', true );
+
+    wp_localize_script('readmore', 'ReminderAjax', array( 'ajaxurl' => admin_url('admin-ajax.php'), 'ajaxsecurity' => REMINDER_SECURITY_STRING));
 
     wp_enqueue_style( 'bootstrapcss', get_template_directory_uri() . '/css/bootstrap/bootstrap.min.css', array(), '', 'all' );
     wp_enqueue_style( 'header', get_template_directory_uri() . '/css/header.css', array(), '', 'all' );
@@ -285,3 +290,35 @@ function mx_w_speeches_format_add_custom_post_type() {
  * action to add the custom post type
  */
 add_action('init', 'mx_w_speeches_format_add_custom_post_type');
+
+if(is_admin()) {
+	add_action('wp_ajax_reminder_more', 'reminder_more_callback');
+	add_action('wp_ajax_nopriv_reminder_more', 'reminder_more_callback');
+}
+
+function reminder_more_callback() {
+	//check_ajax_referer(REMINDER_SECURITY_STRING, 'security');
+
+	$open = $_POST['open'];
+	$content = '';
+
+	$argsReminder = array(
+		'post_type' => 'reminder',
+		'posts_per_page' => 1,
+		'p' => intval($_POST['id']),
+	);
+
+	$result = new WP_Query($argsReminder);
+	if($result->have_posts()) {
+		$result->the_post();
+		$content = get_the_content();
+	}
+
+	if(strcmp($open, 'close')) {
+		//echo $content. '<p id="' .  $_POST["id"] . '" class="read-more-open open" onclick="onReadMore(this.id)"></p>';
+		echo wp_trim_words($content, 15) . '<p id="' .  $_POST["id"] . '" class="read-more" onclick="onReadMore(this.id)"></p>';;
+	} else {
+		//echo wp_trim_words($content, 15) . '<p id="' .  $_POST["id"] . '" class="read-more" onclick="onReadMore(this.id)"></p>';;
+		echo $content. '<p id="' .  $_POST["id"] . '" class="read-more-open open" onclick="onReadMore(this.id)"></p>';
+	}
+}
