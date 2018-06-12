@@ -86,7 +86,7 @@ if($resultsNews->have_posts()) {
         </div>
         <?php $argsReminder = array(
 	        'post_type' => 'reminder',
-	        'posts_per_page' => 3,
+	        //'posts_per_page' => 3,
             'meta_query' => array (
                 array(
                     'key' => 'simdiaw-start-date',
@@ -129,19 +129,28 @@ if($resultsNews->have_posts()) {
                 </div>
             </div>
         <?php
-            while($resultsReminder->have_posts()) {
+            $counter = 3;
+            if($resultsReminder->post_count < 3) {
+                $counter = $resultsReminder->post_count;
+            }
+
+            for($i = $counter; $i>=0; $i--) {
                 $resultsReminder->the_post();
                 get_template_part('template-parts/post-formats/content', get_post_type());
-	        }
-	    ?>
+            }
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <a href="<?php echo get_site_url(); ?>/wahlkreis" class="all-reminder-link">Alle Termine anzeigen</a>
+	        if($resultsReminder->post_count > 3) {
+                ?>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="<?php echo get_site_url(); ?>/wahlkreis" class="all-reminder-link">Alle Termine
+                            anzeigen</a>
+                    </div>
                 </div>
-            </div>
 
-            <?php
+                <?php
+            }
         } else {
             ?>
         <div class="row">
