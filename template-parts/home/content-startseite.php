@@ -86,7 +86,6 @@ if($resultsNews->have_posts()) {
         </div>
         <?php $argsReminder = array(
 	        'post_type' => 'reminder',
-	        //'posts_per_page' => 3,
             'meta_query' => array (
                 array(
                     'key' => 'simdiaw-start-date',

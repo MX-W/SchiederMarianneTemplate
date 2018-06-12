@@ -16,11 +16,11 @@ function onReadMore(clicked_id) {
             open: open
         },
         success: function (response) {
-            document.getElementById(id).parentElement.innerHTML = response;
+            if(response !== "") {
+                document.getElementById(id).parentElement.innerHTML = response;
+            }
         }
     });
-
-    //jQuery(".read-more").toggleClass("open");
 
 
 }

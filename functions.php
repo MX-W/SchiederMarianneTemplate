@@ -324,4 +324,6 @@ function reminder_more_callback() {
             echo $content . '<p id="' . $_POST["id"] . '" class="read-more-open open" onclick="onReadMore(this.id)"></p>';
         }
     }
+
+    exit;
 }
