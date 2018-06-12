@@ -37,6 +37,6 @@
 
             echo wp_trim_words(get_the_content(), 15);
         ?>
-        <p class="read-more" onclick="onReadMore()"></p>
+        <p id="<?php the_ID(); ?>" class="read-more" onclick="onReadMore(this.id)"></p>
     </div>
 </div>
