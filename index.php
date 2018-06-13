@@ -6,12 +6,15 @@ else:
 	get_header();
 endif;
 
-
-if(wp_is_mobile()):
-	echo("Du bist am Handy!");
-endif;
 ?>
 
+<div id="cookies" class="cookies-alert" style="display:none">
+    <p class="cookies-text">
+        Um die Funktionalität der Website zu gewährleisten, verwendet diese Website Cookies.
+    </p>
+    <button onclick="popUp('hide')" class="cookies-ok">Ok</button>
+    <a class="cookies-datenschutz" href="<?php echo home_url(); ?>/datenschutzerklaerung">Datenschutzerklärung</a>
+</div>
 
 <div class="row">
 

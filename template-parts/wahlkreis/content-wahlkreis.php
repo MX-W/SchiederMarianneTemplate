@@ -117,5 +117,4 @@ wp_print_scripts('maps_plugin');
     </div>
 </div>
 
-<script type="text/javascript" src="../../js/read_more_reminder.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1pHMVNqhgjGCAIoAhcIbDcQq5I2B1xsk&callback=myMap"></script>

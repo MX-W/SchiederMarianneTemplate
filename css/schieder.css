@@ -162,6 +162,15 @@ body{
     border-top: 1px solid #980267;
 }
 
+.hr-black {
+    display: inline-block;
+    position: relative;
+    left: 0;
+    width: 75%;
+    border-top: 2px solid #efefef;
+    vertical-align: middle;
+}
+
 /*
     ======================
 
@@ -241,6 +250,12 @@ body{
     font-weight: normal !important;
 }
 
+.heading-small {
+    font-size: 15px;
+    margin: 0;
+    padding: 6px 0;
+}
+
 /*
     ======================
 
@@ -251,6 +266,19 @@ body{
 .section-heading {
     font-size: 2rem;
 }
+
+/*
+    ======================
+
+    Text styling
+
+    ======================
+ */
+.text-small {
+    font-size: 13px;
+    line-height: 1.3;
+}
+
 
 /*
     ======================
@@ -276,6 +304,19 @@ body{
 
 .post-title-link:hover {
     text-decoration: underline;
+}
+
+.link-purple {
+    color: #980267 !important;
+}
+
+.link-small {
+    font-size: 13px;
+    font-style: normal;
+}
+
+.link-archive {
+    color: #808080 !important;
 }
 
 
@@ -412,4 +453,74 @@ body{
     margin-top: 15px;
     text-align: center;
     font-size: 13px;
+}
+
+
+
+/*
+    =============================
+
+        cookies alert
+
+    =============================
+ */
+
+.cookies-alert {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    /*padding: 15px;*/
+    //background-color: rgba(152,2,103, .8);
+    background-color: rgba(0,0,0, .9);
+    z-index: 10;
+    color: #fff;
+    font-size: 13px;
+}
+
+.fade-on-click {
+    opacity: 0;
+    transition: .6s;
+}
+
+.cookies-text {
+    text-align: center;
+    vertical-align: middle;
+    width: 85%;
+    margin: auto;
+    padding: 20px 0 10px 0;
+}
+
+.cookies-ok {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 1.1em 1.5em;
+    line-height: 1;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 30%;
+    margin-bottom: 10px;
+}
+
+.cookies-ok:hover {
+    color: #000;
+    background-color: rgba(255,255,255, .9);
+    transition: 1s;
+}
+
+.cookies-datenschutz {
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 1em;
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+.cookies-datenschutz:hover {
+    color: #000;
+    background-color: rgba(255,255,255, .9);
+    border: 2px solid rgba(255,255,255, .9);
+    transition: 1s;
+    text-decoration: none;
 }

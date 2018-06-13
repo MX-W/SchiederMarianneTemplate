@@ -16,7 +16,7 @@
 
     <div class="row">
 
-        <div class="col-lg-12 post post-image-content justified">
+        <div class="col-lg-12 justified">
             <?php
             if(is_single()) {
                 the_content();
