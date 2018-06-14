@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/sidebar.css">
 <div class="col-lg-3">
 
 	<div class="row">

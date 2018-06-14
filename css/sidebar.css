@@ -1,0 +1,16 @@
+li {
+    list-style: none;
+}
+
+#archive-select {
+    background-color: #e5e5e5;
+    border: .1em solid #d0d0d0;
+    padding: 3px;
+    max-height: 30px;
+    width: 211px;
+}
+
+.categories {
+    font-weight: bold;
+    font-size: 20px;
+}
