@@ -11,20 +11,18 @@
                 'paged' => $paged,
         );
 
-		global $resultsReminder;
-		 $resultsReminder = new WP_Query($args);
+		global $resultsPosts;
+        $resultsPosts = new WP_Query($args);
 
 
-		while($resultsReminder->have_posts()) {
-			if($resultsReminder->have_posts()) {
-				$resultsReminder->the_post();
+		while($resultsPosts->have_posts()) {
+			if($resultsPosts->have_posts()) {
+                $resultsPosts->the_post();
 				get_template_part('template-parts/post-formats/content', get_post_type());
 			}
 		}?>
         <div class="row">
-            <div class="nav-previous alignright"><?php next_posts_link( 'Ältere Beiträge', $resultsReminder->max_num_pages ); ?></div>
-
-            <div class="nav-next alignleft"><?php previous_posts_link( 'Neuere Beiträge' ); ?></div>
+                <?php pagination($resultsPosts->max_num_pages)?>
         </div>
 
         <div class="row">
