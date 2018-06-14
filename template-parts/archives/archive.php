@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-    <link href=" <?php echo get_template_directory_uri() ?>/css/subpages/schieder-aktuelles.css" rel="stylesheet" type="text/css" />
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
