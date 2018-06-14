@@ -29,7 +29,11 @@
         ?>
         <div class="row">
             <div class="col-lg-10">
+                <?php if(!is_archive()) { ?>
                 <iframe width="1024" height="768" src="https://www.youtube-nocookie.com/embed/<?php echo $id; ?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                <?php } else { ?>
+                <iframe width="800" height="601" src="https://www.youtube-nocookie.com/embed/<?php echo $id; ?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                <?php } ?>
             </div>
         </div>
 

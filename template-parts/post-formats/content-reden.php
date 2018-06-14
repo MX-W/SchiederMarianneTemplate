@@ -21,26 +21,13 @@
             if(is_single()) {
                 the_content();
             } else {
-                the_content('(mehr lesen...)');
+                the_content('  weiterlesen >');
             }
             ?>
         </div>
 
     </div>
 
-    <?php
-        if(is_single()) {
-            ?>
-
-            <div class="row">
-                <div class="col-lg-12" style="margin-top: 25px;">
-                    <button class="btn"><a href="/wordpress/bundestag">Zurück</a></button>
-                </div>
-            </div>
-
-            <?php
-        }
-        ?>
     <div class="row">
         <div class="time">
             <?php the_time('d. F Y'); ?>

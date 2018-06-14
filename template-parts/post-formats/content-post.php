@@ -52,39 +52,12 @@
             if(is_single()) {
                 the_content();
             } else {
-                the_content('(mehr lesen...)');
+                the_content('  weiterlesen >');
             }
             ?>
         </div>
 
     </div>
-
-    <?php
-    if(is_single()) {
-        if(!in_category('reden', $post)) {
-    ?>
-
-            <div class="row">
-                <div class="col-lg-12" style="margin-top: 25px;">
-                    <button class="btn"><a href="/wordpress/aktuelles">Zurück</a></button>
-                </div>
-            </div>
-
-    <?php
-        } else {
-            ?>
-
-            <div class="row">
-                <div class="col-lg-12" style="margin-top: 25px;">
-                    <button class="btn"><a href="/wordpress/bundestag">Zurück</a></button>
-                </div>
-            </div>
-
-    <?php
-        }
-    }
-    ?>
-
 </article>
 
 <hr class="custom-post-divide">
