@@ -12,7 +12,7 @@ if(is_page('aktuelles')) { //Aktuelles
     get_template_part('template-parts/bundestag/content-bundestag');
 }elseif(is_front_page()) { //Startseite
     get_template_part('template-parts/startseite/content-startseite');
-}elseif(is_page('impressum')) { //Impressum
+}elseif(is_page('impressum') || is_page('datenschutz')) { //Impressum
     if(have_posts()) {
         while(have_posts()) {
             the_post();
