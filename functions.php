@@ -367,3 +367,60 @@ function pagination($pages = '', $range = 2)
         echo "</div>\n";
     }
 }
+
+
+
+/*
+ *
+ * Contact form post action
+ *
+ *
+ * */
+
+/*add_action('admin_post_nopriv_contact_form', 'contact_form_callback');
+add_action('admin_post_contact_form', 'contact_form_callback');
+
+function contact_form_callback() {
+    global $response;
+    $response = "";
+
+//response messages
+    $not_human       = "Bitte füllen Sie das reCaptcha aus.";
+    $missing_content = "Bitte füllen Sie alle Felder mit * aus";
+    $email_invalid   = "Sie haben keine korrekte E-Mail Adresse eingegeben";
+    $message_unsent  = "Nachricht konnte nicht versendet werden, bitte versuchen Sie es erneut.";
+    $message_sent    = "Vielen Dank! Ihre Nachricht wurde gesendet.";
+
+//user posted variables
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['text'];
+    $subject = $_POST['subject'];
+
+//php mailer variables
+    $to = "wendl.max@gmail.com";
+    $headers = 'From: '. $email . "\r\n" .
+        'Reply-To: ' . $email . "\r\n";
+
+
+    if(empty($name) || empty($message) || empty($subject) || empty($email)){
+        my_contact_form_generate_response("error", $missing_content);
+    } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        my_contact_form_generate_response("error", $email_invalid);
+    } else {
+        $sent = wp_mail($to, $subject, strip_tags($message), $headers);
+        if($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
+        else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
+    }
+
+    wp_redirect('https://localhost/wordpress/service');
+}
+
+function my_contact_form_generate_response($type, $message){
+
+    global $response;
+
+    if($type == "success") $response = "<div class='success'>{$message}</div>";
+    else $response = "<div class='error'>{$message}</div>";
+
+}*/

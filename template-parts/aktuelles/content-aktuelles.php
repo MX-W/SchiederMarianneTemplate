@@ -7,7 +7,7 @@
 
 		$args = array(
                 'type' => 'post',
-                'posts_per_page' => 1,
+                'posts_per_page' => 5,
                 'paged' => $paged,
         );
 

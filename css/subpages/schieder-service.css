@@ -40,3 +40,19 @@ textarea {
     width: 100%;
     margin: 50px auto;
 }
+
+.error{
+    padding: 5px 9px;
+    border: 1px solid red;
+    color: red;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.success{
+    padding: 5px 9px;
+    border: 1px solid green;
+    color: green;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}

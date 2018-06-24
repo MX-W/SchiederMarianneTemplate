@@ -1,3 +1,7 @@
+<?php
+global $response;
+/*$response = "";*/
+?>
 <h1 class="section-heading">Service</h1>
 <div class="custom-hr">
     <span class="hr-left"></span>
@@ -43,22 +47,6 @@
         <div class="custom-hr">
             <span class="hr-left"></span>
         </div>
-
-        <!--<div class="row">
-            <div class="col-lg-4 col-s-12">
-                <table class="table-service">
-                    <tr>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
-        </div>-->
 
         <div class="row">
             <table class="table-service col-lg-12">
@@ -129,7 +117,9 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <form action="" method="post" type="text">
+                <form action="<?php echo get_template_directory_uri() ?>/func/contact-form.php" method="post" type="text">
+                    <input type="hidden" name="submitted" value="1">
+                    <!--<input type="hidden" name="action" value="contact_form">-->
                 <table class="table-service-form">
 
                         <tr>
@@ -142,29 +132,32 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td><h6>Haben Sie Fragen, Anmerkungen oder Ideen? Gerne können Sie mir eine Nachricht schicken!</h6></td>
+                            <td><h6>Haben Sie Fragen, Anmerkungen oder Ideen? Gerne können Sie mir eine Nachricht senden!</h6></td>
                         </tr>
+                    <tr>
+                        <td><?php echo $response; ?></td>
+                    </tr>
                         <tr>
                             <td>
                                 <div class="row">
                                 <div class="col-lg-5">
-                                    <input name="name" placeholder="Name*" class="input-service" type="text"/>
+                                    <input name="name" value="<?php if(!empty($_POST['name'])) { echo $_POST['name'];}?>" placeholder="Name*" class="input-service" type="text"/>
                                 </div>
                                 <div class="col-lg-2"></div>
                                 <div class="col-lg-5">
-                                    <input name="email" placeholder="E-Mail*" class="input-service" tpye="text" />
+                                    <input name="email" value="<?php if(!empty($_POST['email'])) { echo $_POST['email'];}?>" placeholder="E-Mail*" class="input-service" tpye="text" />
                                 </div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input name="subject" placeholder="Betreff*" class="input-service" type="text"/>
+                                <input name="subject" value="<?php if(!empty($_POST['subject'])) { echo $_POST['subject'];}?>" placeholder="Betreff*" class="input-service" type="text"/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <textarea name="text" placeholder="Ihre Nachricht*" rows="7" cols="100" class="input-service" ></textarea>
+                                <textarea name="text" placeholder="Ihre Nachricht*" rows="7" cols="100" class="input-service" ><?php if(!empty($_POST['text'])) { echo $_POST['text'];}?></textarea>
                             </td>
                         </tr>
                         <tr>
