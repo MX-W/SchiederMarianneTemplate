@@ -108,9 +108,14 @@ function add_search_nav_item($items, $args) {
 
 		return $items;
 
-	} else {
+	} else if($args->theme_location == 'footer-menu') {
+	    $oldItems = $items;
+	    $items = '<li class="menu-item"><p>CC-BY-SA Marianne Schieder, MdB</p></li>';
+	    $items .= $oldItems;
 		return $items;
-	}
+	} else {
+	    return $items;
+    }
 
 }
 add_filter('wp_nav_menu_items','add_search_nav_item', 10, 2);

@@ -9,7 +9,7 @@ global $response;
 
 <div class="row">
 
-    <div class="col-lg-12 col-left">
+    <div class="col-lg-12">
         <p>
             Ganz gleich ob Sie Sorgen oder Nöte haben, ob Sie Informationen zu bestimmten Themen brauchen, oder ob Sie einfach mal eine Abgeordnete persönlich kennenlernen wollen: Sie dürfen jederzeit vorbeikommen.
              Meine Mitarbeiterinnen und Mitarbeiter helfen Ihnen gerne weiter. Wenn Sie mich selber treffen wollen, sollten Sie vorsichtshalber einen Termin vereinbaren. Rufen Sie an oder senden Sie ein E-Mail!
@@ -51,13 +51,13 @@ global $response;
         <div class="row">
             <table class="table-service col-lg-12">
                 <tr class="tr-separate row">
-                    <td class="heading-strong table-cell-top col-lg-4">BÜRGERINNENBÜRO WERNBERG-KÖBLITZ</td>
-                    <td class="heading-strong table-cell-top col-lg-4">BÜRGERINNENBÜRO CHAM</td>
+                    <td class="heading-strong table-cell-top col-lg-4">BÜRO WERNBERG-KÖBLITZ</td>
+                    <td class="heading-strong table-cell-top col-lg-4">BÜRO CHAM</td>
                     <td class="heading-strong table-cell-top col-lg-4">BÜRO BERLIN</td>
                 </tr>
                 <tr class="tr-separate row">
-                    <td class="table-cell-top col-lg-4"><p>Das Büro in Wernberg-Köblitz ist täglich für Sie geöffnet. Meine Mitarbeiterin Maria Reitinger steht Ihnen gerne zur Verfügung.</p></td>
-                    <td class="table-cell-top col-lg-4"><p>Im BürgerInnenbüro in Cham steht Ihnen meine Mitarbeiterin Walburga Bartonizek vier halbe Tage in der Woche zur Verfügung. Gerne stehe ich Ihnen für ein Gespräch zur Verfügung - dazu bitte ich aber um vorherige Terminabsprache.</p></td>
+                    <td class="table-cell-top col-lg-4"><p>In meinem Büro in Wernberg-Köblitz steht Ihnen meine Mitarbeiterin Maria Reitinger montags bis donnerstags gerne zur Verfügung. Am Freitag ist Peter Wein für Sie vor Ort.</p></td>
+                    <td class="table-cell-top col-lg-4"><p>Walburga Bartonizek ist Ihre Ansprechpartnerin in meinem Büro in Cham. Gerne nehme auch ich mir Zeit für Sie - dazu bitte ich um vorherige Terminabsprache.</p></td>
                     <td class="table-cell-top col-lg-4"><p>Im Abgeordnetenbüro in Berlin unterstützen mich Ulrike Geißler, Hanna Malz und Felix Engelhard. Auch sie sind gerne bereit, sich Ihrer Anliegen anzunehmen.</p></td>
                 </tr>
                 <tr class="tr-separate row">
