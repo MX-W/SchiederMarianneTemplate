@@ -10,18 +10,16 @@
     </div>
 
     <div class="row">
-        <div class="time">
-            <?php the_time('d. F Y'); ?>
-        </div>
-    </div>
-
-    <div class="row">
         <div class="custom-hr">
             <span class="hr-left"></span>
         </div>
     </div>
 
-
+    <div class="row">
+        <div class="time">
+            <?php the_time('d. F Y'); ?>
+        </div>
+    </div>
 
     <div class="row">
         <div class="separator-small"></div>
