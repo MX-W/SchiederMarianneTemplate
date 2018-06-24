@@ -331,7 +331,7 @@ function reminder_more_callback() {
 
 
 
-function pagination($pages = '', $range = 2)
+function pagination($pages = '', $range = 1)
 {
     $showitems = ($range * 2)+1;
 
