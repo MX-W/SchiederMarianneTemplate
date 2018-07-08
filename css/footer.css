@@ -1,27 +1,11 @@
-/*.menu-footer {
-    margin-left: -15px;
-    margin-right: -15px;
-}*/
-
 .footer-container {
     background-color: #E3000F;
     padding: 50px;
 }
 
-.footer-link {
-    color: #fff !important;
-    font-weight: normal !important;
-    margin: 5px;
-}
 
 .footer-link:hover {
     text-decoration: underline !important;
-}
-
-.menu-footer {
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
 }
 
 .menu-footer > ul.menu {
@@ -38,8 +22,8 @@
 }
 
 .footer-container a{
-    margin: 0px;
-    padding: 0 3px 0 3px;
+    margin: 0;
+    padding: 0 4px 0 3px;
     font-weight: normal;
     font-size: 12px;
     color: #fff;
@@ -49,21 +33,16 @@
 
 .menu-footer > ul.menu > .menu-item > p{
     margin: 0;
-    padding: 0 3px 0 3px;
+    padding: 0 3px 0 4px;
     font-weight: normal;
     font-size: 12px;
     color: #fff;
     text-decoration: none;
 }
 
-.menu-footer > ul.menu > .menu-item:not(.last-item) > a, .menu-footer > ul.menu > .menu-item:not(.last-item) > p {
+.menu-footer > ul.menu > .menu-item:not(:last-child) > a, .menu-footer > ul.menu > .menu-item:not(:last-child) > p {
     border-right: 1px solid #fff;
 }
-
-/*.footer-heading {
-    color: #fff;
-    font-weight: bold;
-}*/
 
 .footer-menu-container {
     margin-bottom: -50px;

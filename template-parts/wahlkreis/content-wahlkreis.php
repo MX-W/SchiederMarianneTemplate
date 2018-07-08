@@ -16,6 +16,10 @@
     </div>
 </div>
 
+<div class="row">
+    <div class="separator-small"></div>
+</div>
+
 
 <div id="map"></div>
 

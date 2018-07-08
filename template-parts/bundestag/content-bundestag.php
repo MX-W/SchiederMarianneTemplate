@@ -50,28 +50,30 @@
                 <h6>Im Deutschen Bundestag bin ich</h6>
                 <br>
                 <ul>
-                    <li>Mitglied im Ausschuss für Bildung, Forschung und Technikfolgenabschätzung.</li>
+                    <li>Mitglied im Ältestenrat.</li>
+                    <li>Mitglied im Ausschuss für Kultur und Medien.</li>
+                    <li>Mitglied im Ausschuss für Recht und Verbraucherschutz.</li>
                     <li>Mitglied im Ausschuss für Wahlprüfung, Immunität und Geschäftsordnung.</li>
-                    <li>stellvertretendes Mitglied im Ausschuss für Recht und Verbraucherschutz.</li>
                 </ul>
             </div>
             <div class="col-lg-4">
                 <h6>In der SPD-Bundestagsfraktion bin ich</h6>
                 <br>
                 <ul>
-                    <li>Parlamentarische Geschäftsführung. (seit Nov 2017)</li>
-                    <li>stellvertretende Vorsitzende der bayerischen SPD-Landesgruppe.</li>
-                    <li>Mitglied der Arbeitsgruppen Bildung und Forschung, Kommunalpolitik und Bürgerschaftliches Engagement.</li>
-                    <li>sowie der Arbeitsgruppen Kirchenpolitik, Urheberrecht und der AWO-Parlamentariergruppe.</li>
+                    <li>Parlamentarische Geschäftsführung.</li>
+                    <li>stellvertretende Vorsitzende der Landesgruppe Bayern.</li>
+                    <li>stellvertretende Sprecherin für Wahlprüfung, Immunität und Geschäftsführung.</li>
                 </ul>
             </div>
             <div class="col-lg-4">
-                <h6>Bei Parlamentariergruppen bin ich</h6>
+                <h6>Bei weteren Gremien bin ich Mitglied:</h6>
                 <br>
                 <ul>
-                    <li>Mitglied der Deutsch-Tschechischen Parlamentariergruppe.</li>
-                    <li>Mitglied im Ausschuss für Wahlprüfung, Immunität und Geschäftsordnung.</li>
-                    <li>Mitglied der Deutsch-Mexikanischen Parlamentariergruppe.</li>
+                    <li>stellvertretende Vorsitzende der Parlamentariergruppe Slowakei-Tschechien-Ungarn</li>
+                    <li>Mitglied im Arbeitskreis politische und ethische Grundfragen im Zentralkomitte der deutschen Katholiken</li>
+                    <li>Mitglied im Beirat des Deutsch-Tschechischen Gesprächsforums</li>
+                    <li>Mitglied im Stiftungsrat der "Striftung Flucht, Vertreibung, Versöhnung"</li>
+                    <li>Mitglied im Kuratorium der "Striftung Denkmal für die ermordeten Juden Europas"</li>
                 </ul>
             </div>
             <!--<table>

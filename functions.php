@@ -112,6 +112,11 @@ function add_search_nav_item($items, $args) {
 	    $oldItems = $items;
 	    $items = '<li class="menu-item"><p>CC-BY-SA Marianne Schieder, MdB</p></li>';
 	    $items .= $oldItems;
+	    $items .= '<li class="menu-item"><a class="footer-link" href="https://www.spdfraktion.de/">SPD-Bundestagsfraktion</a></li>'.
+                    '<li class="menu-item"><a class="footer-link" href="https://spd-landesgruppe-bayern.de/">SPD-Landesgruppe Bayern</a></li>'.
+                    '<li class="menu-item"><a class="footer-link" href="https://www.kuppelkucker.de/start/">Der Bundestag für Kinder</a></li>'.
+                    '<li class="menu-item"><a class="footer-link" href="https://www.vorwaerts.de/">vorwärts-Verlag</a></li>'.
+                    '<li class="menu-item"><a class="footer-link" href="https://www.bdkj-kinderzeltlager.de/">BDKJ-Kinderzeltlager</a></li>';
 		return $items;
 	} else {
 	    return $items;

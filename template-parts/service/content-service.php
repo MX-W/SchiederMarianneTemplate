@@ -1,6 +1,13 @@
 <?php
 global $response;
-/*$response = "";*/
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require get_template_directory_uri() . '/func/PHPMailer/Exception.php';
+require get_template_directory_uri() . '/func/PHPMailer/PHPMailer.php';
+require get_template_directory_uri() . '/func/PHPMailerSMTP.php';
+
 ?>
 <h1 class="section-heading">Service</h1>
 <div class="custom-hr">
