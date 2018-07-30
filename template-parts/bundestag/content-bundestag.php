@@ -47,29 +47,29 @@
 
         <div class="row">
             <div class="col-lg-4">
-                <h6>Im Deutschen Bundestag bin ich</h6>
+                <h6>Deutscher Bundestag:</h6>
                 <br>
                 <ul>
-                    <li>Mitglied im Ältestenrat.</li>
-                    <li>Mitglied im Ausschuss für Kultur und Medien.</li>
-                    <li>Mitglied im Ausschuss für Recht und Verbraucherschutz.</li>
-                    <li>Mitglied im Ausschuss für Wahlprüfung, Immunität und Geschäftsordnung.</li>
+                    <li>Mitglied im Ältestenrat</li>
+                    <li>Mitglied im Ausschuss für Kultur und Medien</li>
+                    <li>Mitglied im Ausschuss für Recht und Verbraucherschutz</li>
+                    <li>Mitglied im Ausschuss für Wahlprüfung, Immunität und Geschäftsordnung</li>
                 </ul>
             </div>
             <div class="col-lg-4">
-                <h6>In der SPD-Bundestagsfraktion bin ich</h6>
+                <h6>SPD-Bundestagsfraktion:</h6>
                 <br>
                 <ul>
-                    <li>Parlamentarische Geschäftsführung.</li>
-                    <li>stellvertretende Vorsitzende der Landesgruppe Bayern.</li>
-                    <li>stellvertretende Sprecherin für Wahlprüfung, Immunität und Geschäftsführung.</li>
+                    <li>Parlamentarische Geschäftsführung</li>
+                    <li>Stellvertretende Vorsitzende der Landesgruppe Bayern</li>
+                    <li>Stellvertretende Sprecherin für Wahlprüfung, Immunität und Geschäftsführung</li>
+                    <li>Stellvertretende Vorsitzende der Parlamentariergruppe Slowakei-Tschechien-Ungarn</li>
                 </ul>
             </div>
             <div class="col-lg-4">
-                <h6>Bei weteren Gremien bin ich Mitglied:</h6>
+                <h6>weitere Gremien:</h6>
                 <br>
                 <ul>
-                    <li>stellvertretende Vorsitzende der Parlamentariergruppe Slowakei-Tschechien-Ungarn</li>
                     <li>Mitglied im Arbeitskreis politische und ethische Grundfragen im Zentralkomitte der deutschen Katholiken</li>
                     <li>Mitglied im Beirat des Deutsch-Tschechischen Gesprächsforums</li>
                     <li>Mitglied im Stiftungsrat der "Striftung Flucht, Vertreibung, Versöhnung"</li>
@@ -135,7 +135,7 @@
             <div class="col-lg-12">
 
                 <div class="row">
-                    <h2 class="section-heading">Meine Reden im Bundestag</h2>
+                    <h2 class="section-heading">Reden im Bundestag</h2>
 
                     <div class="custom-hr">
                         <span class="hr-left"></span>
