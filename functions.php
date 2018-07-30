@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 const REMINDER_SECURITY_STRING = 'reminder_Security';
 
 /*require_once get_template_directory() . '/func/admin.php';*/
@@ -31,8 +31,10 @@ function template_script_enqueue() {
     wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/schieder.js', array(), '', true );
     wp_enqueue_script( 'readmore', get_template_directory_uri() . '/js/read_more_reminder.js', array('jquery'), '', true );
     wp_enqueue_script( 'cookiespopup', get_template_directory_uri() . '/js/cookies_alert.js', array(), '', true );
+    wp_enqueue_script( 'privacyonload', get_template_directory_uri() . '/js/privacy_onload.js', array(), '', false );
 
     wp_localize_script('readmore', 'ReminderAjax', array( 'ajaxurl' => admin_url('admin-ajax.php'), 'ajaxsecurity' => REMINDER_SECURITY_STRING));
+    wp_localize_script('privacyonload', 'ReminderAjax', array( 'ajaxurl' => admin_url('admin-ajax.php')));
 
     wp_enqueue_style( 'bootstrapcss', get_template_directory_uri() . '/css/bootstrap/bootstrap.min.css', array(), '', 'all' );
     wp_enqueue_style( 'header', get_template_directory_uri() . '/css/header.css', array(), '', 'all' );
@@ -109,15 +111,15 @@ function add_search_nav_item($items, $args) {
 		return $items;
 
 	} else if($args->theme_location == 'footer-menu') {
-	    $oldItems = $items;
-	    $items = '<li class="menu-item"><p>CC-BY-SA Marianne Schieder, MdB</p></li>';
-	    $items .= $oldItems;
-	    $items .= '<li class="menu-item"><a class="footer-link" href="https://www.spdfraktion.de/">SPD-Bundestagsfraktion</a></li>'.
-                    '<li class="menu-item"><a class="footer-link" href="https://spd-landesgruppe-bayern.de/">SPD-Landesgruppe Bayern</a></li>'.
-                    '<li class="menu-item"><a class="footer-link" href="https://www.kuppelkucker.de/start/">Der Bundestag für Kinder</a></li>'.
-                    '<li class="menu-item"><a class="footer-link" href="https://www.vorwaerts.de/">vorwärts-Verlag</a></li>'.
-                    '<li class="menu-item"><a class="footer-link" href="https://www.bdkj-kinderzeltlager.de/">BDKJ-Kinderzeltlager</a></li>';
-		return $items;
+        $oldItems = $items;
+        $items = '<li class="menu-item"><p>CC-BY-SA Marianne Schieder, MdB</p></li>';
+        $items .= $oldItems;
+        $items .= '<li class="menu-item"><a class="footer-link" href="https://www.spdfraktion.de/"><span class="menu-image-title">SPD-Bundestagsfraktion</span></a></li>';
+        $items .= '<li class="menu-item"><a class="footer-link" href="https://spd-landesgruppe-bayern.de/"><span class="menu-image-title">SPD-Landesgruppe Bayern</span></a></li>';
+        $items .= '<li class="menu-item"><a class="footer-link" href="https://www.kuppelkucker.de/start/"><span class="menu-image-title">Der Bundestag für Kinder</span></a></li>';
+        $items .= '<li class="menu-item"><a class="footer-link" href="https://www.vorwaerts.de/"><span class="menu-image-title">vorwärts-Verlag</span></a></li>';
+        $items .= '<li class="menu-item"><a class="footer-link" href="https://www.bdkj-kinderzeltlager.de/"><span class="menu-image-title">BDKJ-Kinderzeltlager</span></a></li>';
+        return $items;
 	} else {
 	    return $items;
     }
@@ -305,6 +307,8 @@ add_action('init', 'mx_w_speeches_format_add_custom_post_type');
 if(is_admin()) {
 	add_action('wp_ajax_reminder_more', 'reminder_more_callback');
 	add_action('wp_ajax_nopriv_reminder_more', 'reminder_more_callback');
+	add_action('wp_ajax_privacy', 'privacy_callback');
+	add_action('wp_ajax_nopriv_privacy', 'privacy_callback');
 }
 
 function reminder_more_callback() {
@@ -337,6 +341,18 @@ function reminder_more_callback() {
     }
 
     exit;
+}
+
+function privacy_callback() {
+    $youtubePrivacy = $_POST['youtube'];
+    $mapsPrivacy = $_POST['maps'];
+
+    if(isset($youtubePrivacy)) {
+        $_SESSION['youtube-privacy'] = $youtubePrivacy;
+    }
+    if(isset($mapsPrivacy)) {
+        $_SESSION['maps-privacy'] = $mapsPrivacy;
+    }
 }
 
 

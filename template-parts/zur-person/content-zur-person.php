@@ -51,3 +51,7 @@
         </p>
     </div>
 </div>
+
+<div class="row">
+    <div class="separator"></div>
+</div>

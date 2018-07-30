@@ -3,9 +3,6 @@
     </div>
     <div class="col-lg-2"></div>
 </div>
-<div class="row">
-    <div class="placeholder"></div>
-</div>
 <div class="row footer-container">
     <div class="col-lg-2"></div>
     <div class="col-lg-8">

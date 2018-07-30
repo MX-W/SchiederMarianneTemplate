@@ -38,7 +38,7 @@
 
         <div class="row">
             <div>
-                <h2 class="section-heading">Aufgabenbereiche</h2>
+                <h2 class="section-heading">Funktionen</h2>
             </div>
         </div>
         <div class="custom-hr">
@@ -54,6 +54,7 @@
                     <li>Mitglied im Ausschuss für Kultur und Medien</li>
                     <li>Mitglied im Ausschuss für Recht und Verbraucherschutz</li>
                     <li>Mitglied im Ausschuss für Wahlprüfung, Immunität und Geschäftsordnung</li>
+                    <li>Stellvertretende Vorsitzende der Parlamentariergruppe Slowakei-Tschechien-Ungarn</li>
                 </ul>
             </div>
             <div class="col-lg-4">
@@ -63,11 +64,10 @@
                     <li>Parlamentarische Geschäftsführung</li>
                     <li>Stellvertretende Vorsitzende der Landesgruppe Bayern</li>
                     <li>Stellvertretende Sprecherin für Wahlprüfung, Immunität und Geschäftsführung</li>
-                    <li>Stellvertretende Vorsitzende der Parlamentariergruppe Slowakei-Tschechien-Ungarn</li>
                 </ul>
             </div>
             <div class="col-lg-4">
-                <h6>weitere Gremien:</h6>
+                <h6>Weitere Gremien:</h6>
                 <br>
                 <ul>
                     <li>Mitglied im Arbeitskreis politische und ethische Grundfragen im Zentralkomitte der deutschen Katholiken</li>
@@ -168,4 +168,8 @@
                 ?>
             </div>
 
+        </div>
+
+        <div class="row">
+            <div class="separator"></div>
         </div>

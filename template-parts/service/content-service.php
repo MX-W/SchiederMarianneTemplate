@@ -24,9 +24,6 @@ global $response;
 <div class="row">
     <div class="separator"></div>
 </div>
-<div class="row">
-    <div class="separator"></div>
-</div>
 
 <div class="row">
     <div class="col-lg-12">

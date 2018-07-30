@@ -26,5 +26,9 @@
         <div class="col-lg-2"></div>
     </div>
 
+<div class="row">
+    <div class="separator"></div>
+</div>
+
 <?php
 get_footer();

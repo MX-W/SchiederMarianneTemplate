@@ -1,4 +1,7 @@
 <?php
+if (!session_id()) {
+    session_start();
+}
 
 if(is_front_page()):
 	get_header('front');

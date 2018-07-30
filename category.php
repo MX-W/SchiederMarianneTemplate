@@ -11,57 +11,18 @@
                     if(have_posts()) {
                         while(have_posts()) {
                             the_post();
-                            get_template_part( 'content', get_post_format() );
+                            get_template_part('template-parts/post-formats/content', get_post_type());
                         }
                     }
                     ?>
                 </div>
-
-
-
-                <div class="col-lg-3">
-
-                    <div class="row">
-                        <div class="separator"></div>
-                    </div>
-
-                    <div class="row">
-		                <?php include (__DIR__ . '/template-parts/searchform.php');?>
-                    </div>
-
-                    <div class="row">
-                        <div class="separator"></div>
-                    </div>
-
-                    <div class="row">
-                        <?php wp_list_categories( array(
-                            "exclude" => "4, 15"
-                        )); ?>
-                    </div>
-
-                    <div class="row">
-                        <div class="separator"></div>
-                    </div>
-
-                    <div class="row">
-                        <p class="categories">Archiv</p>
-                    </div>
-
-                    <div class="row">
-                        <select id="archive-select" onchange="document.location.href=this.options[this.selectedIndex].value;">
-                            <option value="" hidden>Bitte Auswählen</option>
-                            <?php wp_get_archives( array(
-                                'type' => 'monthly',
-                                'format' => 'option'
-                            )); ?>
-                        </select>
-                    </div>
-                </div>
-
                 <div class="col-lg-1"></div>
+
+                <?php
+                get_template_part("template-parts/sidebar/sidebar");
+                ?>
             </div>
         </div>
-        <div class="col-lg-2"></div>
     </div>
 
 <?php

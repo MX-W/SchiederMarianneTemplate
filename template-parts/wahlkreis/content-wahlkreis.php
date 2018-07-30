@@ -132,4 +132,8 @@ wp_print_scripts('maps_plugin');
     </div>
 </div>
 
+<div class="row">
+    <div class="separator"></div>
+</div>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1pHMVNqhgjGCAIoAhcIbDcQq5I2B1xsk&callback=myMap"></script>

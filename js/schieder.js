@@ -27,3 +27,35 @@ function responsiveNav() {
     jQuery("#menu-hauptmenue > .menu-item").toggleClass("hide-menu");
     jQuery(".menu-item:first-child").toggleClass("menu-shown");
 }
+
+function setYoutubePrivacy() {
+    localStorage.setItem('youtube-privacy', 'accepted');
+    jQuery.ajax({
+        url: ReminderAjax.ajaxurl,
+        type: 'post',
+        data: {
+            action: 'privacy',
+            youtube: 'accepted',
+            maps: null
+        },
+        success: function (response) {
+        }
+    });
+    location.reload();
+}
+
+function setMapsPrivacy() {
+    localStorage.setItem('maps-privacy', 'accepted');
+    jQuery.ajax({
+        url: ReminderAjax.ajaxurl,
+        type: 'post',
+        data: {
+            action: 'privacy',
+            youtube: null,
+            maps: 'accepted'
+        },
+        success: function (response) {
+        }
+    });
+    location.reload();
+}

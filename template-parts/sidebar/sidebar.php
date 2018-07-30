@@ -21,16 +21,45 @@
 		<div class="separator"></div>
 	</div>
 
+    <div class="row">
+        <p class="categories">Kategorien</p>
+    </div>
+
+    <div class="row">
+        <?php wp_dropdown_categories( array(
+            'orderby' => 'name',
+            'order' => 'ASC',
+            'class' => 'archive-select',
+            'show_option_none' => 'Bitte auswählen',
+
+        )); ?>
+        <script type="text/javascript">
+
+            var dropdown = document.getElementById("cat");
+            function onCatChange() {
+                if ( dropdown.options[dropdown.selectedIndex].value > 0 ) {
+                    location.href = "<?php echo esc_url( home_url( '/' ) ); ?>?cat="+dropdown.options[dropdown.selectedIndex].value;
+                }
+            }
+            dropdown.onchange = onCatChange;
+
+        </script>
+    </div>
+
+    <div class="row">
+        <div class="separator"></div>
+    </div>
+
 	<div class="row">
 		<p class="categories">Archiv</p>
 	</div>
 
 	<div class="row">
-		<select id="archive-select" onchange="document.location.href=this.options[this.selectedIndex].value;">
+		<select class="archive-select" onchange="document.location.href=this.options[this.selectedIndex].value;">
 			<option value="" hidden>Bitte Auswählen</option>
 			<?php wp_get_archives( array(
 				'type' => 'monthly',
-				'format' => 'option'
+				'format' => 'option',
 			)); ?>
 		</select>
 	</div>
@@ -119,7 +148,31 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-10">
-                            <iframe width="100%" height="auto" src="https://www.youtube-nocookie.com/embed/<?php echo $id; ?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                            <?php
+                            if(isset($_SESSION['youtube-privacy'])) {?>
+                                <iframe width="100%" height="auto" src="https://www.youtube-nocookie.com/embed/<?php echo $id; ?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                            <?php
+                            } else {
+                            ?>
+                            <div style="width: 100%; height: auto; background: linear-gradient(to bottom, #980267, #E3000F); display: flex; justify-content: center; align-items: center"; ">
+                            <p style="color: white; max-width: 30%;">
+                                <b>Youtube Video anzeigen?</b>
+                                <br>
+                                <br>
+                                Um dieses Video von YouTube wiederzugeben, werden auch personenbezogene Daten an YouTube weitergeleitet.
+                                <br>
+                                <a class="youtube-privacy-link" href="https://support.google.com/youtube/answer/7671399?p=privacy_guidelines&hl=de&visit_id=0-636627590850052277-536323753&rd=1" target="_blank">YouTube Datenschutzerklärung</a>
+                                <br>
+                                <br>
+                                Soll das Video von YouTube dargestellt werden?
+                                <br>
+                                <br>
+                                <button onclick="setYoutubePrivacy()">Video anzeigen</button>
+                            </p>
+                        </div>
+                        <?php
+                    }
+                    ?>
                         </div>
                     </div>
                     <?php
@@ -141,4 +194,8 @@
             </div>
         </div>
 	</div>
+
+    <div class="row">
+        <div class="separator"></div>
+    </div>
 </div>
