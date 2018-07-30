@@ -52,7 +52,7 @@ if($resultsNews->have_posts()) {
 		$resultsNews->the_post();
 		?>
         <div class="col-lg-4 col-padding">
-            <h6 class="heading-strong"><a class="post-title-link" href="<?php the_permalink(); ?>"><?php the_title();  ?></a></h6>
+            <h6 class="news-heading"><a class="post-title-link" href="<?php the_permalink(); ?>"><?php the_title();  ?></a></h6>
         </div>
 		<?php
 	} ?>
@@ -63,7 +63,7 @@ if($resultsNews->have_posts()) {
 		$resultsNews->the_post();
 		?>
         <div class="col-lg-4 col-padding">
-			<?php echo wp_trim_words(get_the_content('(mehr lesen...)'), 23); ?>
+			<?php echo get_the_content('weiterlesen >'); ?>
         </div>
 		<?php
 	}
