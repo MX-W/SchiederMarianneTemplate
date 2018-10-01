@@ -331,15 +331,12 @@ function reminder_more_callback() {
 		$content = get_the_content();
 	}
 
-
-	if(str_word_count($content) > 15) {
-        if (strcmp($open, 'close')) {
-            //echo $content. '<p id="' .  $_POST["id"] . '" class="read-more-open open" onclick="onReadMore(this.id)"></p>';
-            echo wp_trim_words($content, 15) . '<p id="' . $_POST["id"] . '" class="read-more" onclick="onReadMore(this.id)"></p>';
-        } else {
-            //echo wp_trim_words($content, 15) . '<p id="' .  $_POST["id"] . '" class="read-more" onclick="onReadMore(this.id)"></p>';;
-            echo $content . '<p id="' . $_POST["id"] . '" class="read-more-open open" onclick="onReadMore(this.id)"></p>';
-        }
+    if (strcmp($open, 'close')) {
+        //echo $content. '<p id="' .  $_POST["id"] . '" class="read-more-open open" onclick="onReadMore(this.id)"></p>';
+        echo wp_trim_words($content, 15);
+    } else {
+        //echo wp_trim_words($content, 15) . '<p id="' .  $_POST["id"] . '" class="read-more" onclick="onReadMore(this.id)"></p>';;
+        echo $content;
     }
 
     exit;

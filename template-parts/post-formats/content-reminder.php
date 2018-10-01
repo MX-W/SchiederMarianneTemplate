@@ -33,10 +33,22 @@
         </div>
     </div>
     <div class="col-lg-4">
-        <?php
-
-            echo wp_trim_words(get_the_content(), 15);
-        ?>
-        <p id="<?php the_ID(); ?>" class="read-more" onclick="onReadMore(this.id)"></p>
+        <div class="row">
+            <div class="col-lg-11" id="reminder-content">
+                <?php
+                $content = get_the_content();
+                echo wp_trim_words($content, 15);
+                ?>
+            </div>
+            <?php
+                if(str_word_count($content) > 15) {
+                    ?>
+                    <div class="col-lg-1">
+                    <p id="<?php the_ID(); ?>" class="read-more" onclick="onReadMore(this.id)"></p>
+                    </div>
+                    <?php
+                }
+                ?>
+        </div>
     </div>
 </div>
