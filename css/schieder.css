@@ -367,6 +367,11 @@ body{
     opacity: 1;
 }
 
+.divider-image:not(:hover) {
+    transition: .85s;
+    opacity: 1;
+}
+
 /*
     ======================
 
