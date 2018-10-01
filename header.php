@@ -45,7 +45,10 @@ $css_classes = 'container-fluid';
         <div class="row menu-container">
             <div class="col-lg-2"></div>
             <div class="col-lg-10">
-	            <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu-header')); ?>
+                <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu-header')); ?>
             </div>
         </div>
 
