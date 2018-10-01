@@ -207,12 +207,12 @@ while($resultsReden->have_posts()) {
 wp_reset_query();
 ?>
 
-<div class="row">
+<!--<div class="row">
     <div class="separator"></div>
 </div>
 
 
-<!--<div class="row">
+<div class="row">
     <div class="col-lg-12">
 
         <h2 class="section-heading">Videos</h2>
@@ -279,7 +279,6 @@ wp_reset_query();
 /*            }
             wp_reset_query();
         */?>
-        <!--<div width="1024" height="768">Hier könnte Ihr Video stehen!</div>-->
     </div>
 </div>-->
 
