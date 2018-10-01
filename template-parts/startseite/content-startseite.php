@@ -248,11 +248,7 @@ wp_reset_query();
                         <?php
 /*                        } else {
                         */?>
-<<<<<<< HEAD
                         <div style="width: 1024px; height: 768px; background: linear-gradient(to bottom, #000000, #afafaf); display: flex; justify-content: center; align-items: center"; ">
-=======
-                        <div style="width: 1024px; height: 768px; background: linear-gradient(to bottom, #980267, #E3000F); display: flex; justify-content: center; align-items: center"; ">
->>>>>>> 4f87e580214f64b46da014abd5d003e4efb1312a
                         <p style="color: white; max-width: 30%;">
                             <b>Youtube Video anzeigen?</b>
                             <br>
