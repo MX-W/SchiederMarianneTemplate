@@ -111,6 +111,11 @@ body{
     }
 }
 
+.wp-post-image {
+    display: block;
+    margin:auto;
+}
+
 
 
 /*
