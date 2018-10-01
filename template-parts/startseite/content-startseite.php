@@ -212,7 +212,7 @@ wp_reset_query();
 </div>
 
 
-<div class="row">
+<!--<div class="row">
     <div class="col-lg-12">
 
         <h2 class="section-heading">Videos</h2>
@@ -222,7 +222,7 @@ wp_reset_query();
         </div>
 
         <?php
-            $argsVideo = array(
+/*            $argsVideo = array(
                 'post_type' => 'video',
                 'posts_per_page' => 1,
                 'orderby' => 'date'
@@ -237,17 +237,17 @@ wp_reset_query();
                     $url = get_post_meta($post->ID, '_video_link_value_key', true);
                     preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $url, $matches);
                     $id = $matches[1];
-                    ?>
+                    */?>
                     <div class="row">
-                        <p><?php the_content(); ?></p>
+                        <p><?php /*the_content(); */?></p>
                     </div>
                     <div class="row">
                         <?php
-                        if(isset($_SESSION['youtube-privacy'])) {?>
-                        <iframe width="1024" height="768" src="https://www.youtube-nocookie.com/embed/<?php echo $id; ?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+/*                        if(isset($_SESSION['youtube-privacy'])) {*/?>
+                        <iframe width="1024" height="768" src="https://www.youtube-nocookie.com/embed/<?php /*echo $id; */?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
                         <?php
-                        } else {
-                        ?>
+/*                        } else {
+                        */?>
                         <div style="width: 1024px; height: 768px; background: linear-gradient(to bottom, #980267, #E3000F); display: flex; justify-content: center; align-items: center"; ">
                         <p style="color: white; max-width: 30%;">
                             <b>Youtube Video anzeigen?</b>
@@ -265,23 +265,23 @@ wp_reset_query();
                         </p>
                     </div>
         <?php
-                    }
-                    ?>
+/*                    }
+                    */?>
                     </div>
                     <?php
-                }
+/*                }
             } else {
-              ?>
+              */?>
                 <div class="row">
                     <p>Zur Zeit sind leider keine Videos vorhanden.</p>
                 </div>
         <?php
-            }
+/*            }
             wp_reset_query();
-        ?>
+        */?>
         <!--<div width="1024" height="768">Hier könnte Ihr Video stehen!</div>-->
     </div>
-</div>
+</div>-->
 
 <div class="row">
     <div class="separator"></div>
