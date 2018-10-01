@@ -566,3 +566,19 @@ body{
     background: #980267; /* Current page background */
     color:#fff;
 }
+
+.youtube-privacy-link {
+    color: #fff !important;
+    text-decoration: underline !important;
+    font-weight: normal !important;
+}
+
+.categories-links {
+    color: #7e7e7e;
+    font-size: 13px !important;
+}
+
+.categories-links>a {
+    color: #7e7e7e;
+    font-weight: normal !important;
+}

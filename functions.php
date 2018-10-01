@@ -114,11 +114,11 @@ function add_search_nav_item($items, $args) {
         $oldItems = $items;
         $items = '<li class="menu-item"><p>CC-BY-SA Marianne Schieder, MdB</p></li>';
         $items .= $oldItems;
-        $items .= '<li class="menu-item"><a class="footer-link" href="https://www.spdfraktion.de/"><span class="menu-image-title">SPD-Bundestagsfraktion</span></a></li>';
-        $items .= '<li class="menu-item"><a class="footer-link" href="https://spd-landesgruppe-bayern.de/"><span class="menu-image-title">SPD-Landesgruppe Bayern</span></a></li>';
-        $items .= '<li class="menu-item"><a class="footer-link" href="https://www.kuppelkucker.de/start/"><span class="menu-image-title">Der Bundestag für Kinder</span></a></li>';
-        $items .= '<li class="menu-item"><a class="footer-link" href="https://www.vorwaerts.de/"><span class="menu-image-title">vorwärts-Verlag</span></a></li>';
-        $items .= '<li class="menu-item"><a class="footer-link" href="https://www.bdkj-kinderzeltlager.de/"><span class="menu-image-title">BDKJ-Kinderzeltlager</span></a></li>';
+        $items .= '<li class="menu-item"><a class="footer-link" target="_blank" href="https://www.spdfraktion.de/"><span class="menu-image-title">SPD-Bundestagsfraktion</span></a></li>';
+        $items .= '<li class="menu-item"><a class="footer-link" target="_blank" href="https://spd-landesgruppe-bayern.de/"><span class="menu-image-title">SPD-Landesgruppe Bayern</span></a></li>';
+        $items .= '<li class="menu-item"><a class="footer-link" target="_blank" href="https://www.kuppelkucker.de/start/"><span class="menu-image-title">Der Bundestag für Kinder</span></a></li>';
+        $items .= '<li class="menu-item"><a class="footer-link" target="_blank" href="https://www.vorwaerts.de/"><span class="menu-image-title">vorwärts-Verlag</span></a></li>';
+        $items .= '<li class="menu-item"><a class="footer-link" target="_blank" href="https://www.bdkj-kinderzeltlager.de/"><span class="menu-image-title">BDKJ-Kinderzeltlager</span></a></li>';
         return $items;
 	} else {
 	    return $items;
@@ -307,8 +307,10 @@ add_action('init', 'mx_w_speeches_format_add_custom_post_type');
 if(is_admin()) {
 	add_action('wp_ajax_reminder_more', 'reminder_more_callback');
 	add_action('wp_ajax_nopriv_reminder_more', 'reminder_more_callback');
-	add_action('wp_ajax_privacy', 'privacy_callback');
-	add_action('wp_ajax_nopriv_privacy', 'privacy_callback');
+	add_action('wp_ajax_youtube_privacy', 'privacy_youtube_callback');
+	add_action('wp_ajax_nopriv_youtube_privacy', 'privacy_youtube_callback');
+	add_action('wp_ajax_maps_privacy', 'privacy_maps_callback');
+	add_action('wp_ajax_nopriv_maps_privacy', 'privacy_maps_callback');
 }
 
 function reminder_more_callback() {
@@ -343,16 +345,12 @@ function reminder_more_callback() {
     exit;
 }
 
-function privacy_callback() {
-    $youtubePrivacy = $_POST['youtube'];
-    $mapsPrivacy = $_POST['maps'];
+function privacy_youtube_callback() {
+    $_SESSION['youtube-privacy'] = $_POST['youtube'];
+}
 
-    if(isset($youtubePrivacy)) {
-        $_SESSION['youtube-privacy'] = $youtubePrivacy;
-    }
-    if(isset($mapsPrivacy)) {
-        $_SESSION['maps-privacy'] = $mapsPrivacy;
-    }
+function privacy_maps_callback() {
+    $_SESSION['maps-privacy'] = $_POST['maps'];
 }
 
 

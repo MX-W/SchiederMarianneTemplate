@@ -50,7 +50,7 @@
                     Soll das Video von YouTube dargestellt werden?
                     <br>
                     <br>
-                    <button onclick="setYoutubePrivacy()">Video anzeigen</button>
+                    <button onclick="setYoutubePrivacy()" style="border: none; cursor: pointer; border-radius: 5px; background-color: #7e7e7e; color: #fff;">Video anzeigen?</button>
                 </p>
             </div>
                 <?php
@@ -75,7 +75,7 @@
                     Soll das Video von YouTube dargestellt werden?
                     <br>
                     <br>
-                    <button onclick="setYoutubePrivacy()">Video anzeigen</button>
+                    <button onclick="setYoutubePrivacy()" style="border: none; cursor: pointer; border-radius: 5px; background-color: #7e7e7e; color: #fff;">Video anzeigen?</button>
                 </p>
             </div>
             <?php

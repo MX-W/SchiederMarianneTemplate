@@ -29,14 +29,13 @@ function responsiveNav() {
 }
 
 function setYoutubePrivacy() {
-    localStorage.setItem('youtube-privacy', 'accepted');
+    window.localStorage.setItem('youtube-privacy', 'accepted');
     jQuery.ajax({
         url: ReminderAjax.ajaxurl,
         type: 'post',
         data: {
-            action: 'privacy',
+            action: 'youtube_privacy',
             youtube: 'accepted',
-            maps: null
         },
         success: function (response) {
         }
@@ -45,13 +44,12 @@ function setYoutubePrivacy() {
 }
 
 function setMapsPrivacy() {
-    localStorage.setItem('maps-privacy', 'accepted');
+    window.localStorage.setItem('maps-privacy', 'accepted');
     jQuery.ajax({
         url: ReminderAjax.ajaxurl,
         type: 'post',
         data: {
-            action: 'privacy',
-            youtube: null,
+            action: 'maps_privacy',
             maps: 'accepted'
         },
         success: function (response) {

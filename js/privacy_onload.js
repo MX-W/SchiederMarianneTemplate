@@ -1,21 +1,26 @@
 document.ready = function() {
-    var youtubePrivacy, mapsPrivacy = null;
-    if(localStorage.getItem('youtube-privacy')) {
-       youtubePrivacy = 'accepted';
+    if(window.localStorage.getItem('youtube-privacy')) {
+        jQuery.ajax({
+            url: ReminderAjax.ajaxurl,
+            type: 'post',
+            data: {
+                action: 'youtube_privacy',
+                youtube: 'accepted',
+            },
+            success: function (response) {
+            }
+        });
     }
-    if(localStorage.getItem('maps-privacy')) {
-        mapsPrivacy = 'accepted';
+    if(window.localStorage.getItem('maps-privacy')) {
+        jQuery.ajax({
+            url: ReminderAjax.ajaxurl,
+            type: 'post',
+            data: {
+                action: 'maps_privacy',
+                maps: 'accepted'
+            },
+            success: function (response) {
+            }
+        });
     }
-
-    jQuery.ajax({
-        url: ReminderAjax.ajaxurl,
-        type: 'post',
-        data: {
-            action: 'privacy',
-            youtube: youtubePrivacy,
-            maps: mapsPrivacy
-        },
-        success: function (response) {
-        }
-    });
 };

@@ -154,20 +154,15 @@
                             <?php
                             } else {
                             ?>
-                            <div style="width: 100%; height: auto; background: linear-gradient(to bottom, #980267, #E3000F); display: flex; justify-content: center; align-items: center"; ">
-                            <p style="color: white; max-width: 30%;">
-                                <b>Youtube Video anzeigen?</b>
-                                <br>
+                            <div style="width: 100%; height: auto; background: linear-gradient(to bottom, #000000, #afafaf); display: flex; justify-content: center; align-items: center"; ">
+                            <p style="color: white; max-width: 90%; text-align: center;">
                                 <br>
                                 Um dieses Video von YouTube wiederzugeben, werden auch personenbezogene Daten an YouTube weitergeleitet.
                                 <br>
                                 <a class="youtube-privacy-link" href="https://support.google.com/youtube/answer/7671399?p=privacy_guidelines&hl=de&visit_id=0-636627590850052277-536323753&rd=1" target="_blank">YouTube Datenschutzerklärung</a>
                                 <br>
                                 <br>
-                                Soll das Video von YouTube dargestellt werden?
-                                <br>
-                                <br>
-                                <button onclick="setYoutubePrivacy()">Video anzeigen</button>
+                                <button onclick="setYoutubePrivacy()" style="border: none; cursor: pointer; border-radius: 5px; background-color: #E3000F; color: #fff;">Video anzeigen?</button>
                             </p>
                         </div>
                         <?php

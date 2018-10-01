@@ -5,9 +5,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="row">
         <div class="col-lg-12">
-            <h3><?php the_title(); ?></h3>
+            <h3 style="margin-bottom: -5px"><?php the_title(); ?></h3>
+            <span class="categories-links">
+                <?php the_category(', '); ?>
+            </span>
         </div>
     </div>
+
+
 
     <div class="row">
         <div class="custom-hr">
