@@ -233,12 +233,12 @@
         text-decoration: none;
         cursor: pointer;
         color: #000;
-        font-size: 5px;
+        font-size: 9px;
     }
 
     .menu-header > ul.menu > .menu-item:first-child > a {
         font-weight: bold;
-        font-size: 10px;
+        font-size: 15px;
         padding: 10px 120px 20px 5px;
     }
 }
