@@ -10,9 +10,9 @@
     <div class="col-lg-12">
         <p>
             Meine Heimat ist der Wahlkreis 234 Schwandorf, der die Landkreise Schwandorf und Cham mit ihren etwa 280.000 Einwohnerinnen und Einwohnern umfasst. Er erstreckt sich von Wernberg-Köblitz, wo ich geboren wurde und noch heute wohne, im Norden bis zum Städtedreieck im Süden hinüber zum Lamer Winkel im Bayerischen Wald und an der tschechischen Grenze entlang bis nach Stadlern. Insgesamt sind das fast 3.000 km² und damit mehr als das ganze Saarland mit knapp über 2.500 km²!
-
+            <br style="line-height: 0.5;"><br style="line-height: 0.5;">
             Von hier stamme ich, hier bin ich daheim und hier lebe ich gerne. Seit 2005 kämpfe ich in Berlin mit aller Kraft und Leidenschaft für die Anliegen und Interessen unserer Heimat.
-
+            <br style="line-height: 0.5;"><br style="line-height: 0.5;">
             Ich bin viel unterwegs in den 33 Kommunen im Landkreis Schwandorf und den 39 Kommunen im Landkreis Cham. So bin ich gerne im Kontakt mit Bürgerinnen und Bürgern, mit Vereinen und Organisationen, Rathäusern und Behörden, Betrieben und Unternehmen. Wollte ich allein jeden Tag eine andere Freiwillige Feuerwehr im Wahlkreis besuchen, wäre das problemlos möglich. Ein ganzes Jahr wäre ich dann mit den Besuchen beschäftigt!
         </p>
     </div>
