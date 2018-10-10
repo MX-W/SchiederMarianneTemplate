@@ -1,17 +1,24 @@
 <?php
 
-require_once get_template_directory_uri() . 'func/PHPMailer/src/Exception.php';
-require_once get_template_directory_uri() . 'func/PHPMailer/src/PHPMailer.php';
-require_once get_template_directory_uri() . 'func/PHPMailer/src/SMTP.php';
+$root = dirname(__FILE__);
 
-/*$root = dirname(dirname(dirname(dirname(dirname(__FILE__)))));
+echo $root;
 
-if(file_exists($root . '/wp-load.php')) {
+require_once($root . '/PHPMailer/src/Exception.php');
+require_once($root . '/PHPMailer/src/PHPMailer.php');
+require_once($root . '/PHPMailer/src/SMTP.php');
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+
+/*if(file_exists($root . '/wp-load.php')) {
     require_once($root . '/wp-load.php');
 }*/
 
 global $response;
 $response = "";
+
 //response messages
 $not_human       = "Bitte füllen Sie das reCaptcha aus.";
 $missing_content = "Bitte füllen Sie alle Felder mit * aus";
@@ -25,8 +32,6 @@ $email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['text'];
 $name = $_POST['name'];
-
-echo($name);
 
 /*if($_POST['submitted']) {
 	if (empty($name) || empty($message) || empty($subject) || empty($email)) {
