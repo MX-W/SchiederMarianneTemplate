@@ -1,6 +1,19 @@
 <?php
 global $response;
 
+$root = dirname(dirname(dirname(__FILE__)));
+
+require_once($root . '/func/PHPMailer/src/Exception.php');
+require_once($root . '/func/PHPMailer/src/PHPMailer.php');
+require_once($root . '/func/PHPMailer/src/SMTP.php');
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+if(!empty($_POST)) {
+    form_action();
+}
+
 ?>
 <div class="row">
     <div class="separator"></div>
@@ -117,7 +130,7 @@ global $response;
 
         <div class="row">
             <div class="col-lg-12">
-                <form action="<?php echo get_template_directory_uri() ?>/func/contact-form.php" method="post">
+                <form method="post">
                     <input type="hidden" name="submitted" value="1">
                     <!--<input type="hidden" name="action" value="contact_form">-->
                 <table class="table-service-form">
@@ -141,28 +154,28 @@ global $response;
                             <td>
                                 <div class="row">
                                 <div class="col-lg-5">
-                                    <input name="name" value="<?php if(!empty($_POST['name'])) { echo $_POST['name'];}?>" placeholder="Name*" class="input-service" type="text"/>
+                                    <input name="sm_name" value="<?php if(!empty($_POST['name'])) { echo $_POST['name'];}?>" placeholder="Name*" class="input-service" type="text"/>
                                 </div>
                                 <div class="col-lg-2"></div>
                                 <div class="col-lg-5">
-                                    <input name="email" value="<?php if(!empty($_POST['email'])) { echo $_POST['email'];}?>" placeholder="E-Mail*" class="input-service" tpye="text" />
+                                    <input name="sm_email" value="<?php if(!empty($_POST['email'])) { echo $_POST['email'];}?>" placeholder="E-Mail*" class="input-service" tpye="text" />
                                 </div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input name="subject" value="<?php if(!empty($_POST['subject'])) { echo $_POST['subject'];}?>" placeholder="Betreff*" class="input-service" type="text"/>
+                                <input name="sm_subject" value="<?php if(!empty($_POST['subject'])) { echo $_POST['subject'];}?>" placeholder="Betreff*" class="input-service" type="text"/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <textarea name="text" placeholder="Ihre Nachricht*" rows="7" cols="100" class="input-service" ><?php if(!empty($_POST['text'])) { echo $_POST['text'];}?></textarea>
+                                <textarea name="sm_text" placeholder="Ihre Nachricht*" rows="7" cols="100" class="input-service" ><?php if(!empty($_POST['text'])) { echo $_POST['text'];}?></textarea>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="service-submit" name="submit" value="Absenden" class="input-submit" type="submit"/>
+                                <input id="service-submit" name="sm_submit" value="Absenden" class="input-submit" type="submit"/>
                             </td>
                         </tr>
 
@@ -174,3 +187,74 @@ global $response;
         <div class="row">
             <div class="separator"></div>
         </div>
+
+        <?php
+
+function form_action() {
+	$response = "";
+
+//response messages
+	$not_human       = "Bitte füllen Sie das reCaptcha aus.";
+	$missing_content = "Bitte füllen Sie alle Felder mit * aus";
+	$email_invalid   = "Sie haben keine korrekte E-Mail Adresse eingegeben";
+	$message_unsent  = "Nachricht konnte nicht versendet werden, bitte versuchen Sie es erneut.";
+	$message_sent    = "Vielen Dank! Ihre Nachricht wurde gesendet.";
+
+//user posted variables
+	$email = $_POST['sm_email'];
+	$subject = $_POST['sm_subject'];
+	$message = $_POST['sm_text'];
+	$name = $_POST['sm_name'];
+
+	/*if($_POST['submitted']) {
+		if (empty($name) || empty($message) || empty($subject) || empty($email)) {
+			my_contact_form_generate_response("error", $missing_content);
+		} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			my_contact_form_generate_response("error", $email_invalid);
+		} else {
+			$sent = wp_mail($to, $subject, strip_tags($message), $headers);
+			if ($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
+			else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
+		}
+	}*/
+
+	$mail = new PHPMailer(true);
+	try {
+		$mail->SMTPDebug = 2;
+		$mail->isSMTP();
+		$mail->Host = 'smtp.1und1.de';
+
+		$mail->SMTPAuth = true;
+		$mail->Username = 'service@marianne-schieder.de';
+		$mail->Password = 'Ma8619_MdB';
+		$mail->SMTPSecure = 'tls';
+		$mail->Port = 587;
+
+//Recipients
+		$mail->setFrom($email, $name);
+		$mail->addAddress('service@marianne-schieder.de', 'Marianne Schieder, MdB');
+		$mail->addCC($email, $name);
+		$mail->addReplyTo($email, $name);
+
+//Content
+		$mail->isHTML(true);                                  // Set email format to HTML
+		$mail->Subject = $subject;
+		$mail->Body    = $message;
+		$mail->AltBody = $message;
+
+		$mail->send();
+		//header('Location: https://'. home_url() .'/wordpress/service');
+	} catch(\Exception $e) {
+		echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+	}
+}
+
+function my_contact_form_generate_response($type, $message){
+
+	global $response;
+
+	if($type == "success") $response = "<div class='success'>{$message}</div>";
+	else $response = "<div class='error'>{$message}</div>";
+
+}
+?>
