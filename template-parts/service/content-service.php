@@ -2,6 +2,9 @@
 global $response;
 
 ?>
+<div class="row">
+    <div class="separator"></div>
+</div>
 <h1 class="section-heading">Service</h1>
 <div class="custom-hr">
     <span class="hr-left"></span>
@@ -114,7 +117,7 @@ global $response;
 
         <div class="row">
             <div class="col-lg-12">
-                <form action="<?php echo get_template_directory_uri() ?>/func/contact-form.php" method="post" type="text">
+                <form action="<?php echo get_template_directory_uri() ?>/func/contact-form.php" method="post">
                     <input type="hidden" name="submitted" value="1">
                     <!--<input type="hidden" name="action" value="contact_form">-->
                 <table class="table-service-form">

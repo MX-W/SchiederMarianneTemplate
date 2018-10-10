@@ -60,4 +60,8 @@ $total_results = $wp_query->found_posts;
     </div>
     <div class="col-lg-2"></div>
 </div>
+
+<div class="row">
+    <div class="separator"></div>
+</div>
 <?php get_footer(); ?>

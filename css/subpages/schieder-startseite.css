@@ -22,3 +22,8 @@ iframe {
     font-size: 19px;
     font-weight: bold;
 }
+
+.crop-image > img {
+    overflow: hidden;
+    clip: rect(50px, 0, 50px, 0);
+}

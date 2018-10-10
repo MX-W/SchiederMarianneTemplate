@@ -57,3 +57,14 @@ function setMapsPrivacy() {
     });
     location.reload();
 }
+
+/*
+function cropVerticalImages() {
+    var postImages = document.getElementsByClassName("wp-post-image");
+    for(var i = 0; i<= postImages.length; i++) {
+        if(postImages[i].clientHeight > postImages[i].clientWidth) {
+            postImages[i] = new Image(postImages[i]);
+            postImages[i] = getImagePortion(postImages[i], )
+        }
+    }
+}*/

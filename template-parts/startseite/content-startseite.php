@@ -38,11 +38,26 @@ if($resultsNews->have_posts()) {
 
 	while($resultsNews->have_posts()) {
 		$resultsNews->the_post();
+
+		$secondaryImage = null;
+        if (class_exists('MultiPostThumbnails')) {
+
+            $secondaryImage = MultiPostThumbnails::get_the_post_thumbnail(get_post_type(), 'secondary-image');
+        }
+        if($secondaryImage != null) {
+            ?>
+            <div class="col-lg-4 col-padding">
+                <?php echo $secondaryImage ?>
+            </div>
+
+        <?php
+        } else {
 		?>
         <div class="col-lg-4 col-padding">
-			<?php the_post_thumbnail(); ?>
+            <?php the_post_thumbnail(); ?>
         </div>
-		<?php
+        <?php
+        }
 	}
 	?>
 </div>

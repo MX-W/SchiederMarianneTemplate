@@ -65,6 +65,50 @@ add_action('wp_enqueue_scripts', 'template_script_enqueue');
 /*
  * ===========================
  *
+ * Adding a second thumbnail option
+ *
+ * ===========================
+ */
+if (class_exists('MultiPostThumbnails')) {
+
+    new MultiPostThumbnails(array(
+        'label' => 'Bild Startseite',
+        'id' => 'secondary-image',
+        'post_type' => 'post'
+    ) );
+
+}
+
+
+/*
+ * ===========================
+ *
+ * Add posts to search query
+ *
+ * ===========================
+ */
+add_filter( 'pre_get_posts', 'add_post_types_to_search_query' );
+/**
+ * This function modifies the main WordPress query to include an array of
+ * post types instead of the default 'post' post type.
+ *
+ * @param object $query  The original query.
+ * @return object $query The amended query.
+ */
+function add_post_types_to_search_query( $query ) {
+
+    if ( $query->is_search ) {
+        $query->set( 'post_type', array( 'post', 'reden', 'reminder', 'video' ) );
+    }
+
+    return $query;
+
+}
+
+
+/*
+ * ===========================
+ *
  * Activate menus
  *
  * ===========================

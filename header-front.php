@@ -34,12 +34,13 @@ $css_classes = 'container-fluid';
             ?>
             <div class="row header-contact-section">
                 <div class="col-lg-2"></div>
-                <div class="col-lg-10">
+                <div class="col-lg-8">
                     <p class="pull-left header-contact-text">
                         <b>Sie haben Fragen? Rufen Sie gerne an! Büro Berlin: 030 / 227 - 72270 - Büro Wernberg: 09604 /
                             931 211</b>
                     </p>
                 </div>
+                <div class="col-lg-2"></div>
             </div>
             <?php
         }
@@ -47,12 +48,13 @@ $css_classes = 'container-fluid';
 
         <div class="row menu-container">
             <div class="col-lg-2"></div>
-            <div class="col-lg-10">
+            <div class="col-lg-10 col-sm-8 col-s-8">
                 <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
                     <i class="fa fa-bars"></i>
                 </a>
                 <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu-header')); ?>
             </div>
+            <div class="col-sm-2 col-s-2"></div>
         </div>
     </div>
 </div>

@@ -94,20 +94,24 @@ body{
     padding: 0 0;
 }
 
-
-.placeholder {
-    height: 150px;
-    width: 100%;
-}
-
 [class*='col-'] {
     padding: 0 0;
 }
 
-@media only screen and (min-width: 1360px) {
+.placeholder {
+    height: 35px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 1404px) {
     .container-fluid {
         padding: 0;
         margin: 0;
+    }
+
+    .placeholder {
+        height: 150px;
+        width: 100%;
     }
 }
 

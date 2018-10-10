@@ -31,4 +31,8 @@ $search = new WP_Query( $search_query );
 
 </div>
 
+<div class="row">
+    <div class="separator"></div>
+</div>
+
 <?php get_footer(); ?>
