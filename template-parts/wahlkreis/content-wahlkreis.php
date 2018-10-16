@@ -1,4 +1,6 @@
-
+<div class="row">
+    <div class="separator"></div>
+</div>
 
 <h1 class="section-heading">Wahlkreis Schwandorf-Cham</h1>
 

@@ -1,5 +1,9 @@
 
 <div class="row">
+    <div class="separator"></div>
+</div>
+
+<div class="row">
     <h2 class="section-heading">Bundestag</h2>
     <div class="custom-hr">
         <span class="hr-left"></span>

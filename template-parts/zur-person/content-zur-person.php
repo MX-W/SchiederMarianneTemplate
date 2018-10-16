@@ -1,4 +1,8 @@
 
+<div class="row">
+    <div class="separator"></div>
+</div>
+
 <h1 class="section-heading">Persönlicher Werdegang</h1>
 
 <div class="custom-hr">

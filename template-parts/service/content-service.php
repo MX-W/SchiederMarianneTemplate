@@ -3,7 +3,7 @@ global $response;
 
 $root = dirname(dirname(dirname(__FILE__)));
 
-require_once($root . '/func/PHPMailer/src/Exception.php');
+/*require_once($root . '/func/PHPMailer/src/Exception.php');
 require_once($root . '/func/PHPMailer/src/PHPMailer.php');
 require_once($root . '/func/PHPMailer/src/SMTP.php');
 
@@ -12,7 +12,7 @@ use PHPMailer\PHPMailer\Exception;
 
 if(!empty($_POST)) {
     form_action();
-}
+}*/
 
 ?>
 <div class="row">
@@ -175,7 +175,7 @@ if(!empty($_POST)) {
                         </tr>
                         <tr>
                             <td>
-                                <input id="service-submit" name="sm_submit" value="Absenden" class="input-submit" type="submit"/>
+                                <input id="service-submit" name="sm_submit" value="Absenden" class="input-submit" type="submit" style="cursor: not-allowed;" title="Dieses Feature steht in Kürze zur Verfügung"/>
                             </td>
                         </tr>
 
@@ -226,7 +226,7 @@ function form_action() {
 
 		$mail->SMTPAuth = true;
 		$mail->Username = 'service@marianne-schieder.de';
-		$mail->Password = 'Ma8619_MdB';
+		$mail->Password = '';
 		$mail->SMTPSecure = 'tls';
 		$mail->Port = 587;
 
