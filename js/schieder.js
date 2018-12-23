@@ -1,17 +1,25 @@
 function scrollEffectMenu() {
     jQuery(window).scroll(function(){
         if(jQuery(this).scrollTop() < 50) {
-            jQuery( ".menu-container" ).css( "background-color", "rgba(255,255,255,.1)" );
             jQuery(".header-contact-section").removeClass("contact-scrolled");
         }
         if(jQuery(this).scrollTop() >= 50) {
-            jQuery( ".menu-container" ).css( "background-color", "rgba(255,255,255,1)" );
             jQuery(".header-contact-section").addClass("contact-scrolled");
         }
     });
 }
 
-scrollEffectMenu();
+jQuery().ready(function() {
+    if(jQuery(window).scrollTop() < 50)
+    {
+        jQuery(".header-contact-section").removeClass("contact-scrolled");
+    }
+    else if(jQuery(window).scrollTop() >= 50)
+    {
+        jQuery(".header-contact-section").addClass("contact-scrolled");
+    }
+    scrollEffectMenu();
+})
 
 /*
 function setHeaderImageHeight()
@@ -32,6 +40,7 @@ function setYoutubePrivacy() {
     window.localStorage.setItem('youtube-privacy', 'accepted');
     jQuery.ajax({
         url: ReminderAjax.ajaxurl,
+        async: false,
         type: 'post',
         data: {
             action: 'youtube_privacy',
@@ -47,6 +56,7 @@ function setMapsPrivacy() {
     window.localStorage.setItem('maps-privacy', 'accepted');
     jQuery.ajax({
         url: ReminderAjax.ajaxurl,
+        async: false,
         type: 'post',
         data: {
             action: 'maps_privacy',
@@ -68,3 +78,5 @@ function cropVerticalImages() {
         }
     }
 }*/
+
+var isFirefox = typeof InstallTrigger !== 'undefined';

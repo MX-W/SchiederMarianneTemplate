@@ -131,11 +131,17 @@
 
         </div>-->
 
-        <div class="row">
-            <div class="separator"></div>
-        </div>
+        <!--
 
-        <div class="row">
+        %%%%%%%%%%%%%%%%%%%%% Ab hier für Reden einkommentieren %%%%%%%%%%%%%%%%%%%%%
+
+        -->
+
+        <!--<div class="row">
+            <div class="separator"></div>
+        </div>-->
+
+        <!--<div class="row">
             <div class="col-lg-12">
 
                 <div class="row">
@@ -151,7 +157,7 @@
                 </div>
 
                 <?php
-
+/*
                 $args = array(
                     'type' => 'post',
                     'post_type' => 'reden',
@@ -161,18 +167,23 @@
 
                 $results = new WP_Query($args);
 
-
-                while($results->have_posts()) {
-                    if($results->have_posts()) {
+                if($results->have_posts()) {
+                    while($results->have_posts()) {
                         $results->the_post();
                         get_template_part('template-parts/post-formats/content', get_post_type());
                     }
-                }
+                } else {
+                */?>
+                <div class="row">
+                    <p>Zur Zeit sind leider noch keine Reden vorhanden.</p>
+                </div>
+                <?php
+/*                }
                 wp_reset_query();
-                ?>
+                */?>
             </div>
 
-        </div>
+        </div>-->
 
         <div class="row">
             <div class="separator"></div>

@@ -63,6 +63,13 @@
 			)); ?>
 		</select>
 	</div>
+    <div class="row">
+        <br>
+        <a class="download-link" title="Version 1.0.0" href="https://marianne-schieder.de/download/283/" rel="nofollow">
+        	Pressemitteilungen von 2006-2018 (Sofortiger Download bei Klick!)
+        </a>
+        <!-- <a onclick="downloadNews()" target="_blank">Pressemitteilungen der alten Website von 2006-2018 (automatischer Download)</a> -->
+    </div>
 
 	<div class="row">
 		<div class="separator"></div>
@@ -94,6 +101,12 @@
                 <span class="hr-black"></span>
             <?php
                 }
+            } else {
+                ?>
+                <div class="row">
+                    <p>Zur Zeit sind leider noch keine Reden vorhanden.</p>
+                </div>
+                <?php
             }
             wp_reset_query();
             ?>
@@ -175,7 +188,7 @@
             } else {
                 ?>
                 <div class="row">
-                    <p>Zur Zeit sind leider keine Videos vorhanden.</p>
+                    <p>Zur Zeit sind leider noch keine Videos vorhanden.</p>
                 </div>
                 <?php
             }

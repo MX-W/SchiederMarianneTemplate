@@ -87,7 +87,7 @@ function myMap() {
                     lng: markerPositionsLng[i]
                 },
                 icon: {
-                    path: "M113.8,22.905h-13.514v-5.406c0-3.215-2.631-5.845-5.846-5.845s-5.844,2.63-5.844,5.845v5.406H50.406v-5.406" +
+                    /*path: "M113.8,22.905h-13.514v-5.406c0-3.215-2.631-5.845-5.846-5.845s-5.844,2.63-5.844,5.845v5.406H50.406v-5.406" +
                     "  c0-3.215-2.63-5.845-5.845-5.845s-5.845,2.63-5.845,5.845v5.406H25.202c-5.533,0-10.035,4.501-10.035,10.034v74.122" +
                     "  c0,5.533,4.501,10.034,10.035,10.034h79.632c10.478,0,19-8.522,19-19V32.939C123.834,27.406,119.333,22.905,113.8,22.905z" +
                     "   M25.202,30.905h13.521c0.077,3.149,2.671,5.702,5.838,5.702c3.166,0,5.759-2.553,5.837-5.702h38.205" +
@@ -99,10 +99,14 @@ function myMap() {
                     "c-12.396,0-12.434-9.831-12.236-12.153h7.523c-0.04,1.654,0.317,2.903,1.069,3.708c0.752,1.027,1.901,1.386,3.287,1.386" +
                     "  c2.257,0,3.683-0.938,3.683-3.485c0-2.727-1.861-3.218-3.683-3.218c-1.149,0-1.703,0.135-2.297,0.225v-6.078" +
                     "  c0.594,0.045,1.228,0.179,2.297,0.179c1.664,0,3.762-0.401,3.762-2.813c0-1.967-1.98-2.727-3.603-2.727" +
-                    "  c-2.139,0-3.881,1.295-3.802,3.887H46.491z M81.264,78.135h-6.455v-6.434c3.999,0.09,7.96-1.607,8.196-6.747H89.5v31.099h-8.236V78.135z",
-                    scale: .3,
-                    fillColor: 'black',
-                    fillOpacity: .8
+                    "  c-2.139,0-3.881,1.295-3.802,3.887H46.491z M81.264,78.135h-6.455v-6.434c3.999,0.09,7.96-1.607,8.196-6.747H89.5v31.099h-8.236V78.135z",*/
+                    url: templateUrl + '/img/maps/marker-icon.png',
+                    /*scale: .3,
+                    /!*fillColor: 'black',*!/
+                    fillOpacity: .8*/
+                    scaledSize: new google.maps.Size(50, 50), // scaled size
+                    origin: new google.maps.Point(0,0), // origin
+                    anchor: new google.maps.Point(25, 50) // anchor
                 },
                 map: map,
                 animation: google.maps.Animation.DROP,
@@ -110,6 +114,31 @@ function myMap() {
             }));
         }
     }
+
+    var counter = 0;
+    markerArray.forEach(function(marker){
+
+        var content = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">'+ titles[counter]+'</h3>'+
+            '<div id="bodyContent">'+
+            '<br>'+
+            '<p><b>Adresse:</b><br>'+
+            geoLocations[counter] + '<br>'+
+            '<br>'+
+            '<b>Zeit:</b><br>'+
+            dates[counter] + '<br>'+
+            '</div>'+
+            '</div>';
+
+        google.maps.event.addListener(marker, 'click', function() {
+            info.setContent(content);
+            info.open(map, this);
+        });
+
+        counter++;
+    });
 
     /*for (var i = 0; i< markerArray.length; i++) {
 

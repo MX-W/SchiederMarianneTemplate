@@ -6,6 +6,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+    <meta name="description" content="Auf dieser Webseite können Sie Informationen über die Bundestagsabgeordnete
+        Marianne Schieder erfahren. Es werden aktuelle Termine und etwaige Bundestagsreden oder Videos präsentiert, sowie
+        die Funktionen im Bundestag und die Möglichkeit der Kontaktaufnahme gewährleistet." />
+
 	<title>Schieder Marianne, MdB</title>
 
     <!-- Favicon -->
@@ -23,10 +27,14 @@ $css_classes = 'container-fluid';
 
 ?>
 <body <?php body_class($css_classes) ?>>
-
-<div id="header-image-container">
-    <img id="header-image" src="" alt="">
+<div class="row header-image-row">
+    <div class="col-lg-12 col-s-12">
+        <div id="header-image-container">
+            <div id="header-image"></div>
+        </div>
+    </div>
 </div>
+
 <div class="row header-container">
     <div class="col-lg-12">
         <?php

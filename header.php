@@ -6,6 +6,10 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <meta name="description" content="Auf dieser Webseite können Sie Informationen über die Bundestagsabgeordnete
+        Marianne Schieder erfahren. Es werden aktuelle Termine und etwaige Bundestagsreden oder Videos präsentiert, sowie
+        die Funktionen im Bundestag und die Möglichkeit der Kontaktaufnahme gewährleistet." />
+
         <title>Schieder Marianne, MdB</title>
 
         <!-- Favicon -->
@@ -14,6 +18,7 @@
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
 
         <?php wp_head(); ?>
     </head>

@@ -17,7 +17,7 @@ function onReadMore(clicked_id) {
         },
         success: function (response) {
             if(response !== "") {
-                document.getElementById('reminder-content').innerHTML = response;
+                document.getElementById('reminder-content-' + clicked_id).innerHTML = response;
                 if(open.localeCompare("open") === -1) {
                     document.getElementById(clicked_id).classList.remove("read-more");
                     document.getElementById(clicked_id).classList.add("read-more-open", "open");

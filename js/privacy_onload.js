@@ -1,4 +1,4 @@
-document.ready = function() {
+jQuery(this).ready = function() {
     if(window.localStorage.getItem('youtube-privacy')) {
         jQuery.ajax({
             url: ReminderAjax.ajaxurl,

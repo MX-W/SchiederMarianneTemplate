@@ -27,7 +27,7 @@
 
 <?php
 if(isset($_SESSION['maps-privacy'])) {?>
-    <div id="map"></div>
+    <div id="map" style="width: 100%; height: 400px;"></div>
     <?php
 } else {
     ?>
@@ -41,7 +41,7 @@ if(isset($_SESSION['maps-privacy'])) {?>
         <a class="youtube-privacy-link" href="https://policies.google.com/privacy" target="_blank">Google Datenschutzerklärung</a>
         <br>
         <br>
-        Soll das Karte dargestellt werden?
+        Soll die Karte dargestellt werden?
         <br>
         <br>
         <button onclick="setMapsPrivacy()" style="border: none; cursor: pointer; border-radius: 5px; background-color: #E3000F; color: #fff;">Karte anzeigen?</button>
@@ -84,7 +84,16 @@ if($resultsReminder->have_posts()) {
     while ($resultsReminder->have_posts()) {
         $resultsReminder->the_post();
         $locations[] = get_simdiaw_location();
-        $dates[] = get_simdiaw_start_date();
+
+        $dateString = get_simdiaw_start_date() . '<br>';
+            if (has_simdiaw_start_time()) $dateString .= get_simdiaw_start_time();
+            if(has_simdiaw_end_date()) {
+                $dateString .= 'bis <br>';
+                $dateString .= get_simdiaw_end_date() . '<br>';
+                $dateString .= get_simdiaw_end_time();
+            }
+
+        $dates[] = $dateString;
         $titles[] = get_the_title();
 
     }
@@ -117,26 +126,36 @@ wp_print_scripts('maps_plugin');
         <?php
 		if ( $resultsReminder->have_posts() ) {
 			?>
-            <div class="row">
-                <p>Hier sehen Sie alle demnächst anstehende Termine.</p>
-            </div>
 
             <div class="row">
                 <div class="separator"></div>
             </div>
-
-            <div class="row reminder-entry">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-2">
-                    <p class="center-vertical">Datum/Uhrzeit</p>
+            <?php
+            if(!wp_is_mobile()) {
+                ?>
+                <div class="row reminder-entry">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2">
+                        <p class="center-vertical">Datum/Uhrzeit</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <p class="center-vertical">Ort</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p class="center-vertical">Info</p>
+                    </div>
                 </div>
-                <div class="col-lg-5">
-                    <p class="center-vertical">Ort</p>
+                <?php
+            } else {
+                ?>
+                <div class="row reminder-entry">
+                    <div class="col-lg-12">
+                        <p class="center-vertical">Aktuelle Termine</p>
+                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <p class="center-vertical">Info</p>
-                </div>
-            </div>
+                <?php
+            }
+            ?>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="hr-line-purple"></div>
