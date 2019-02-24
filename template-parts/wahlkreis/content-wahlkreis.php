@@ -63,14 +63,14 @@ $argsReminder = array(
     'posts_per_page' => -1,
     'meta_query' => array (
         array(
-            'key' => 'simdiaw-start-date',
+            'key' => 'termine-start-date',
             'value' => date("Y-m-d"),
             'compare' => '>='
         )
     ),
     'orderby' => 'meta_value',
     'order' => 'ASC',
-    'meta_key' => 'simdiaw-start-date',
+    'meta_key' => 'termine-start-date',
 );
 
 $resultsReminder = new WP_Query($argsReminder);
@@ -83,14 +83,14 @@ if($resultsReminder->have_posts()) {
     $locations = array();
     while ($resultsReminder->have_posts()) {
         $resultsReminder->the_post();
-        $locations[] = get_simdiaw_location();
+        $locations[] = get_termine_location();
 
-        $dateString = get_simdiaw_start_date() . '<br>';
-            if (has_simdiaw_start_time()) $dateString .= get_simdiaw_start_time();
-            if(has_simdiaw_end_date()) {
+        $dateString = get_termine_start_date() . '<br>';
+            if (has_termine_start_time()) $dateString .= get_termine_start_time();
+            if(has_termine_end_date()) {
                 $dateString .= 'bis <br>';
-                $dateString .= get_simdiaw_end_date() . '<br>';
-                $dateString .= get_simdiaw_end_time();
+                $dateString .= get_termine_end_date() . '<br>';
+                $dateString .= get_termine_end_time();
             }
 
         $dates[] = $dateString;

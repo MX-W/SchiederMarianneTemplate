@@ -153,14 +153,14 @@ if($resultsNews->have_posts()) {
             'post_type' => 'reminder',
             'meta_query' => array (
                 array(
-                    'key' => 'simdiaw-start-date',
+                    'key' => 'termine-start-date',
                     'value' => date("Y-m-d"),
                     'compare' => '>='
                 )
             ),
             'orderby' => 'meta_value',
             'order' => 'ASC',
-            'meta_key' => 'simdiaw-start-date',
+            'meta_key' => 'termine-start-date',
         );
 
         $resultsReminder = new WP_Query($argsReminder);
@@ -282,7 +282,7 @@ while($resultsReden->have_posts()) {
 wp_reset_query();
 ?>
 
-<!--<div class="row">
+<div class="row">
     <div class="separator"></div>
 </div>
 
@@ -290,72 +290,88 @@ wp_reset_query();
 <div class="row">
     <div class="col-lg-12">
 
-        <h2 class="section-heading">Videos</h2>
+        <?php
+        $argsVideo = array(
+            'post_type' => 'video',
+            'posts_per_page' => 1,
+            'orderby' => 'date'
+        );
 
-        <div class="custom-hr">
-            <span class="hr-left"></span>
+        $resultsVideo = new WP_Query($argsVideo);
+
+        if( $resultsVideo->have_posts()) {
+        $resultsVideo->the_post();
+
+        $url = get_post_meta($post->ID, '_video_link_value_key', true);
+        preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $url, $matches);
+        $id = $matches[1];
+        ?>
+        <div class="row">
+            <p><?php the_content(); ?></p>
         </div>
+        <div class="row">
+            <?php
+            if(isset($_SESSION['youtube-privacy'])) {
+                ?>
 
-        <?php
-/*            $argsVideo = array(
-                'post_type' => 'video',
-                'posts_per_page' => 1,
-                'orderby' => 'date'
-            );
+                <h2 class="section-heading">Videos</h2>
 
-            $resultsVideo = new WP_Query($argsVideo);
-
-            if( $resultsVideo->have_posts()) {
-                while($resultsVideo->have_posts()) {
-                    $resultsVideo->the_post();
-
-                    $url = get_post_meta($post->ID, '_video_link_value_key', true);
-                    preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $url, $matches);
-                    $id = $matches[1];
-                    */?>
-                    <div class="row">
-                        <p><?php /*the_content(); */?></p>
-                    </div>
-                    <div class="row">
-                        <?php
-/*                        if(isset($_SESSION['youtube-privacy'])) {*/?>
-                        <iframe width="1024" height="768" src="https://www.youtube-nocookie.com/embed/<?php /*echo $id; */?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-                        <?php
-/*                        } else {
-                        */?>
-                        <div style="width: 1024px; height: 768px; background: linear-gradient(to bottom, #000000, #afafaf); display: flex; justify-content: center; align-items: center"; ">
-                        <p style="color: white; max-width: 30%;">
-                            <b>Youtube Video anzeigen?</b>
-                            <br>
-                            <br>
-                            Um dieses Video von YouTube wiederzugeben, werden auch personenbezogene Daten an YouTube weitergeleitet.
-                            <br>
-                            <a class="youtube-privacy-link" href="https://support.google.com/youtube/answer/7671399?p=privacy_guidelines&hl=de&visit_id=0-636627590850052277-536323753&rd=1" target="_blank">YouTube Datenschutzerklärung</a>
-                            <br>
-                            <br>
-                            Soll das Video von YouTube dargestellt werden?
-                            <br>
-                            <br>
-                            <button onclick="setYoutubePrivacy()" style="border: none; cursor: pointer; border-radius: 5px; background-color: #E3000F; color: #fff;">Video anzeigen?</button>
-                        </p>
-                    </div>
-        <?php
-/*                    }
-                    */?>
-                    </div>
-                    <?php
-/*                }
-            } else {
-              */?>
-                <div class="row">
-                    <p>Zur Zeit sind leider keine Videos vorhanden.</p>
+                <div class="custom-hr">
+                    <span class="hr-left"></span>
                 </div>
-        <?php
-/*            }
-            wp_reset_query();
-        */?>
+
+                <div class="row">
+                    <div class="separator"></div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8" style="text-align: center; margin-bottom: 5px;">
+                        <h3><?php the_title(); ?></h3>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+
+
+
+                <iframe width="1024" height="768" src="https://www.youtube-nocookie.com/embed/<?php echo $id; ?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                <?php
+            } else {
+            ?>
+            <div style="width: 1024px; height: 768px; background: linear-gradient(to bottom, #000000, #afafaf); display: flex; justify-content: center; align-items: center"; ">
+            <p style="color: white; max-width: 30%;">
+                <b>Youtube Video anzeigen?</b>
+                <br>
+                <br>
+                Um dieses Video von YouTube wiederzugeben, werden auch personenbezogene Daten an YouTube weitergeleitet.
+                <br>
+                <a class="youtube-privacy-link" href="https://support.google.com/youtube/answer/7671399?p=privacy_guidelines&hl=de&visit_id=0-636627590850052277-536323753&rd=1" target="_blank">YouTube Datenschutzerklärung</a>
+                <br>
+                <br>
+                Soll das Video von YouTube dargestellt werden?
+                <br>
+                <br>
+                <button onclick="setYoutubePrivacy()" style="border: none; cursor: pointer; border-radius: 5px; background-color: #E3000F; color: #fff;">Video anzeigen?</button>
+            </p>
+        </div>
+    <?php
+    }
+    ?>
     </div>
-</div>-->
+    <?php
+    } /*else {
+        */?><!--
+        <div class="row">
+            <p>Zur Zeit sind leider keine Videos vorhanden.</p>
+        </div>
+        --><?php
+/*    }*/
+    wp_reset_query();
+    ?>
+</div>
+</div>
 
 <div class="row">
     <div class="separator"></div>

@@ -65,7 +65,7 @@
 	</div>
     <div class="row">
         <br>
-        <a class="download-link" title="Version 1.0.0" href="https://marianne-schieder.de/download/283/" rel="nofollow">
+        <a class="download-link" title="Version 1.0.0" href="https://marianne-schieder.de/download/293/" rel="nofollow">
         	Pressemitteilungen von 2006-2018 (Sofortiger Download bei Klick!)
         </a>
         <!-- <a onclick="downloadNews()" target="_blank">Pressemitteilungen der alten Website von 2006-2018 (automatischer Download)</a> -->
@@ -75,7 +75,7 @@
 		<div class="separator"></div>
 	</div>
 
-	<div class="row">
+<!--	<div class="row">
 		<p class="categories">Reden</p>
 	</div>
 
@@ -84,7 +84,7 @@
         <div class="col-lg-10">
             <div class="row">
             <?php
-            $argsReden = array(
+/*            $argsReden = array(
                 'post_type' => 'reden',
                 'posts_per_page' => 4,
                 'orderby' => 'date',
@@ -96,20 +96,20 @@
             if($resultsReden->have_posts()) {
                 while($resultsReden->have_posts()) {
                     $resultsReden->the_post();
-            ?>
-                <a class="link-archive link-small" href="<?php the_permalink(); ?>"><h5 class="heading-small"><?php the_title(); ?></h5></a>
+            */?>
+                <a class="link-archive link-small" href="<?php /*the_permalink(); */?>"><h5 class="heading-small"><?php /*the_title(); */?></h5></a>
                 <span class="hr-black"></span>
             <?php
-                }
+/*                }
             } else {
-                ?>
+                */?>
                 <div class="row">
                     <p>Zur Zeit sind leider noch keine Reden vorhanden.</p>
                 </div>
                 <?php
-            }
+/*            }
             wp_reset_query();
-            ?>
+            */?>
             </div>
 
             <div class="row">
@@ -119,13 +119,13 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <a class="link-small link-purple" href="<?php echo get_post_type_archive_link( 'reden' ); ?>">Klicken Sie hier um alle Reden zu sehen.</a>
+                    <a class="link-small link-purple" href="<?php /*echo get_post_type_archive_link( 'reden' ); */?>">Klicken Sie hier um alle Reden zu sehen.</a>
                 </div>
             </div>
 
         </div>
 
-	</div>
+	</div> !-->
 
 	<div class="row">
 		<div class="separator"></div>
@@ -140,14 +140,12 @@
             <?php
             $argsVideo = array(
                 'post_type' => 'video',
-                'posts_per_page' => 1,
                 'orderby' => 'date'
             );
 
             $resultsVideo = new WP_Query($argsVideo);
 
             if( $resultsVideo->have_posts()) {
-                while($resultsVideo->have_posts()) {
                     $resultsVideo->the_post();
 
                     $url = get_post_meta($post->ID, '_video_link_value_key', true);
@@ -162,10 +160,21 @@
                     <div class="row">
                         <div class="col-lg-10">
                             <?php
+
+
+                            /**
+                             * Render the iframe with the video
+                             */
                             if(isset($_SESSION['youtube-privacy'])) {?>
                                 <iframe width="100%" height="auto" src="https://www.youtube-nocookie.com/embed/<?php echo $id; ?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
                             <?php
-                            } else {
+                            }
+
+                            /**
+                             * Render the youtube privacy information
+                             */
+                            else
+                            {
                             ?>
                             <div style="width: 100%; height: auto; background: linear-gradient(to bottom, #000000, #afafaf); display: flex; justify-content: center; align-items: center"; ">
                             <p style="color: white; max-width: 90%; text-align: center;">
@@ -184,7 +193,6 @@
                         </div>
                     </div>
                     <?php
-                }
             } else {
                 ?>
                 <div class="row">
@@ -192,14 +200,22 @@
                 </div>
                 <?php
             }
-            wp_reset_query();
-            ?>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <a class="link-small link-purple" href="<?php echo get_post_type_archive_link( 'video' ); ?>">Klicken Sie hier um alle Videos zu sehen.</a>
+
+
+            if($resultsVideo->post_count > 1) {
+                echo $resultsVideo->post_count;
+                ?>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a class="link-small link-purple" href="<?php echo get_post_type_archive_link('video'); ?>">Klicken
+                            Sie hier um alle Videos zu sehen.</a>
+                    </div>
                 </div>
-            </div>
+                <?php
+            }
+            wp_reset_query();
+        ?>
         </div>
 	</div>
 
