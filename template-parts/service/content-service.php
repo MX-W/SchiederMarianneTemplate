@@ -360,7 +360,7 @@ function form_action() {
                              alt="Pressefoto"
                              data-toggle="modal"
                              data-target="#imageModal"
-                             data-id="582"
+                             data-id="599"
 
                         >
                         <img class="gallery-img rounded-lg"
@@ -368,14 +368,14 @@ function form_action() {
                              alt="Pressefoto"
                              data-toggle="modal"
                              data-target="#imageModal"
-                             data-id="582"
+                             data-id="602"
                         >
                         <img class="gallery-img rounded-lg"
                              src="<?php echo get_template_directory_uri(); ?>/img/pressefotos/_TT19847.jpg"
                              alt="Pressefoto"
                              data-toggle="modal"
                              data-target="#imageModal"
-                             data-id="582"
+                             data-id="605"
                         >
                     </div>
                 </div>
