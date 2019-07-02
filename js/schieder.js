@@ -19,6 +19,17 @@ jQuery().ready(function() {
         jQuery(".header-contact-section").addClass("contact-scrolled");
     }
     scrollEffectMenu();
+
+
+    jQuery(".gallery-img").on("click", function() {
+        $('#modal-image').attr('src', jQuery(this).attr('src')); // here asign the image to the modal when the user click the enlarge link
+    });
+
+    jQuery('#downloadButton').on('click', () => {
+        const src = $('#modal-image').attr('src');
+        const fileName =  src.substring(src.lastIndexOf('/')+1);
+        window.open(AjaxArray.ajaxurl + '?action=download_image&filename=' + fileName, '_blank');
+    })
 })
 
 /*
@@ -80,3 +91,4 @@ function cropVerticalImages() {
 }*/
 
 var isFirefox = typeof InstallTrigger !== 'undefined';
+

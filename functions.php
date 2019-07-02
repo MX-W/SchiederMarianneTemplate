@@ -14,7 +14,19 @@ const REMINDER_SECURITY_STRING = 'reminder_Security';
 add_filter( 'show_admin_bar', '__return_false' );
 
 
+if (!function_exists('write_log')) {
 
+	function write_log($log) {
+		if (true === WP_DEBUG) {
+			if (is_array($log) || is_object($log)) {
+				error_log(print_r($log, true));
+			} else {
+				error_log($log);
+			}
+		}
+	}
+
+}
 
 /*
  * ===========================
@@ -35,6 +47,7 @@ function template_script_enqueue() {
 
     wp_localize_script('readmore', 'ReminderAjax', array( 'ajaxurl' => admin_url('admin-ajax.php'), 'ajaxsecurity' => REMINDER_SECURITY_STRING));
     wp_localize_script('privacyonload', 'ReminderAjax', array( 'ajaxurl' => admin_url('admin-ajax.php')));
+    wp_localize_script('customjs', 'AjaxArray', array( 'ajaxurl' => admin_url('admin-ajax.php')));
 
     wp_enqueue_style( 'bootstrapcss', get_template_directory_uri() . '/css/bootstrap/bootstrap.min.css', array(), '', 'all' );
     wp_enqueue_style( 'header', get_template_directory_uri() . '/css/header.css', array(), '', 'all' );
@@ -355,6 +368,8 @@ if(is_admin()) {
 	add_action('wp_ajax_nopriv_youtube_privacy', 'privacy_youtube_callback');
 	add_action('wp_ajax_maps_privacy', 'privacy_maps_callback');
 	add_action('wp_ajax_nopriv_maps_privacy', 'privacy_maps_callback');
+	add_action('wp_ajax_download_image','download_image_callback');
+	add_action('wp_ajax__nopriv_download_image','download_image_callback');
 }
 
 function reminder_more_callback() {
@@ -393,6 +408,35 @@ function privacy_youtube_callback() {
 function privacy_maps_callback() {
     $_SESSION['maps-privacy'] = $_POST['maps'];
 }
+
+function download_image_callback() {
+	$baseFilePath = get_template_directory_uri() . '/img/pressefotos/';
+	$file_name = $_GET['filename'];
+
+	$file_path = path_join($baseFilePath, $file_name);
+
+	try{
+		header('Pragma: public');   // required
+		header('Expires: 0');       // no cache
+		header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+		header('Last-Modified: '.date ('D, d M Y H:i:s').' GMT');
+		header('Cache-Control: private',false);
+		header('Content-Type: image/jpg');
+		header('Content-Disposition: attachment; filename="Pressefoto_Marianne_Schieder.jpg"');
+		header('Content-Transfer-Encoding: binary');
+		header('Connection: close');
+		set_time_limit(0);
+		@readfile("$file_path") or die("File not found.");
+
+	}catch(Exception $e)
+	{
+		$data['error'] = $e->getMessage() ." @ ". $e->getFile() .' - '. $e->getLine();
+		echo json_encode($data);
+		die();
+	}
+
+}
+
 
 
 
