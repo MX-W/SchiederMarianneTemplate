@@ -97,6 +97,7 @@ textarea {
     font-weight: lighter;
     font-size: 30px;
     color: #cc2535;
+    cursor: pointer;
 }
 
 .close-modal:hover {
