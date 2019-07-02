@@ -56,7 +56,6 @@
                 <ul>
                     <li>Mitglied im Ältestenrat</li>
                     <li>Mitglied im Ausschuss für Kultur und Medien</li>
-                    <li>Mitglied im Ausschuss für Recht und Verbraucherschutz</li>
                     <li>Mitglied im Ausschuss für Wahlprüfung, Immunität und Geschäftsordnung</li>
                     <li>Stellvertretende Vorsitzende der Parlamentariergruppe Slowakei-Tschechien-Ungarn</li>
                 </ul>
@@ -77,7 +76,7 @@
                     <li>Mitglied im Arbeitskreis politische und ethische Grundfragen im Zentralkomitte der deutschen Katholiken</li>
                     <li>Mitglied im Beirat des Deutsch-Tschechischen Gesprächsforums</li>
                     <li>Mitglied im Stiftungsrat der "Stiftung Flucht, Vertreibung, Versöhnung"</li>
-                    <li>Mitglied im Kuratorium der "Stiftung Denkmal für die ermordeten Juden Europas" (noch nicht bestätigt)</li>
+                    <li>Mitglied im Kuratorium der "Stiftung Denkmal für die ermordeten Juden Europas"</li>
                 </ul>
             </div>
             <!--<table>

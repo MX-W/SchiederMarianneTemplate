@@ -15,20 +15,16 @@ if(wp_is_mobile()) {
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
             <?php
-            //the_termine_meta_date();
-            /*echo get_termine_start_date('d. F Y') . '<br>';
-            if (has_termine_start_time()) echo (get_termine_start_time('H:i') . " Uhr");
-            if(has_termine_end_date()) {
-                echo 'bis <br>';
-                echo get_termine_end_date('d. F Y') . '<br>';
-                echo (get_termine_end_time('H:i'). ' Uhr');
-            }*/
             echo get_termine_start_date('d. F Y') . '<br>';
             if (has_termine_start_time()) echo (get_termine_start_time('H:i') . " Uhr");
-            if(has_termine_end_date()) {
+            if(has_termine_end_date())
+            {
                 echo ' bis <br>';
                 echo get_termine_end_date('d. F Y') . '<br>';
-                echo (get_termine_end_time('H:i'). ' Uhr');
+                if(has_termine_end_time())
+                {
+                    echo (get_termine_end_time('H:i'). ' Uhr');
+                }
             }
             ?>
         </div>
