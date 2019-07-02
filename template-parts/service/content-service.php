@@ -313,18 +313,21 @@ function form_action() {
                              alt="Pressefoto"
                              data-toggle="modal"
                              data-target="#imageModal"
+                             data-id="579"
                         >
                         <img class="gallery-img rounded-lg"
                              src="<?php echo get_template_directory_uri(); ?>/img/pressefotos/_TT19336.jpg"
                              alt="Pressefoto"
                              data-toggle="modal"
                              data-target="#imageModal"
+                             data-id="582"
                         >
                         <img class="gallery-img rounded-lg"
                              src="<?php echo get_template_directory_uri(); ?>/img/pressefotos/_TT19476.jpg"
                              alt="Pressefoto"
                              data-toggle="modal"
                              data-target="#imageModal"
+                             data-id="585"
                         >
 
                     </div>
@@ -334,18 +337,21 @@ function form_action() {
                              alt="Pressefoto"
                              data-toggle="modal"
                              data-target="#imageModal"
+                             data-id="589"
                         >
                         <img class="gallery-img rounded-lg"
                              src="<?php echo get_template_directory_uri(); ?>/img/pressefotos/_TT19593.jpg"
                              alt="Pressefoto"
                              data-toggle="modal"
                              data-target="#imageModal"
+                             data-id="592"
                         >
                         <img class="gallery-img rounded-lg"
                              src="<?php echo get_template_directory_uri(); ?>/img/pressefotos/_TT19674.jpg"
                              alt="Pressefoto"
                              data-toggle="modal"
                              data-target="#imageModal"
+                             data-id="595"
                         >
                     </div>
                     <div class="img-column">
@@ -354,18 +360,22 @@ function form_action() {
                              alt="Pressefoto"
                              data-toggle="modal"
                              data-target="#imageModal"
+                             data-id="582"
+
                         >
                         <img class="gallery-img rounded-lg"
                              src="<?php echo get_template_directory_uri(); ?>/img/pressefotos/_TT19800.jpg"
                              alt="Pressefoto"
                              data-toggle="modal"
                              data-target="#imageModal"
+                             data-id="582"
                         >
                         <img class="gallery-img rounded-lg"
                              src="<?php echo get_template_directory_uri(); ?>/img/pressefotos/_TT19847.jpg"
                              alt="Pressefoto"
                              data-toggle="modal"
                              data-target="#imageModal"
+                             data-id="582"
                         >
                     </div>
                 </div>

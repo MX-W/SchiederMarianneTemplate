@@ -22,13 +22,13 @@ jQuery().ready(function() {
 
 
     jQuery(".gallery-img").on("click", function() {
-        $('#modal-image').attr('src', jQuery(this).attr('src')); // here asign the image to the modal when the user click the enlarge link
+        $('#modal-image').attr('src', jQuery(this).attr('src')); // here assign the image to the modal when the user click the enlarge link
+        $('#modal-image').attr('data-id', jQuery(this).attr('data-id'));
     });
 
     jQuery('#downloadButton').on('click', () => {
-        const src = $('#modal-image').attr('src');
-        const fileName =  src.substring(src.lastIndexOf('/')+1);
-        window.open(AjaxArray.ajaxurl + '?action=download_image&filename=' + fileName, '_blank');
+        const fileName = $('#modal-image').attr('data-id');
+        window.open(params.baseUrl + '/download/' + fileName, '_blank');
     })
 })
 

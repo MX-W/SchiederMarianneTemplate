@@ -80,7 +80,7 @@ textarea {
 }
 
 .img-column img:hover {
-    opacity: .5;
+    opacity: .7;
     -ms-transform: scale(.95);
     -webkit-transform: scale(.95);
     transform: scale(.95);
