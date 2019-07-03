@@ -20,17 +20,22 @@ jQuery().ready(function() {
     }
     scrollEffectMenu();
 
+});
 
-    jQuery(".gallery-img").on("click", function() {
-        $('#modal-image').attr('src', jQuery(this).attr('src')); // here assign the image to the modal when the user click the enlarge link
-        $('#modal-image').attr('data-id', jQuery(this).attr('data-id'));
-    });
+function downloadImage()
+{
+    let fileName = document.getElementById('modal-image').dataset.id;
+    window.open(params.baseUrl + '/download/' + fileName, '_blank');
+}
 
-    jQuery('#downloadButton').on('click', () => {
-        const fileName = $('#modal-image').attr('data-id');
-        window.open(params.baseUrl + '/download/' + fileName, '_blank');
-    })
-})
+function galleryImageClick(event)
+{
+    console.log(event);
+    let normal = document.getElementById('modal-image');
+    //var modalImage = jQuery('#modal-image');
+    normal.src = event.target.src; // here assign the image to the modal when the user click the enlarge link
+    normal.dataset.id = event.target.dataset.id;
+}
 
 /*
 function setHeaderImageHeight()

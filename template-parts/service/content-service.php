@@ -314,6 +314,7 @@ function form_action() {
                              data-toggle="modal"
                              data-target="#imageModal"
                              data-id="579"
+                             onclick="galleryImageClick(event)"
                         >
                         <img class="gallery-img rounded-lg"
                              src="<?php echo get_template_directory_uri(); ?>/img/pressefotos/_TT19336.jpg"
@@ -321,6 +322,7 @@ function form_action() {
                              data-toggle="modal"
                              data-target="#imageModal"
                              data-id="582"
+                             onclick="galleryImageClick(event)"
                         >
                         <img class="gallery-img rounded-lg"
                              src="<?php echo get_template_directory_uri(); ?>/img/pressefotos/_TT19476.jpg"
@@ -328,6 +330,7 @@ function form_action() {
                              data-toggle="modal"
                              data-target="#imageModal"
                              data-id="585"
+                             onclick="galleryImageClick(event)"
                         >
 
                     </div>
@@ -338,6 +341,7 @@ function form_action() {
                              data-toggle="modal"
                              data-target="#imageModal"
                              data-id="589"
+                             onclick="galleryImageClick(event)"
                         >
                         <img class="gallery-img rounded-lg"
                              src="<?php echo get_template_directory_uri(); ?>/img/pressefotos/_TT19593.jpg"
@@ -345,6 +349,8 @@ function form_action() {
                              data-toggle="modal"
                              data-target="#imageModal"
                              data-id="592"
+                             onclick="galleryImageClick(event)"
+
                         >
                         <img class="gallery-img rounded-lg"
                              src="<?php echo get_template_directory_uri(); ?>/img/pressefotos/_TT19674.jpg"
@@ -352,6 +358,7 @@ function form_action() {
                              data-toggle="modal"
                              data-target="#imageModal"
                              data-id="595"
+                             onclick="galleryImageClick(event)"
                         >
                     </div>
                     <div class="img-column">
@@ -361,6 +368,7 @@ function form_action() {
                              data-toggle="modal"
                              data-target="#imageModal"
                              data-id="599"
+                             onclick="galleryImageClick(event)"
 
                         >
                         <img class="gallery-img rounded-lg"
@@ -369,6 +377,8 @@ function form_action() {
                              data-toggle="modal"
                              data-target="#imageModal"
                              data-id="602"
+                             onclick="galleryImageClick(event)"
+
                         >
                         <img class="gallery-img rounded-lg"
                              src="<?php echo get_template_directory_uri(); ?>/img/pressefotos/_TT19847.jpg"
@@ -376,6 +386,7 @@ function form_action() {
                              data-toggle="modal"
                              data-target="#imageModal"
                              data-id="605"
+                             onclick="galleryImageClick(event)"
                         >
                     </div>
                 </div>
@@ -397,7 +408,7 @@ function form_action() {
                         </div>
                         <div class="col-lg-2">
                                 <i class="fa fa-times close close-modal my-auto" data-dismiss="modal" aria-label="Schließen"></i>
-                                <i class="fa fa-arrow-down close my-auto" id="downloadButton"></i>
+                                <i class="fa fa-arrow-down close my-auto" id="downloadButton" onclick="downloadImage(event)"></i>
                         </div>
                     </div>
                     <div class="modal-body">
