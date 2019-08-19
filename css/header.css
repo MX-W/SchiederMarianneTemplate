@@ -124,7 +124,7 @@
 
     .menu-header > ul.menu > .menu-item:first-child > a {
         font-weight: bold;
-        padding: 10px 120px 20px 5px;
+        padding: 20px 120px 20px 5px;
     }
 
     .fa {
@@ -144,6 +144,7 @@
     #menu-hauptmenue {
         width: 100%;
         list-style: none;
+        margin-top: 10px;
     }
 
     .icon {
@@ -200,7 +201,7 @@
     .menu-header > ul.menu > .menu-item:first-child > a {
         font-weight: bold;
         font-size: 15px;
-        padding: 10px 120px 20px 5px;
+        padding: 20px 120px 20px 5px;
     }
 
     #header-image-container {
@@ -250,7 +251,7 @@
     margin-top: -16px;
 }
 
-.menu-header > ul.menu > .menu-item:hover > .sub-menu > li > a > span {
+.menu-header > ul.menu > .menu-item:hover > .sub-menu > li > a {
     color: #fff;
     transition: .5s;
 }
