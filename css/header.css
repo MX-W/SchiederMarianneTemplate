@@ -281,6 +281,11 @@
     Social Media Buttons
  */
 
+.menu-spd {
+    height: 27px;
+    width: 27px;
+}
+
 .fa-facebook {
     line-height: 31px;
     background-color: transparent;
