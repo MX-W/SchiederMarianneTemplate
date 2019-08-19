@@ -124,7 +124,7 @@
 
     .menu-header > ul.menu > .menu-item:first-child > a {
         font-weight: bold;
-        padding: 20px 120px 20px 5px;
+        padding: 15px 30px 20px 10px;
     }
 
     .fa {
@@ -201,7 +201,7 @@
     .menu-header > ul.menu > .menu-item:first-child > a {
         font-weight: bold;
         font-size: 15px;
-        padding: 20px 120px 20px 5px;
+        padding: 15px 30px 20px 10px;
     }
 
     #header-image-container {
@@ -247,7 +247,7 @@
     position: relative;
     list-style: none;
     padding: 0;
-    margin-left: 58px;
+    margin-left: 63px;
     margin-top: -16px;
 }
 
