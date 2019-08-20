@@ -26,9 +26,6 @@ button {
     width: 120px;
     border: none;
     font-size: 10pt;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
     color: #000;
 
     transition: .2s;
