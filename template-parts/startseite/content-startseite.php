@@ -153,9 +153,9 @@ if($resultsNews->have_posts()) {
             'post_type' => 'reminder',
             'meta_query' => array (
                 array(
-                    'key' => 'termine-start-date',
+                    'key' => 'termine-end-date',
                     'value' => date("Y-m-d"),
-                    'compare' => '>='
+                    'compare' => '<='
                 )
             ),
             'orderby' => 'meta_value',
@@ -213,18 +213,18 @@ if($resultsNews->have_posts()) {
                 get_template_part('template-parts/post-formats/content', get_post_type());
             }
 
-            if($resultsReminder->post_count > 3) {
-                ?>
+            /*if($resultsReminder->post_count > 3) {
+                */?><!--
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <a href="<?php echo get_site_url(); ?>/wahlkreis" class="all-reminder-link">Alle Termine
+                        <a href="<?php /*echo get_site_url(); */?>/wahlkreis" class="all-reminder-link">Alle Termine
                             anzeigen</a>
                     </div>
                 </div>
 
-                <?php
-            }
+                --><?php
+/*            }*/
         } else {
             ?>
             <div class="row">
