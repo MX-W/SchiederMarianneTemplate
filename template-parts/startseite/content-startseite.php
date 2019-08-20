@@ -159,8 +159,8 @@ if($resultsNews->have_posts()) {
                 )
             ),
             'orderby' => 'meta_value',
-            'order' => 'ASC',
-            'meta_key' => 'termine-start-date',
+            'order' => 'DESC',
+            'meta_key' => 'termine-end-date',
         );
 
         $resultsReminder = new WP_Query($argsReminder);
