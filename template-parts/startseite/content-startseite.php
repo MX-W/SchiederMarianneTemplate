@@ -152,11 +152,17 @@ if($resultsNews->have_posts()) {
         <?php $argsReminder = array(
             'post_type' => 'reminder',
             'meta_query' => array (
-                array(
-                    'key' => 'termine-start-date',
-                    'value' => date("Y-m-d"),
-                    'compare' => '>='
-                )
+                    'relation' => 'OR',
+                    array(
+                        'key' => 'termine-start-date',
+                        'value' => date("Y-m-d"),
+                        'compare' => '>='
+                    ),
+                    array(
+                        'key' => 'termine-end-date',
+                        'value' => date("Y-m-d"),
+                        'compare' => '>='
+                    )
             ),
             'orderby' => 'meta_value',
             'order' => 'ASC',
