@@ -282,8 +282,9 @@
  */
 
 .menu-spd {
-    height: 26px;
-    width: 26px;
+    margin-top: -5px;
+    height: 27px;
+    width: 27px;
 }
 
 .fa-facebook {
