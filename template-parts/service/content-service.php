@@ -398,7 +398,7 @@ function form_action() {
             <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <div class="col-lg-10">
+                        <div class="col-lg-9">
                             <h1 class="section-heading">Pressefotos</h1>
                             <div class="custom-hr">
                                 <span class="hr-left"></span>
@@ -406,9 +406,13 @@ function form_action() {
                             <h6>Für Ihre Presseberichterstattung können Sie das Bild gerne unter Angabe der Quelle
                                 "photothek" verwenden.</h6>
                         </div>
-                        <div class="col-lg-2">
-                                <i class="fa fa-times close close-modal my-auto" data-dismiss="modal" aria-label="Schließen"></i>
+                        <div class="col-lg-3">
+                            <div style="display: inline-flex; align-content: center; float: right;">
+                                <span class="close download-text" style="align-self: center;">Download: </span>
                                 <i class="fa fa-arrow-down close my-auto" id="downloadButton" onclick="downloadImage(event)"></i>
+                                <i class="fa fa-times close close-modal my-auto" data-dismiss="modal" aria-label="Schließen"></i>
+                            </div>
+
                         </div>
                     </div>
                     <div class="modal-body">
