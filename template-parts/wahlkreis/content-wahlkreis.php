@@ -138,12 +138,10 @@ wp_print_scripts('maps_plugin');
                     <div class="col-lg-2">
                         <p class="center-vertical">Datum/Uhrzeit</p>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-8">
                         <p class="center-vertical">Ort</p>
                     </div>
-                    <div class="col-lg-4">
-                        <p class="center-vertical">Info</p>
-                    </div>
+                    <div class="col-lg-1"></div>
                 </div>
                 <?php
             } else {
