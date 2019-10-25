@@ -189,9 +189,6 @@ if($resultsNews->have_posts()) {
                         <p class="center-vertical">Ort</p>
                     </div>
                     <div class="col-lg-1"></div>
-                    <!--<div class="col-lg-4">
-                        <p class="center-vertical">Info</p>
-                    </div>-->
                 </div>
                 <?php
             } else {

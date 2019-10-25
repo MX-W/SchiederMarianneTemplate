@@ -49,29 +49,4 @@ if ( wp_is_mobile() ) {
             </div>
         </div>
         <div class="col-lg-1"></div>
-        <!--<div class="col-lg-4 col-s-4">
-            <div class="row">
-                <div class="col-lg-11 col-s-11" id="reminder-content-<?php /*the_ID(); */?>">
-					<?php
-/*					$content = get_the_content();
-					if ( is_page( 'wahlkreis' ) && wp_is_mobile() ) {
-						echo $content;
-					} else {
-						echo wp_trim_words( $content, 15 );
-					}
-					*/?>
-                </div>
-				<?php
-/*				if ( ! wp_is_mobile() ) {
-					if ( str_word_count( $content ) > 15 ) {
-						*/?>
-                        <div class="col-lg-1">
-                            <p id="<?php /*the_ID(); */?>" class="read-more" onclick="onReadMore(this.id)"></p>
-                        </div>
-						<?php
-/*					}
-				}
-				*/?>
-            </div>
-        </div>-->
     </div>
