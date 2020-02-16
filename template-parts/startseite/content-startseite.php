@@ -311,35 +311,31 @@ wp_reset_query();
         $id = $matches[1];
         ?>
         <div class="row">
-            <p><?php the_content(); ?></p>
-        </div>
-        <div class="row">
+            <h2 class="section-heading">Videos</h2>
+
+            <div class="custom-hr">
+                <span class="hr-left"></span>
+            </div>
+
+            <div class="row">
+                <div class="separator"></div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-lg-12" style="margin-bottom: 5px;">
+                    <h3><?php the_title(); ?></h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <p><?php the_content(); ?></p>
+            </div>
+
             <?php
             if(isset($_SESSION['youtube-privacy'])) {
                 ?>
-
-                <h2 class="section-heading">Videos</h2>
-
-                <div class="custom-hr">
-                    <span class="hr-left"></span>
-                </div>
-
-                <div class="row">
-                    <div class="separator"></div>
-                </div>
-
-
-
-                <div class="row">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8" style="text-align: center; margin-bottom: 5px;">
-                        <h3><?php the_title(); ?></h3>
-                    </div>
-                    <div class="col-lg-2"></div>
-                </div>
-
-
-
                 <iframe width="1024" height="768" src="https://www.youtube-nocookie.com/embed/<?php echo $id; ?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
                 <?php
             } else {
