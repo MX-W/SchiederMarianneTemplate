@@ -65,7 +65,7 @@
                 <br>
                 <ul>
                     <li>Parlamentarische Geschäftsführung</li>
-                    <li>Stellvertretende Vorsitzende der Landesgruppe Bayern</li>
+                    <li>Vorsitzende der Landesgruppe Bayern</li>
                     <li>Stellvertretende Sprecherin für Wahlprüfung, Immunität und Geschäftsführung</li>
                 </ul>
             </div>
