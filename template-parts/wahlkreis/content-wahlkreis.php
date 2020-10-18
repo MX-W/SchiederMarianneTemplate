@@ -49,55 +49,10 @@ if(isset($_SESSION['maps-privacy'])) {?>
     </div>
     <?php
 }
-?>
-
-
-<div class="row">
-    <div class="separator"></div>
-</div>
-
-<?php
-
-$argsReminder = array(
-    'post_type' => 'reminder',
-    'posts_per_page' => -1,
-    'meta_query' => array (
-        array(
-            'key' => 'termine-start-date',
-            'value' => date("Y-m-d"),
-            'compare' => '>='
-        )
-    ),
-    'orderby' => 'meta_value',
-    'order' => 'ASC',
-    'meta_key' => 'termine-start-date',
-);
-
-$resultsReminder = new WP_Query($argsReminder);
 
 global $locations;
 global $titles;
 global $dates;
-
-if($resultsReminder->have_posts()) {
-    $locations = array();
-    while ($resultsReminder->have_posts()) {
-        $resultsReminder->the_post();
-        $locations[] = get_termine_location();
-
-        $dateString = get_termine_start_date() . '<br>';
-            if (has_termine_start_time()) $dateString .= get_termine_start_time();
-            if(has_termine_end_date()) {
-                $dateString .= 'bis <br>';
-                $dateString .= get_termine_end_date() . '<br>';
-                $dateString .= get_termine_end_time();
-            }
-
-        $dates[] = $dateString;
-        $titles[] = get_the_title();
-
-    }
-}
 
 wp_register_script('maps_plugin', get_template_directory_uri().'/js/wahlkreis_maps_plugin.js');
 $translation_array = array(
@@ -113,69 +68,6 @@ wp_localize_script('maps_plugin', 'object_name', $translation_array);
 wp_print_scripts('maps_plugin');
 
 ?>
-
-
-<div class="row">
-    <div class="col-lg-12">
-        <div class="row">
-            <h1  class="section-heading">Termine</h1>
-            <div class="custom-hr">
-                <span class="hr-left"></span>
-            </div>
-        </div>
-        <?php
-		if ( $resultsReminder->have_posts() ) {
-			?>
-
-            <div class="row">
-                <div class="separator"></div>
-            </div>
-            <?php
-            if(!wp_is_mobile()) {
-                ?>
-                <div class="row reminder-entry">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-2">
-                        <p class="center-vertical">Datum/Uhrzeit</p>
-                    </div>
-                    <div class="col-lg-8">
-                        <p class="center-vertical">Ort</p>
-                    </div>
-                    <div class="col-lg-1"></div>
-                </div>
-                <?php
-            } else {
-                ?>
-                <div class="row reminder-entry">
-                    <div class="col-lg-12">
-                        <p class="center-vertical">Aktuelle Termine</p>
-                    </div>
-                </div>
-                <?php
-            }
-            ?>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="hr-line-purple"></div>
-                </div>
-            </div>
-			<?php
-			while($resultsReminder->have_posts()) {
-				$resultsReminder->the_post();
-				get_template_part('template-parts/post-formats/content', get_post_type());
-			}
-		} else {
-			?>
-            <div class="row">
-                <p>Zur Zeit stehen keine Termine an!</p>
-            </div>
-
-			<?php
-		}
-		wp_reset_query();
-		?>
-    </div>
-</div>
 
 <div class="row">
     <div class="separator"></div>

@@ -347,20 +347,6 @@ body{
 /*
     ======================
 
-    reminder entry
-
-    ======================
-*/
-
-.reminder-entry:nth-child(2n) {
-    background-color: #e3e3e3;
-}
-
-
-
-/*
-    ======================
-
     divider image
 
     ======================
