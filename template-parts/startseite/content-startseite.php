@@ -264,6 +264,9 @@ wp_reset_query();
         ?>
     </div>
 </div>
+
+<div class="row">
+    <div class="separator"></div>
 </div>
 
 <div class="row">
