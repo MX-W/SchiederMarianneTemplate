@@ -303,6 +303,22 @@
     color: #fff !important;
 }
 
+.fa-twitter {
+    line-height: 31px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 5px;
+    border-right: 2px solid transparent;
+    padding: 0 7px !important;
+}
+
+.fa-twitter:hover {
+    transition: .8s;
+    background-color: #00ACEE;
+    text-decoration: none;
+    color: #fff !important;
+}
+
 .fa-no-float {
     float: none;
 }

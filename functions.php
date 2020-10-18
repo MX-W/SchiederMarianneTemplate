@@ -158,6 +158,7 @@ set_post_thumbnail_size(1024, 681);
 function add_search_nav_item($items, $args) {
 	if($args->theme_location == 'header-menu') {
 		$items .= '<li class="menu-item hide-menu"><a target="_blank" class="facebook-wrapper" href="https://www.facebook.com/MarianneSchieder/"><div class="fa fa-facebook fa-no-float menu-facebook"></div></a></li>';
+		$items .= '<li class="menu-item hide-menu"><a target="_blank" class="facebook-wrapper" href="https://twitter.com/m_schieder"><div class="fa fa-twitter fa-no-float menu-facebook"></div></a></li>';
 		$items .= '<li class="menu-item hide-menu"><a target="_blank" href="https://www.spd.de"><img src="https://marianne-schieder.de/wp-content/uploads/2019/08/spd-logo-75x75.png" class="menu-spd"/></a></li>';
 		$items .= '<li id="search-item" class="menu-item hide-menu">'. file_get_contents(__DIR__ . '/template-parts/searchform-header.php', true) . '</li>';
 
