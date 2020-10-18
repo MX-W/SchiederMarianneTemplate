@@ -99,10 +99,11 @@ function form_action() {
 
     <div class="col-lg-12">
         <p>
-            Ganz gleich ob Sie Sorgen oder Nöte haben, ob Sie Informationen zu bestimmten Themen brauchen, oder ob Sie
-            einfach mal eine Abgeordnete persönlich kennenlernen wollen: Sie dürfen jederzeit vorbeikommen.
-            Meine Mitarbeiterinnen und Mitarbeiter helfen Ihnen gerne weiter. Wenn Sie mich selber treffen wollen,
-            sollten Sie vorsichtshalber einen Termin vereinbaren. Rufen Sie an oder senden Sie ein E-Mail!
+            Ganz gleich ob Sie Sorgen oder Nöte haben, ob Sie Informationen zu bestimmten Themen
+            brauchen, oder ob Sie einfach mal eine Abgeordnete persönlich kennenlernen wollen: Sie
+            dürfen jederzeit vorbeikommen. Meine Mitarbeiterinnen und Mitarbeiter helfen Ihnen gerne
+            weiter. Wenn Sie mich selber treffen wollen, sollten Sie vorsichtshalber einen Termin
+            vereinbaren. Rufen Sie an oder senden Sie ein E-Mail!
 
         </p>
     </div>
@@ -145,14 +146,14 @@ function form_action() {
                         <td class="heading-strong table-cell-top col-lg-4">BÜRO BERLIN</td>
                     </tr>
                     <tr class="tr-separate row">
-                        <td class="table-cell-top col-lg-4"><p>In meinem Büro in Wernberg-Köblitz steht Ihnen meine
-                                Mitarbeiterin Maria Reitinger montags bis donnerstags gerne zur Verfügung. Am
-                                Freitag ist Peter Wein für Sie vor Ort.</p></td>
-                        <td class="table-cell-top col-lg-4"><p>Walburga Bartonizek ist Ihre Ansprechpartnerin in
-                                meinem Büro in Cham. Gerne nehme auch ich mir Zeit für Sie - dazu bitte ich um
+                        <td class="table-cell-top col-lg-4"><p>Meine Mitarbeiterin <b>Maria
+                                    Reitinger</b> steht Ihnen gerne zur Verfügung.</p></td>
+                        <td class="table-cell-top col-lg-4"><p>Im BürgerInnenbüro in Cham steht Ihnen meine Mitarbeiterin <b>Walburga Bartonizek</b> vier halbe
+                                Tage in der Woche zur Verfügung. Meine Sprechstunden im Büro in Cham werden in der Presse
+                                bekannt gegeben. Gerne stehe ich Ihnen für ein Gespräch zur Verfügung - dazu bitte ich aber um
                                 vorherige Terminabsprache.</p></td>
                         <td class="table-cell-top col-lg-4"><p>Im Abgeordnetenbüro in Berlin unterstützen mich
-                                Ulrike Geißler, Hanna Malz und Felix Engelhard. Auch sie sind gerne bereit, sich
+                                <b>Ulrike Geißler, Hanna Malz und Peter Wein</b>. Auch sie sind gerne bereit, sich
                                 Ihrer Anliegen anzunehmen.</p></td>
                     </tr>
                     <tr class="tr-separate row">
@@ -168,7 +169,7 @@ function form_action() {
                                 <b>Mail:</b> marianne.schieder@wk.bundestag.de<br>
                                 <br>
                                 <b>Öffnungszeiten:</b><br>
-                                Mo. - Fr. 9.00 - 16.00 Uhr<br>
+                                Mo. - Do. 9.00 - 16.00 Uhr<br>
                             </p></td>
                         <td class="table-cell-top col-lg-4">
                             <p>
@@ -211,9 +212,8 @@ function form_action() {
                         <div class="heading-strong table-cell-top col-s-12">BÜRO WERNBERG-KÖBLITZ</div>
                     </div>
                     <div class="row">
-                        <div class="table-cell-top col-s-12"><p>In meinem Büro in Wernberg-Köblitz steht Ihnen meine
-                                Mitarbeiterin Maria Reitinger montags bis donnerstags gerne zur Verfügung. Am
-                                Freitag ist Peter Wein für Sie vor Ort.</p></div>
+                        <div class="table-cell-top col-s-12"><p>Meine Mitarbeiterin <b>Maria
+                                    Reitinger</b> steht Ihnen gerne zur Verfügung.</p></div>
                     </div>
                     <div class="row">
                         <div class="table-cell-top col-s-12">
@@ -228,7 +228,7 @@ function form_action() {
                                 <b>Mail:</b> marianne.schieder@wk.bundestag.de<br>
                                 <br>
                                 <b>Öffnungszeiten:</b><br>
-                                Mo. - Fr. 9.00 - 16.00 Uhr<br>
+                                Mo. - Do. 9.00 - 16.00 Uhr<br>
                             </p></div>
                     </div>
                     <div class="row">
@@ -238,8 +238,9 @@ function form_action() {
                         <div class="heading-strong table-cell-top col-s-12">BÜRO CHAM</div>
                     </div>
                     <div class="row">
-                        <div class="table-cell-top col-s-12"><p>Walburga Bartonizek ist Ihre Ansprechpartnerin in
-                                meinem Büro in Cham. Gerne nehme auch ich mir Zeit für Sie - dazu bitte ich um
+                        <div class="table-cell-top col-s-12"><p>Im BürgerInnenbüro in Cham steht Ihnen meine Mitarbeiterin <b>Walburga Bartonizek</b> vier halbe
+                                Tage in der Woche zur Verfügung. Meine Sprechstunden im Büro in Cham werden in der Presse
+                                bekannt gegeben. Gerne stehe ich Ihnen für ein Gespräch zur Verfügung - dazu bitte ich aber um
                                 vorherige Terminabsprache.</p></div>
                     </div>
                     <div class="row">
@@ -268,7 +269,7 @@ function form_action() {
                     </div>
                     <div class="row">
                         <div class="table-cell-top col-s-12"><p>Im Abgeordnetenbüro in Berlin unterstützen mich
-                                Ulrike Geißler, Hanna Malz und Felix Engelhard. Auch sie sind gerne bereit, sich
+                                <b>Ulrike Geißler, Hanna Malz und Peter Wein</b>. Auch sie sind gerne bereit, sich
                                 Ihrer Anliegen anzunehmen.</p></div>
                     </div>
                     <div class="row">

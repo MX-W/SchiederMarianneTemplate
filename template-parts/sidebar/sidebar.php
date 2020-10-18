@@ -203,7 +203,6 @@
 
 
 		if ( $resultsVideo->post_count > 1 ) {
-			echo $resultsVideo->post_count;
 			?>
             <div class="row">
                 <div class="col-lg-12">
