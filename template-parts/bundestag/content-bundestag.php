@@ -73,7 +73,6 @@
                 <h6>Weitere Gremien:</h6>
                 <br>
                 <ul>
-                    <li>Mitglied im Arbeitskreis politische und ethische Grundfragen im Zentralkomitte der deutschen Katholiken</li>
                     <li>Mitglied im Beirat des Deutsch-Tschechischen Gesprächsforums</li>
                     <li>Mitglied im Stiftungsrat der "Stiftung Flucht, Vertreibung, Versöhnung"</li>
                     <li>Mitglied im Kuratorium der "Stiftung Denkmal für die ermordeten Juden Europas"</li>
