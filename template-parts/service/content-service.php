@@ -147,13 +147,13 @@ function form_action() {
                     </tr>
                     <tr class="tr-separate row">
                         <td class="table-cell-top col-lg-4"><p>Meine Mitarbeiterin <b>Maria
-                                    Reitinger</b> steht Ihnen gerne zur Verfügung.</p></td>
+                                    Reitinger</b> steht Ihnen gerne zur Verfügung. Jeden Freitag steht mein Mitarbeiter <b>Jakob Berg</b> für Sie zur Verfügung.</p></td>
                         <td class="table-cell-top col-lg-4"><p>Im BürgerInnenbüro in Cham steht Ihnen meine Mitarbeiterin <b>Walburga Bartonizek</b> vier halbe
                                 Tage in der Woche zur Verfügung. Meine Sprechstunden im Büro in Cham werden in der Presse
                                 bekannt gegeben. Gerne stehe ich Ihnen für ein Gespräch zur Verfügung - dazu bitte ich aber um
                                 vorherige Terminabsprache.</p></td>
                         <td class="table-cell-top col-lg-4"><p>Im Abgeordnetenbüro in Berlin unterstützen mich
-                                <b>Ulrike Geißler, Hanna Malz und Peter Wein</b>. Auch sie sind gerne bereit, sich
+                                <b>Karl Bley und Peter Wein</b>. Auch sie sind gerne bereit, sich
                                 Ihrer Anliegen anzunehmen.</p></td>
                     </tr>
                     <tr class="tr-separate row">
@@ -213,7 +213,7 @@ function form_action() {
                     </div>
                     <div class="row">
                         <div class="table-cell-top col-s-12"><p>Meine Mitarbeiterin <b>Maria
-                                    Reitinger</b> steht Ihnen gerne zur Verfügung.</p></div>
+                                    Reitinger</b> steht Ihnen gerne zur Verfügung. Jeden Freitag steht mein Mitarbeiter <b>Jakob Berg</b> für Sie zur Verfügung.</p></div>
                     </div>
                     <div class="row">
                         <div class="table-cell-top col-s-12">
@@ -269,7 +269,7 @@ function form_action() {
                     </div>
                     <div class="row">
                         <div class="table-cell-top col-s-12"><p>Im Abgeordnetenbüro in Berlin unterstützen mich
-                                <b>Ulrike Geißler, Hanna Malz und Peter Wein</b>. Auch sie sind gerne bereit, sich
+                                <b>Karl Bley und Peter Wein</b>. Auch sie sind gerne bereit, sich
                                 Ihrer Anliegen anzunehmen.</p></div>
                     </div>
                     <div class="row">
