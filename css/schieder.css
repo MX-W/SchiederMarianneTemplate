@@ -470,11 +470,12 @@ body{
     right: 25px;
     bottom: 25px;
     /*padding: 15px;*/
-    //background-color: rgba(152,2,103, .8);
+    /*background-color: rgba(152,2,103, .8);*/
     background-color: rgba(0,0,0, .9);
     z-index: 10;
     color: #fff;
     font-size: 13px;
+    max-width: 50%;
 }
 
 .fade-on-click {
@@ -490,36 +491,69 @@ body{
     padding: 20px 0 10px 0;
 }
 
-.cookies-ok {
-    border: none;
+.cookies-text > a {
+    text-decoration: none;
+    color: #E3000F;
+}
+.cookies-text > a:hover {
+    text-decoration: underline;
+}
+
+.buttons {
+    margin: auto;
+}
+
+.cookies-accept {
     background-color: transparent;
     color: #fff;
     padding: 1.1em 1.5em;
     line-height: 1;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 30%;
-    margin-bottom: 10px;
+    margin: 10px auto;
+    width: 140px;
+    border: 2px solid #fff;
+    display: block;
 }
 
-.cookies-ok:hover {
+.cookies-accept:hover {
     color: #000;
     background-color: rgba(255,255,255, .9);
+    border: 2px solid #fff;
     transition: 1s;
 }
 
-.cookies-datenschutz {
+.cookies-decline {
     color: #fff;
-    border: 2px solid #fff;
     border-radius: 5px;
     padding: 1em;
-    margin-left: 10%;
     cursor: pointer;
+    background-color: transparent;
+    width: 140px;
+    border: 2px solid transparent;
+    margin: 10px auto;
+    display: block;
+}
+@media screen and (min-width: 768px) {
+    .cookies-accept {
+        display: inline-block;
+        margin: 10px 0 10px 40px;
+    }
+
+    .cookies-decline {
+        display: inline-block;
+        float: right;
+        margin: 10px 40px 10px 0;
+    }
 }
 
-.cookies-datenschutz:hover {
-    color: #000;
-    background-color: rgba(255,255,255, .9);
+@media screen and (min-width: 1440px) {
+    .cookies-alert {
+        max-width: 30%;
+    }
+}
+
+.cookies-decline:hover {
     border: 2px solid rgba(255,255,255, .9);
     transition: 1s;
     text-decoration: none;

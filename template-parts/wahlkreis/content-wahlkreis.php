@@ -26,7 +26,7 @@
 
 
 <?php
-if(isset($_SESSION['maps-privacy'])) {?>
+if(isset($_COOKIE["privacy_accepted"]) && $_COOKIE["privacy_accepted"] === "true") {?>
     <div id="map" style="width: 100%; height: 400px;"></div>
     <?php
 } else {
@@ -42,6 +42,9 @@ if(isset($_SESSION['maps-privacy'])) {?>
         <br>
         <br>
         Soll die Karte dargestellt werden?
+        <br>
+        <br>
+        Dann akzeptieren Sie bitte die <a target="_blank" href="<?php echo home_url(); ?>/datenschutz">Datenschutzerklärung</a>, indem Sie folgenden Button drücken.
         <br>
         <br>
         <button onclick="setMapsPrivacy()" style="border: none; cursor: pointer; border-radius: 5px; background-color: #E3000F; color: #fff;">Karte anzeigen?</button>

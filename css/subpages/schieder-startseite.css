@@ -23,3 +23,8 @@ iframe {
     overflow: hidden;
     clip: rect(50px, 0, 50px, 0);
 }
+
+.facebook-plugin-container {
+    padding-top: 50px;
+    text-align: center;
+}

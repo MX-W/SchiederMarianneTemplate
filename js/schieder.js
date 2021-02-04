@@ -30,7 +30,6 @@ function downloadImage()
 
 function galleryImageClick(event)
 {
-    console.log(event);
     let normal = document.getElementById('modal-image');
     //var modalImage = jQuery('#modal-image');
     normal.src = event.target.src; // here assign the image to the modal when the user click the enlarge link
@@ -53,34 +52,12 @@ function responsiveNav() {
 }
 
 function setYoutubePrivacy() {
-    window.localStorage.setItem('youtube-privacy', 'accepted');
-    jQuery.ajax({
-        url: ReminderAjax.ajaxurl,
-        async: false,
-        type: 'post',
-        data: {
-            action: 'youtube_privacy',
-            youtube: 'accepted',
-        },
-        success: function (response) {
-        }
-    });
+    setCookie('privacy_accepted', true, 90);
     location.reload();
 }
 
 function setMapsPrivacy() {
-    window.localStorage.setItem('maps-privacy', 'accepted');
-    jQuery.ajax({
-        url: ReminderAjax.ajaxurl,
-        async: false,
-        type: 'post',
-        data: {
-            action: 'maps_privacy',
-            maps: 'accepted'
-        },
-        success: function (response) {
-        }
-    });
+    setCookie('privacy_accepted', true, 90);
     location.reload();
 }
 
@@ -94,6 +71,29 @@ function cropVerticalImages() {
         }
     }
 }*/
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + "";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return null;
+}
 
 var isFirefox = typeof InstallTrigger !== 'undefined';
 

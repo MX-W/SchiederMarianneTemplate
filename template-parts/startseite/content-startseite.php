@@ -1,3 +1,5 @@
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v9.0" nonce="8ftROrD4"></script>
 
 <div class="row">
     <div class="separator"></div>
@@ -229,7 +231,7 @@ wp_reset_query();
                 </div>
 
                 <?php
-                if(isset($_SESSION['youtube-privacy']))
+                if(isset($_COOKIE["privacy_accepted"]) && $_COOKIE["privacy_accepted"] === "true")
                 {
                 ?>
                     <iframe width="1024" height="768" src="https://www.youtube-nocookie.com/embed/<?php echo $id; ?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
@@ -251,6 +253,9 @@ wp_reset_query();
                             Soll das Video von YouTube dargestellt werden?
                             <br>
                             <br>
+                            Dann akzeptieren Sie bitte die <a target="_blank" href="<?php echo home_url(); ?>/datenschutz">Datenschutzerklärung</a>, indem Sie folgenden Button drücken.
+                            <br>
+                            <br>
                             <button onclick="setYoutubePrivacy()" style="border: none; cursor: pointer; border-radius: 5px; background-color: #E3000F; color: #fff;">Video anzeigen?</button>
                         </p>
                     </div>
@@ -269,6 +274,42 @@ wp_reset_query();
     <div class="separator"></div>
 </div>
 
+<?php if(isset($_COOKIE["privacy_accepted"]) && $_COOKIE["privacy_accepted"] === "true") {?>
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <h1  class="section-heading">Facebook</h1>
+            <div class="custom-hr">
+                <span class="hr-left"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="facebook-plugin-container">
+                    <div class="fb-page"
+                         data-href="https://www.facebook.com/MarianneSchieder"
+                         data-tabs="timeline"
+                         data-width="500"
+                         data-height="500"
+                         data-small-header="false"
+                         data-adapt-container-width="true"
+                         data-hide-cover="false"
+                         data-show-facepile="false"
+                         data-lazy="true"
+                    >
+                        <blockquote cite="https://www.facebook.com/MarianneSchieder" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/MarianneSchieder">Marianne Schieder, MdB</a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="row">
     <div class="separator"></div>
 </div>
+
+<?php } ?>

@@ -32,7 +32,7 @@
             <div class="col-lg-10">
                 <?php
                 if(!is_archive()) {
-                    if(isset($_SESSION['youtube-privacy'])) {?>
+                    if(isset($_COOKIE["privacy_accepted"]) && $_COOKIE["privacy_accepted"] === "true") {?>
                         <iframe width="1024" height="768" src="https://www.youtube-nocookie.com/embed/<?php echo $id; ?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
                 <?php
                     } else {
@@ -50,13 +50,16 @@
                     Soll das Video von YouTube dargestellt werden?
                     <br>
                     <br>
+                    Dann akzeptieren Sie bitte die <a target="_blank" href="<?php echo home_url(); ?>/datenschutz">Datenschutzerklärung</a>, indem Sie folgenden Button drücken.
+                    <br>
+                    <br>
                     <button onclick="setYoutubePrivacy()" style="border: none; cursor: pointer; border-radius: 5px; background-color: #7e7e7e; color: #fff;">Video anzeigen?</button>
                 </p>
             </div>
                 <?php
                     }
                 } else {
-                    if(isset($_SESSION['youtube-privacy'])) {
+                    if(isset($_COOKIE["privacy_accepted"]) && $_COOKIE["privacy_accepted"] === "true") {
                     ?>
                     <iframe width="800" height="601" src="https://www.youtube-nocookie.com/embed/<?php echo $id; ?>?rel=0&amp;showinfo=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
                     <?php
@@ -73,6 +76,9 @@
                     <br>
                     <br>
                     Soll das Video von YouTube dargestellt werden?
+                    <br>
+                    <br>
+                    Dann akzeptieren Sie bitte die <a target="_blank" href="<?php echo home_url(); ?>/datenschutz">Datenschutzerklärung</a>, indem Sie folgenden Button drücken.
                     <br>
                     <br>
                     <button onclick="setYoutubePrivacy()" style="border: none; cursor: pointer; border-radius: 5px; background-color: #7e7e7e; color: #fff;">Video anzeigen?</button>

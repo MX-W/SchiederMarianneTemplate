@@ -13,10 +13,13 @@ endif;
 
 <div id="cookies" class="cookies-alert" style="display:none">
     <p class="cookies-text">
-        Um die Funktionalität der Website zu gewährleisten, verwendet diese Website Cookies.
+        Um die Funktionalität der Website zu gewährleisten, verwendet diese Website Cookies. Wenn Sie diese Website in vollem Umfang nutzen wollen, stimmen Sie bitte der <a target="_blank" href="<?php echo home_url(); ?>/datenschutz">Datenschutzerklärung</a> zu. Welche Cookies gesetzt werden, können Sie dort entnehmen.
     </p>
-    <button onclick="popUp('hide')" class="cookies-ok">Ok</button>
-    <a class="cookies-datenschutz" href="<?php echo home_url(); ?>/datenschutz">Datenschutzerklärung</a>
+    <div class="buttons">
+        <button class="cookies-accept">Annehmen</button>
+        <button class="cookies-decline">Ablehnen</button>
+    </div>
+
 </div>
 
 <div class="row">
