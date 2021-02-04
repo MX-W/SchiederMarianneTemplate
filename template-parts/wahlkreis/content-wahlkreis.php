@@ -59,7 +59,9 @@ global $dates;
 
 wp_register_script('maps_plugin', get_template_directory_uri().'/js/wahlkreis_maps_plugin.js');
 $translation_array = array(
-        'templateUrl' => get_template_directory_uri());
+        'templateUrl' => get_template_directory_uri(),
+        'apiKey' => 'AIzaSyA1pHMVNqhgjGCAIoAhcIbDcQq5I2B1xsk'
+);
 
 if(!is_null($locations)) {
     $translation_array['geoLocations'] = $locations;

@@ -31,7 +31,7 @@ function myMap() {
             key = key.replace(' ', '+');
 
             var mapsGeocodeApiUrl = 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
-                geoLocations[key] + '&region=de&bounds=49.635436, 11.763190|49.004473, 13.336531&key=AIzaSyA1pHMVNqhgjGCAIoAhcIbDcQq5I2B1xsk';
+                geoLocations[key] + '&region=de&bounds=49.635436, 11.763190|49.004473, 13.336531&key=' + object_name.apiKey;
 
             $.ajax({
                 url: mapsGeocodeApiUrl,
