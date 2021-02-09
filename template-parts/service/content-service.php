@@ -169,7 +169,7 @@ function form_action() {
                                 <b>Mail:</b> marianne.schieder@wk.bundestag.de<br>
                                 <br>
                                 <b>Öffnungszeiten:</b><br>
-                                Mo. - Do. 9.00 - 16.00 Uhr<br>
+                                Mo. - Fr. 9.00 - 16.00 Uhr<br>
                             </p></td>
                         <td class="table-cell-top col-lg-4">
                             <p>
@@ -228,7 +228,7 @@ function form_action() {
                                 <b>Mail:</b> marianne.schieder@wk.bundestag.de<br>
                                 <br>
                                 <b>Öffnungszeiten:</b><br>
-                                Mo. - Do. 9.00 - 16.00 Uhr<br>
+                                Mo. - Fr. 9.00 - 16.00 Uhr<br>
                             </p></div>
                     </div>
                     <div class="row">
